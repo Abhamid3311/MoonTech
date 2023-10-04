@@ -6,14 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "json-server": "json-server --watch db.json --port 5000",
     "lint": "next lint"
   },
   "dependencies": {
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.6.4",
+    "json-server": "^0.17.4",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swiper": "^10.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10",

@@ -4,9 +4,9 @@ import Footer from './Footer'
 
 export default function RootLayout({ children }) {
     return (
-        <div>
+        <div className='bg-black'>
             <Header />
-            <div className='min-h-screen max-w-7xl mx-auto'>{children}</div>
+            <div className=''>{children}</div>
             <Footer />
         </div>
     )

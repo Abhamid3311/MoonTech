@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header = () => {
     return (
-        <Navbar rounded className='bg-secondary text-white'>
+        <Navbar rounded className='bg-black text-white'>
 
 
             <Navbar.Brand href="https://flowbite-react.com">
@@ -20,7 +20,7 @@ const Header = () => {
 
 
             <div className="flex md:order-2">
-                <Button className=''>
+                <Button color="failure">
                     <Link href={'/pc-builder'}>  PC Builder </Link>
                 </Button>
                 <Navbar.Toggle />
