@@ -8,17 +8,17 @@ const ProductCard = ({ product }) => {
     return (
         <>
             <Link href={"/"}>
-                <div className='h-[420px] overflow-hidden rounded-md shadow-sm hover:shadow-xl bg-white'>
+                <div className='h-full lg:h-[420px] overflow-hidden rounded-md shadow-sm hover:shadow-xl bg-white'>
                     <div className='h-[270px] w-full'>
                         <img src={img} alt={name} srcSet="" className='  card-img' />
                     </div>
 
                     <div className='  p-3 h-full'>
-                        <h1 className="text-2xl font-bold tracking-tight text-primary" > {name}  </h1>
-                        <p>Category: {category}</p>
-                        <p>Rating: {individualRating}</p>
-                        <p>Price: <span className='text-primary text-lg font-bold'> {price}$</span></p>
-                        <p>Status: {status}</p>
+                        <h1 className="text-lg lg:text-2xl font-bold tracking-tight text-primary" > {name}  </h1>
+                        <p className='text-sm lg:text-base'>Category: {category}</p>
+                        <p className='text-sm lg:text-base'>Rating: {individualRating}</p>
+                        <p className='text-sm lg:text-base'>Price: <span className='text-primary text-base lg:text-lg font-bold'> {price}$</span></p>
+                        <p className='text-sm lg:text-base'>Status: {status}</p>
 
                     </div>
                 </div>

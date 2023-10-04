@@ -25,17 +25,17 @@ const BannerDetails = ({ BannerData }) => {
         color: descClr  // Set text color based on descClr
     };
     return (
-        <div className='w-full  min-h-[90vh] ' style={{
+        <div className='w-full  h-full lg:min-h-[90vh] py-10 lg:py-0' style={{
             backgroundImage: `url(${img})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
         }}>
-            <div className='max-w-7xl mx-auto flex items-center min-h-[60vh]'>
+            <div className='max-w-7xl mx-auto flex items-center h-full  lg:min-h-[50vh] px-5 lg:px-0 '>
                 <div className='text-white '>
-                    <h3 className='text-[40px] -mb-6'>{title}</h3>
-                    <h1 className='text-[60px] font-bold'>{subTitle}</h1>
-                    <p style={textStyle} className='text-xl mb-5'>{desc}</p>
+                    <h3 className='text-xl lg:text-[40px] '>{title}</h3>
+                    <h1 className='text-2xl lg:text-[60px] font-bold my-1 lg:my-4'>{subTitle}</h1>
+                    <p style={textStyle} className='text-sm lg:text-xl mb-5'>{desc}</p>
 
                     <Button color="failure"><Link href={link}>{btnText}</Link>  </Button>
 

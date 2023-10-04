@@ -13,14 +13,14 @@ const Header = () => {
                     className="mr-3 h-6 sm:h-9"
                     src="/favicon.svg"
                 /> */}
-                <span className="self-center whitespace-nowrap text-2xl font-bold text-primary">
+                <span className="self-center whitespace-nowrap text-xl lg:text-2xl font-bold text-primary">
                     MoonTech
                 </span>
             </Navbar.Brand>
 
 
             <div className="flex md:order-2">
-                <Button color="failure">
+                <Button color="failure" className="py-0.5 px-1 lg:py-1 lg:px-5 text-sm lg:text-base">
                     <Link href={'/pc-builder'}>  PC Builder </Link>
                 </Button>
                 <Navbar.Toggle />
