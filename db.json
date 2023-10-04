@@ -1,427 +1,426 @@
 {
-    "accessories":[
+  "accessories": [
+    {
+      "id": "1",
+      "img": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/10th-gen-core-i3-10100t/10th-gen-core-i3-10100t-01-228x228.webp",
+      "name": "Example Motherboard 1",
+      "category": "Motherboards",
+      "status": "In Stock",
+      "price": "220",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
         {
-          "id": "1",
-          "img": "path_to_image1",
-          "name": "Example Motherboard 1",
-          "category": "Motherboards",
-          "status": "In Stock",
-          "price": "220",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "Ryzen"
-            },
-            {
-              "id": 2,
-              "model": "Ryzen 500T"
-            },
-            {
-              "id": 3,
-              "specification": "Ryzen"
-            },
-            {
-              "id": 4,
-              "Port": "Ryzen"
-            },
-            {
-              "id": 5,
-              "Type": "Ryzen"
-            },
-            {
-              "id": 6,
-              "Resolution": "Ryzen"
-            },
-            {
-              "id": 7,
-              "Voltage": "Ryzen"
-            }
-          ],
-          "individualRating": 5,
-          "averageRating": 4.9,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "This is a nice product"
-            },
-            {
-              "id": 2,
-              "comment": "Great performance and quality!"
-            }
-          ]
+          "id": 1,
+          "brand": "Ryzen"
         },
         {
-          "id": "2",
-          "img": "path_to_image2",
-          "name": "Example RAM 1",
-          "category": "RAM",
-          "status": "In Stock",
-          "price": "120",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "HyperX"
-            },
-            {
-              "id": 2,
-              "model": "DDR4"
-            },
-            {
-              "id": 3,
-              "specification": "16GB"
-            },
-            {
-              "id": 4,
-              "Port": "DIMM"
-            },
-            {
-              "id": 5,
-              "Type": "Unbuffered"
-            },
-            {
-              "id": 6,
-              "Voltage": "1.35V"
-            }
-          ],
-          "individualRating": 4,
-          "averageRating": 4.5,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Excellent RAM for gaming!"
-            },
-            {
-              "id": 2,
-              "comment": "Fast and reliable."
-            }
-          ]
+          "id": 2,
+          "model": "Ryzen 500T"
         },
         {
-          "id": "3",
-          "img": "path_to_image3",
-          "name": "Example Processor 1",
-          "category": "Processors",
-          "status": "In Stock",
-          "price": "350",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "Intel"
-            },
-            {
-              "id": 2,
-              "model": "Core i7-9700K"
-            },
-            {
-              "id": 3,
-              "specification": "9th Gen"
-            },
-            {
-              "id": 4,
-              "Cores": "8"
-            },
-            {
-              "id": 5,
-              "Threads": "8"
-            },
-            {
-              "id": 6,
-              "Clock Speed": "3.6GHz"
-            }
-          ],
-          "individualRating": 4.7,
-          "averageRating": 4.8,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Powerful processor for heavy tasks."
-            },
-            {
-              "id": 2,
-              "comment": "Great for gaming and multitasking."
-            }
-          ]
+          "id": 3,
+          "specification": "Ryzen"
         },
         {
-          "id": "4",
-          "img": "path_to_image4",
-          "name": "Example Graphics Card 1",
-          "category": "Graphics Cards",
-          "status": "Out of Stock",
-          "price": "500",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "NVIDIA"
-            },
-            {
-              "id": 2,
-              "model": "GeForce RTX 3080"
-            },
-            {
-              "id": 3,
-              "specification": "10GB GDDR6X"
-            },
-            {
-              "id": 4,
-              "Ports": "HDMI, DisplayPort"
-            }
-          ],
-          "individualRating": 4.9,
-          "averageRating": 4.9,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Amazing graphics card for high-end gaming!"
-            },
-            {
-              "id": 2,
-              "comment": "Top-notch performance and great cooling."
-            }
-          ]
+          "id": 4,
+          "Port": "Ryzen"
         },
         {
-          "id": "5",
-          "img": "path_to_image5",
-          "name": "Example SSD 1",
-          "category": "Storage",
-          "status": "In Stock",
-          "price": "150",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "Samsung"
-            },
-            {
-              "id": 2,
-              "model": "860 EVO"
-            },
-            {
-              "id": 3,
-              "specification": "1TB"
-            },
-            {
-              "id": 4,
-              "Type": "2.5 inch SATA III"
-            }
-          ],
-          "individualRating": 4.8,
-          "averageRating": 4.7,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Blazing fast storage, highly recommended!"
-            },
-            {
-              "id": 2,
-              "comment": "Reliable and efficient SSD."
-            }
-          ]
+          "id": 5,
+          "Type": "Ryzen"
         },
         {
-          "id": "6",
-          "img": "path_to_image6",
-          "name": "Example Power Supply 1",
-          "category": "Power Supplies",
-          "status": "In Stock",
-          "price": "80",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "EVGA"
-            },
-            {
-              "id": 2,
-              "model": "600W 80+ Bronze"
-            },
-            {
-              "id": 3,
-              "specification": "600W"
-            },
-            {
-              "id": 4,
-              "Certification": "80+ Bronze"
-            }
-          ],
-          "individualRating": 4.7,
-          "averageRating": 4.5,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Solid and reliable power supply."
-            },
-            {
-              "id": 2,
-              "comment": "Efficient and affordable."
-            }
-          ]
+          "id": 6,
+          "Resolution": "Ryzen"
         },
         {
-          "id": "7",
-          "img": "path_to_image7",
-          "name": "Example Case 1",
-          "category": "PC Cases",
-          "status": "In Stock",
-          "price": "70",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "NZXT"
-            },
-            {
-              "id": 2,
-              "model": "H510"
-            },
-            {
-              "id": 3,
-              "specification": "Mid Tower"
-            },
-            {
-              "id": 4,
-              "Compatibility": "ATX, MicroATX, Mini-ITX"
-            }
-          ],
-          "individualRating": 4.6,
-          "averageRating": 4.4,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Sleek design and great cable management."
-            },
-            {
-              "id": 2,
-              "comment": "Excellent case for the price."
-            }
-          ]
+          "id": 7,
+          "Voltage": "Ryzen"
+        }
+      ],
+      "individualRating": 5,
+      "averageRating": 4.9,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "This is a nice product"
         },
         {
-          "id": "8",
-          "img": "path_to_image8",
-          "name": "Example CPU Cooler 1",
-          "category": "Cooling",
-          "status": "In Stock",
-          "price": "40",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "Cooler Master"
-            },
-            {
-              "id": 2,
-              "model": "Hyper 212 RGB"
-            },
-            {
-              "id": 3,
-              "specification": "Air Cooler"
-            },
-            {
-              "id": 4,
-              "Fan Speed": "650 - 2000 RPM"
-            }
-          ],
-          "individualRating": 4.5,
-          "averageRating": 4.3,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Keeps my CPU cool even under heavy load."
-            },
-            {
-              "id": 2,
-              "comment": "Great performance and easy to install."
-            }
-          ]
-        },
-        {
-          "id": "9",
-          "img": "path_to_image9",
-          "name": "Example Hard Drive 1",
-          "category": "Storage",
-          "status": "In Stock",
-          "price": "60",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "Western Digital"
-            },
-            {
-              "id": 2,
-              "model": "WD Blue"
-            },
-            {
-              "id": 3,
-              "specification": "1TB"
-            },
-            {
-              "id": 4,
-              "Type": "3.5 inch SATA III"
-            }
-          ],
-          "individualRating": 4.6,
-          "averageRating": 4.4,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Reliable and affordable storage solution."
-            },
-            {
-              "id": 2,
-              "comment": "Works great for all my files and games."
-            }
-          ]
-        },
-        {
-          "id": "10",
-          "img": "path_to_image10",
-          "name": "Example Wireless Keyboard and Mouse Combo",
-          "category": "Peripherals",
-          "status": "In Stock",
-          "price": "35",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-          "features": [
-            {
-              "id": 1,
-              "brand": "Logitech"
-            },
-            {
-              "id": 2,
-              "model": "MK270"
-            },
-            {
-              "id": 3,
-              "specification": "Wireless"
-            },
-            {
-              "id": 4,
-              "Keyboard Type": "Membrane"
-            },
-            {
-              "id": 5,
-              "Mouse DPI": "1000"
-            }
-          ],
-          "individualRating": 4.7,
-          "averageRating": 4.5,
-          "Reviews": [
-            {
-              "id": 1,
-              "comment": "Great combo, very convenient!"
-            },
-            {
-              "id": 2,
-              "comment": "Good quality and affordable."
-            }
-          ]
+          "id": 2,
+          "comment": "Great performance and quality!"
         }
       ]
-      
+    },
+    {
+      "id": "2",
+      "img": "https://www.startech.com.bd/image/cache/catalog/processor/amd/r5-2600/r5-228x228.jpg",
+      "name": "Example RAM 1",
+      "category": "RAM",
+      "status": "In Stock",
+      "price": "120",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "HyperX"
+        },
+        {
+          "id": 2,
+          "model": "DDR4"
+        },
+        {
+          "id": 3,
+          "specification": "16GB"
+        },
+        {
+          "id": 4,
+          "Port": "DIMM"
+        },
+        {
+          "id": 5,
+          "Type": "Unbuffered"
+        },
+        {
+          "id": 6,
+          "Voltage": "1.35V"
+        }
+      ],
+      "individualRating": 4,
+      "averageRating": 4.5,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Excellent RAM for gaming!"
+        },
+        {
+          "id": 2,
+          "comment": "Fast and reliable."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "img": "https://www.startech.com.bd/image/cache/catalog/processor/AMD/athlon-3000g/athlon-3000g-1-228x228.jpg",
+      "name": "Example Processor 1",
+      "category": "Processors",
+      "status": "In Stock",
+      "price": "350",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "Intel"
+        },
+        {
+          "id": 2,
+          "model": "Core i7-9700K"
+        },
+        {
+          "id": 3,
+          "specification": "9th Gen"
+        },
+        {
+          "id": 4,
+          "Cores": "8"
+        },
+        {
+          "id": 5,
+          "Threads": "8"
+        },
+        {
+          "id": 6,
+          "Clock Speed": "3.6GHz"
+        }
+      ],
+      "individualRating": 4.7,
+      "averageRating": 4.8,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Powerful processor for heavy tasks."
+        },
+        {
+          "id": 2,
+          "comment": "Great for gaming and multitasking."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "img": "https://www.startech.com.bd/image/cache/catalog/processor/AMD/athlon-3000g/athlon-3000g-1-228x228.jpg",
+      "name": "Example Graphics Card 1",
+      "category": "Graphics Cards",
+      "status": "Out of Stock",
+      "price": "500",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "NVIDIA"
+        },
+        {
+          "id": 2,
+          "model": "GeForce RTX 3080"
+        },
+        {
+          "id": 3,
+          "specification": "10GB GDDR6X"
+        },
+        {
+          "id": 4,
+          "Ports": "HDMI, DisplayPort"
+        }
+      ],
+      "individualRating": 4.9,
+      "averageRating": 4.9,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Amazing graphics card for high-end gaming!"
+        },
+        {
+          "id": 2,
+          "comment": "Top-notch performance and great cooling."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "img": "https://www.startech.com.bd/image/cache/catalog/processor/amd/amd-ryzen-5-5500/amd-ryzen-5-5500-01-228x228.jpg",
+      "name": "Example SSD 1",
+      "category": "Storage",
+      "status": "In Stock",
+      "price": "150",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "Samsung"
+        },
+        {
+          "id": 2,
+          "model": "860 EVO"
+        },
+        {
+          "id": 3,
+          "specification": "1TB"
+        },
+        {
+          "id": 4,
+          "Type": "2.5 inch SATA III"
+        }
+      ],
+      "individualRating": 4.8,
+      "averageRating": 4.7,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Blazing fast storage, highly recommended!"
+        },
+        {
+          "id": 2,
+          "comment": "Reliable and efficient SSD."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "img": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/GIGABYTE%20GA-J1800M-D3P/GIGABYTE%20GA-J1800M-D3P-1-228x228.jpg",
+      "name": "Example Power Supply 1",
+      "category": "Power Supplies",
+      "status": "In Stock",
+      "price": "80",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "EVGA"
+        },
+        {
+          "id": 2,
+          "model": "600W 80+ Bronze"
+        },
+        {
+          "id": 3,
+          "specification": "600W"
+        },
+        {
+          "id": 4,
+          "Certification": "80+ Bronze"
+        }
+      ],
+      "individualRating": 4.7,
+      "averageRating": 4.5,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Solid and reliable power supply."
+        },
+        {
+          "id": 2,
+          "comment": "Efficient and affordable."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "img": "https://www.startech.com.bd/image/cache/catalog/hdd/toshiba/dt01aba100v/dt01aba100v-500x500.jpg",
+      "name": "Example Case 1",
+      "category": "PC Cases",
+      "status": "In Stock",
+      "price": "70",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "NZXT"
+        },
+        {
+          "id": 2,
+          "model": "H510"
+        },
+        {
+          "id": 3,
+          "specification": "Mid Tower"
+        },
+        {
+          "id": 4,
+          "Compatibility": "ATX, MicroATX, Mini-ITX"
+        }
+      ],
+      "individualRating": 4.6,
+      "averageRating": 4.4,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Sleek design and great cable management."
+        },
+        {
+          "id": 2,
+          "comment": "Excellent case for the price."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "img": "https://www.startech.com.bd/image/cache/catalog/ram/transcend/jetram-4gb/jetram-4gb-01-228x228.webp",
+      "name": "Example CPU Cooler 1",
+      "category": "Cooling",
+      "status": "In Stock",
+      "price": "40",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "Cooler Master"
+        },
+        {
+          "id": 2,
+          "model": "Hyper 212 RGB"
+        },
+        {
+          "id": 3,
+          "specification": "Air Cooler"
+        },
+        {
+          "id": 4,
+          "Fan Speed": "650 - 2000 RPM"
+        }
+      ],
+      "individualRating": 4.5,
+      "averageRating": 4.3,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Keeps my CPU cool even under heavy load."
+        },
+        {
+          "id": 2,
+          "comment": "Great performance and easy to install."
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "img": "https://www.startech.com.bd/image/cache/catalog/Component/HDD/Seagate%20/seagate-1-228x228.jpg",
+      "name": "Example Hard Drive 1",
+      "category": "Storage",
+      "status": "In Stock",
+      "price": "60",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "Western Digital"
+        },
+        {
+          "id": 2,
+          "model": "WD Blue"
+        },
+        {
+          "id": 3,
+          "specification": "1TB"
+        },
+        {
+          "id": 4,
+          "Type": "3.5 inch SATA III"
+        }
+      ],
+      "individualRating": 4.6,
+      "averageRating": 4.4,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Reliable and affordable storage solution."
+        },
+        {
+          "id": 2,
+          "comment": "Works great for all my files and games."
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "img": "https://www.startech.com.bd/image/cache/catalog/Component/HDD/Seagate%20/seagate-1-228x228.jpg",
+      "name": "Example Wireless Keyboard and Mouse Combo",
+      "category": "Peripherals",
+      "status": "In Stock",
+      "price": "35",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+      "features": [
+        {
+          "id": 1,
+          "brand": "Logitech"
+        },
+        {
+          "id": 2,
+          "model": "MK270"
+        },
+        {
+          "id": 3,
+          "specification": "Wireless"
+        },
+        {
+          "id": 4,
+          "Keyboard Type": "Membrane"
+        },
+        {
+          "id": 5,
+          "Mouse DPI": "1000"
+        }
+      ],
+      "individualRating": 4.7,
+      "averageRating": 4.5,
+      "Reviews": [
+        {
+          "id": 1,
+          "comment": "Great combo, very convenient!"
+        },
+        {
+          "id": 2,
+          "comment": "Good quality and affordable."
+        }
+      ]
+    }
+  ]
 }

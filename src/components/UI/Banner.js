@@ -4,8 +4,6 @@ import { BannerData } from './staticData';
 import Link from 'next/link';
 
 
-
-
 const Banner = () => {
     return (
         <div >
@@ -39,10 +37,7 @@ const BannerDetails = ({ BannerData }) => {
                     <h1 className='text-[60px] font-bold'>{subTitle}</h1>
                     <p style={textStyle} className='text-xl mb-5'>{desc}</p>
 
-                    <div>
-                        <Button color="failure"><Link href={link}>{btnText}</Link>  </Button>
-                        {/* <Button color="failure">Failure </Button> */}
-                    </div>
+                    <Button color="failure"><Link href={link}>{btnText}</Link>  </Button>
 
 
                 </div>
