@@ -61,4 +61,56 @@ export const BannerData = [
         link: "/",
         btnText: "Learn More"
     }, */
+];
+
+
+export const CategoryData = [
+    {
+        id: 1,
+        name: "Processor",
+        icon: "",
+        link: "/Processor"
+    },
+    {
+        id: 2,
+        name: "Motherboard",
+        icon: "",
+        link: "/Motherboard"
+    },
+    {
+        id: 3,
+        name: "RAM",
+        icon: "",
+        link: "/RAM"
+    },
+    {
+        id: 4,
+        name: "Power Supply Unit",
+        icon: "",
+        link: "/PowerSupply"
+    },
+    {
+        id: 5,
+        name: "Storage Device",
+        icon: "",
+        link: "/StorageDevice"
+    },
+    {
+        id: 6,
+        name: "Monitor",
+        icon: "",
+        link: "/Monitor"
+    },
+    {
+        id: 7,
+        name: "Keyboard",
+        icon: "",
+        link: "/accesorries"
+    },
+    {
+        id: 8,
+        name: "Mouse",
+        icon: "",
+        link: "/accesorries"
+    },
 ]

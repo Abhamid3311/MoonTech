@@ -1,16 +1,18 @@
 import Banner from '@/components/UI/Banner';
 import FeaturedProdcts from '@/components/UI/Featured';
+import FeaturedCategory from '@/components/UI/FeaturedCategory';
 import RootLayout from '@/components/layouts/RootLayout';
 
 
-export default function Home({products}) {
+export default function Home({ products }) {
   return (
     <div>
       <Banner />
       <FeaturedProdcts products={products} />
+      <FeaturedCategory />
     </div>
   )
-}
+};
 
 
 Home.getLayout = function getLayout(page) {
@@ -21,12 +23,12 @@ Home.getLayout = function getLayout(page) {
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:5000/accessories");
   const data = await res.json();
-  console.log(data)
+  // console.log(data)
 
   return {
     props: {
-      products: data
+      products: data,
     }
   }
-}
+};
 

@@ -28,19 +28,19 @@ const Header = () => {
 
 
             <Navbar.Collapse className='text-white'>
-                <Navbar.Link active  className='text-white'><Link href={'/'}> Home </Link> </Navbar.Link>
+                <Navbar.Link active className='text-white'><Link href={'/'}> Home </Link> </Navbar.Link>
                 <Navbar.Link className='text-white' ><Link href={'/about'}> About </Link> </Navbar.Link>
-                <Navbar.Link  className='text-white'><Link href={'/services'}> Services </Link> </Navbar.Link>
+                <Navbar.Link className='text-white'><Link href={'/services'}> Services </Link> </Navbar.Link>
 
                 <Navbar.Link className='text-white'>
                     <Dropdown inline label="Categories" >
                         <Dropdown.Item><Link href={'/Processor'}> Processor </Link> </Dropdown.Item>
-                        <Dropdown.Item>  <Link href={'/MotherBoard'}> Motherboard </Link> </Dropdown.Item>
+                        <Dropdown.Item>  <Link href={'/Motherboard'}> Motherboard </Link> </Dropdown.Item>
                         <Dropdown.Item> <Link href={'/RAM'}> RAM </Link> </Dropdown.Item>
-                        <Dropdown.Item><Link href={'/RAM'}> Power Supply Unit </Link>  </Dropdown.Item>
-                        <Dropdown.Item> <Link href={'/RAM'}> Storage Device </Link>  </Dropdown.Item>
-                        <Dropdown.Item> <Link href={'/RAM'}> Monitor </Link> </Dropdown.Item>
-                        <Dropdown.Item><Link href={'/RAM'}> Others </Link> </Dropdown.Item>
+                        <Dropdown.Item><Link href={'/PowerSupply'}> Power Supply Unit </Link>  </Dropdown.Item>
+                        <Dropdown.Item> <Link href={'/StorageDevice'}> Storage Device </Link>  </Dropdown.Item>
+                        <Dropdown.Item> <Link href={'/Monitor'}> Monitor </Link> </Dropdown.Item>
+                        <Dropdown.Item><Link href={'/accesorries'}> Others </Link> </Dropdown.Item>
                     </Dropdown>
                 </Navbar.Link>
 

@@ -4,9 +4,9 @@ import ProductCard from './ProductCard';
 const FeaturedProdcts = ({ products }) => {
 
     return (
-        <div className='bg-lightBg'>
+        <div className='bg-lightBg text-secondary'>
             <div className='text-center pt-10'>
-                <h1 className='text-3xl font-bold text-primary'>Featured Products</h1>
+                <h1 className='text-4xl font-bold text-primary'>Featured Products</h1>
                 <h3 className='' >Check & Get Your Desired Product!</h3>
             </div>
 

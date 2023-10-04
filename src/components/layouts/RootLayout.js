@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 export default function RootLayout({ children }) {
     return (
-        <div className='bg-black'>
+        <div className='bg-black text-white'>
             <Header />
             <div className=''>{children}</div>
             <Footer />
