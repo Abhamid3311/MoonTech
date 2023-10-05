@@ -3,10 +3,10 @@ import React from 'react';
 
 const ProductCard = ({ product }) => {
     // console.log(product)
-    const { name, price, img, status, individualRating, category } = product;
+    const { id, name, price, img, status, individualRating, category } = product;
     return (
         <>
-            <Link href={"/"}>
+            <Link href={`/product-details/${id}`}>
                 <div className='h-full lg:h-[420px] overflow-hidden rounded-md shadow-sm hover:shadow-xl bg-white'>
                     <div className='h-[270px] w-full'>
                         <img src={img} alt={name} srcSet="" className='  card-img' />
