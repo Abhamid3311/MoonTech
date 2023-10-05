@@ -120,7 +120,7 @@ const data = [
         "id": "1",
         "img": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/GIGABYTE%20GA-J1800M-D3P/GIGABYTE%20GA-J1800M-D3P-1-228x228.jpg",
         "name": "Example Motherboard 1",
-        "category": "Motherboards",
+        "category": "Motherboard",
         "status": "In Stock",
         "price": "220",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
@@ -147,12 +147,9 @@ const data = [
             },
             {
                 "id": 6,
-                "Resolution": "Ryzen"
+                "Voltage": "220V"
             },
-            {
-                "id": 7,
-                "Voltage": "Ryzen"
-            }
+           
         ],
         "individualRating": 5,
         "averageRating": 4.9,

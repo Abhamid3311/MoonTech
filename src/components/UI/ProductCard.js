@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -14,10 +13,10 @@ const ProductCard = ({ product }) => {
                     </div>
 
                     <div className='  p-3 h-full'>
-                        <h1 className="text-lg lg:text-xl font-bold tracking-tight text-primary" > {name.slice(0,25)}  </h1>
+                        <h1 className="text-lg lg:text-xl font-bold tracking-tight text-primary" > {name.slice(0, 22)}{name.length > 22 ? "..." : ""}  </h1>
                         <p className='text-sm lg:text-base'>Category: {category}</p>
                         <p className='text-sm lg:text-base'>Rating: {individualRating}</p>
-                        <p className='text-sm lg:text-base'>Price: <span className='text-primary text-base lg:text-lg font-bold'> {price}$</span></p>
+                        <p className='text-sm lg:text-base'>Price: <span className='text-primary text-base lg:text-lg font-bold'> {price} tk</span></p>
                         <p className='text-sm lg:text-base'>Status: {status}</p>
 
                     </div>

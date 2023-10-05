@@ -1,0 +1,844 @@
+{
+    "accessories": [
+        {
+            "id": "1",
+            "img": "https://www.startech.com.bd/image/cache/catalog/processor/amd/r5-2600/r5-228x228.jpg",
+            "name": "AMD Ryzen 5 2600X Processor",
+            "category": "Processor",
+            "status": "In Stock",
+            "price": "11999",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "AMD"
+                },
+                {
+                    "id": 2,
+                    "model": "PCIe 3.0 x16"
+                },
+                {
+                    "id": 3,
+                    "specification": "8 cores, 16 threads"
+                }
+            ],
+            "individualRating": 4.7,
+            "averageRating": 4.7,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Excellent performance and speed!"
+                },
+                {
+                    "id": 2,
+                    "comment": "Ideal for heavy multitasking."
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "img": "https://www.startech.com.bd/image/cache/catalog/processor/amd/ryzen-3-3200g/ryzen-3-3200g-3-228x228.jpg",
+            "name": "AMD Ryzen 3 3200G Processor with Radeon RX Vega 8 Graphics",
+            "category": "Processor",
+            "status": "Out of Stock",
+            "price": "11999",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "AMD"
+                },
+                {
+                    "id": 2,
+                    "model": "Ryzen 7 3700X"
+                },
+                {
+                    "id": 3,
+                    "specification": "8 cores, 16 threads"
+                }
+            ],
+            "individualRating": 4.6,
+            "averageRating": 4.6,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Great value for the price."
+                },
+                {
+                    "id": 2,
+                    "comment": "Efficient and reliable performance."
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "img": "https://www.startech.com.bd/image/cache/catalog/processor/AMD/ryzen-3500/ryzen-3500-228x228.jpg",
+            "name": "AMD RYZEN 5 3500 Processor",
+            "category": "Processor",
+            "status": "In Stock",
+            "price": "12500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "AMD"
+                },
+                {
+                    "id": 2,
+                    "model": "Ryzen 5 3600"
+                },
+                {
+                    "id": 3,
+                    "specification": "6 cores, 12 threads"
+                }
+            ],
+            "individualRating": 4.5,
+            "averageRating": 4.5,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Solid performance and value."
+                },
+                {
+                    "id": 2,
+                    "comment": "Runs cool under load."
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/asus/prime-h610m-K-d4/prime-h610m-K-d4-02-228x228.jpg",
+            "name": "ASUS PRIME H610M-K D4-SI 12th Gen mATX Motherboard",
+            "category": "Motherboard",
+            "status": "In Stock",
+            "price": "10100",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "ASUS"
+                },
+                {
+                    "id": 2,
+                    "model": "ROG Strix Z390-E"
+                },
+                {
+                    "id": 3,
+                    "specification": "ATX form factor"
+                }
+            ],
+            "individualRating": 4.8,
+            "averageRating": 4.8,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Excellent build quality and features."
+                },
+                {
+                    "id": 2,
+                    "comment": "Easy to install and configure."
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "img": "https://www.startech.com.bd/image/cache/catalog/motherboard/gigabyte/h410m-h-v2/h410m-h-v2-01-228x228.webp",
+            "name": "GIGABYTE H410M H V2 10th Gen Micro ATX Motherboard",
+            "category": "Motherboard",
+            "status": "Out of Stock",
+            "price": "9000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Gigabyte"
+                },
+                {
+                    "id": 2,
+                    "model": "B450 AORUS PRO WIFI"
+                },
+                {
+                    "id": 3,
+                    "specification": "ATX form factor"
+                }
+            ],
+            "individualRating": 4.6,
+            "averageRating": 4.6,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Sturdy and feature-rich."
+                },
+                {
+                    "id": 2,
+                    "comment": "Great BIOS interface."
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "img": "https://www.startech.com.bd/image/cache/catalog/component/motherboard/msi-ryzan/b450m-a-pro-max/b450m-a-pro-max-1-228x228.jpg",
+            "name": "MSI B450M-A PRO MAX AMD AM4 Motherboard",
+            "category": "Motherboard",
+            "status": "In Stock",
+            "price": "8300",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "MSI"
+                },
+                {
+                    "id": 2,
+                    "model": "MAG B550 TOMAHAWK"
+                },
+                {
+                    "id": 3,
+                    "specification": "ATX form factor"
+                }
+            ],
+            "individualRating": 4.7,
+            "averageRating": 4.7,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Excellent performance and stability."
+                },
+                {
+                    "id": 2,
+                    "comment": "Easy setup and ample ports."
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "img": "https://www.startech.com.bd/image/cache/catalog/RAM/VENG_LPX_BLK_01-228x228.png",
+            "name": "Corsair Vengeance LPX 8GB 3200MHz DDR4 Desktop RAM",
+            "category": "RAM",
+            "status": "In Stock",
+            "price": "2599",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Corsair"
+                },
+                {
+                    "id": 2,
+                    "model": "Vengeance LPX 16GB"
+                },
+                {
+                    "id": 3,
+                    "specification": "DDR4 3200MHz"
+                }
+            ],
+            "individualRating": 4.4,
+            "averageRating": 4.4,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Fast and reliable RAM."
+                },
+                {
+                    "id": 2,
+                    "comment": "Great for gaming and multitasking."
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "img": "https://www.startech.com.bd/image/cache/catalog/ram/gskill/ripjaws-v/ripjaws-v-01-228x228.jpg",
+            "name": "G.Skill Ripjaws V 4GB DDR4 2666MHz Red Heatsink Desktop RAM",
+            "category": "RAM",
+            "status": "Out of Stock",
+            "price": "1800",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "G.SKILL"
+                },
+                {
+                    "id": 2,
+                    "model": "Ripjaws V 16GB"
+                },
+                {
+                    "id": 3,
+                    "specification": "DDR4 3600MHz"
+                }
+            ],
+            "individualRating": 4.6,
+            "averageRating": 4.6,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Great value and performance."
+                },
+                {
+                    "id": 2,
+                    "comment": "Easy to install and reliable."
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "img": "https://www.startech.com.bd/image/cache/catalog/ram/crucial/4gb-ddr4-2666mhz/4gb-ddr4-2666mhz-1-228x228.jpg",
+            "name": "Crucial 4GB Single DDR4 2666MHz Desktop RAM",
+            "category": "RAM",
+            "status": "In Stock",
+            "price": "1650",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Crucial"
+                },
+                {
+                    "id": 2,
+                    "model": "Ballistix Sport LT 16GB"
+                },
+                {
+                    "id": 3,
+                    "specification": "DDR4 3000MHz"
+                }
+            ],
+            "individualRating": 4.5,
+            "averageRating": 4.5,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Reliable and efficient RAM."
+                },
+                {
+                    "id": 2,
+                    "comment": "Good for heavy applications."
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/asus/rog-strix-650g/rog-strix-650g-01-228x228.jpg",
+            "name": "ASUS ROG Strix 650G 650W 80 Plus Gold Power Supply",
+            "category": "Power Supply Unit",
+            "status": "In Stock",
+            "price": "13700",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "ASUS"
+                },
+                {
+                    "id": 2,
+                    "model": "SuperNOVA 650 G3"
+                },
+                {
+                    "id": 3,
+                    "specification": "650W, 80+ Gold Certified"
+                }
+            ],
+            "individualRating": 4.7,
+            "averageRating": 4.7,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Efficient and stable power supply."
+                },
+                {
+                    "id": 2,
+                    "comment": "Good cable management options."
+                }
+            ]
+        },
+        {
+            "id": "11",
+            "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/corsair/cv650/cv650-1-228x228.jpg",
+            "name": "Corsair CV650 650Watt 80 Plus Bronze Certified Power Supply",
+            "category": "Power Supply Unit",
+            "status": "Out of Stock",
+            "price": "5799",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Corsair"
+                },
+                {
+                    "id": 2,
+                    "model": "RM750x"
+                },
+                {
+                    "id": 3,
+                    "specification": "750W, 80+ Gold Certified"
+                }
+            ],
+            "individualRating": 4.6,
+            "averageRating": 4.6,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Quiet and reliable power supply."
+                },
+                {
+                    "id": 2,
+                    "comment": "Handles high-end components well."
+                }
+            ]
+        },
+        {
+            "id": "12",
+            "img": "https://www.startech.com.bd/image/cache/catalog/power-supply/msi/mpg-a650gf/a650gf-228x228.jpg",
+            "name": "MSI MPG A650GF 650W 80 Plus Gold Full Modular Power Supply",
+            "category": "Power Supply Unit",
+            "status": "In Stock",
+            "price": "4800",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "MSI"
+                },
+                {
+                    "id": 2,
+                    "model": "Focus GX-850"
+                },
+                {
+                    "id": 3,
+                    "specification": "850W, 80+ Gold Certified"
+                }
+            ],
+            "individualRating": 4.8,
+            "averageRating": 4.8,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Solid and efficient power delivery."
+                },
+                {
+                    "id": 2,
+                    "comment": "Great for high-powered systems."
+                }
+            ]
+        },
+        {
+            "id": "13",
+            "img": "https://www.startech.com.bd/image/cache/catalog/HDD/Western%20Digital/WD%20INT%20Blue%201TB-228x228.jpg",
+            "name": "Western Digital 1TB Blue Desktop HDD",
+            "category": "Storage Device",
+            "status": "In Stock",
+            "price": "4500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Western Digital"
+                },
+                {
+                    "id": 2,
+                    "model": "860 EVO 500GB"
+                },
+                {
+                    "id": 3,
+                    "specification": "2.5\" SATA SSD"
+                }
+            ],
+            "individualRating": 4.7,
+            "averageRating": 4.7,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Fast and reliable storage drive."
+                },
+                {
+                    "id": 2,
+                    "comment": "Improves system performance significantly."
+                }
+            ]
+        },
+        {
+            "id": "14",
+            "img": "https://www.startech.com.bd/image/cache/catalog/component/hdd/toshiba/s300-4tb/s300-03-228x228.jpg",
+            "name": "Toshiba S300 4TB 3.5 Inch Surveillance HDD",
+            "category": "Storage Device",
+            "status": "Out of Stock",
+            "price": "8950",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Toshiba"
+                },
+                {
+                    "id": 2,
+                    "model": "WD Blue 1TB"
+                },
+                {
+                    "id": 3,
+                    "specification": "3.5\" SATA HDD"
+                }
+            ],
+            "individualRating": 4.6,
+            "averageRating": 4.6,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Reliable and spacious storage."
+                },
+                {
+                    "id": 2,
+                    "comment": "Perfect for storing large files."
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "img": "https://www.startech.com.bd/image/cache/catalog/Component/HDD/Seagate%20/seagate-1-228x228.jpg",
+            "name": "Seagate Internal 1TB SATA Barracuda HDD",
+            "category": "Storage Device",
+            "status": "In Stock",
+            "price": "5700",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Seagate"
+                },
+                {
+                    "id": 2,
+                    "model": "MX500 1TB"
+                },
+                {
+                    "id": 3,
+                    "specification": " 1TB SSD"
+                }
+            ],
+            "individualRating": 4.5,
+            "averageRating": 4.5,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Fast and reliable storage drive."
+                },
+                {
+                    "id": 2,
+                    "comment": "Affordable and durable."
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "img": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/e22-g5/e22-g5-228x228.webp",
+            "name": "HP E22 G5 21.5 FHD IPS Monitor",
+            "category": "Monitor",
+            "status": "In Stock",
+            "price": "15000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "HP"
+                },
+                {
+                    "id": 2,
+                    "model": "S2417DG"
+                },
+                {
+                    "id": 3,
+                    "specification": "24\" 1440p, 165Hz, G-Sync"
+                }
+            ],
+            "individualRating": 4.8,
+            "averageRating": 4.8,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Crisp display and smooth performance."
+                },
+                {
+                    "id": 2,
+                    "comment": "Great for gaming and multimedia."
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "img": "https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/22mk600m/lg-22mk600m-1-228x228.jpg",
+            "name": "LG 22MK600M-B 21.5 inch IPS Full HD LED Monitor",
+            "category": "Monitor",
+            "status": "Out of Stock",
+            "price": "14500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "LG"
+                },
+                {
+                    "id": 2,
+                    "model": "27GL83A-B"
+                },
+                {
+                    "id": 3,
+                    "specification": "27\" 1440p, 144Hz, IPS"
+                }
+            ],
+            "individualRating": 4.7,
+            "averageRating": 4.7,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Excellent color reproduction and refresh rate."
+                },
+                {
+                    "id": 2,
+                    "comment": "Ideal for professional use and gaming."
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "img": "https://www.startech.com.bd/image/cache/catalog/monitor/acer/ek220q-h3bi/ek220q-h3bi-05-228x228.webp",
+            "name": "ACER EK220Q H3bi 21.5 inch 1ms 100hz Borderless Full HD Monitor",
+            "category": "Monitor",
+            "status": "In Stock",
+            "price": "9500",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Acer"
+                },
+                {
+                    "id": 2,
+                    "model": "KG241Q Pbiip"
+                },
+                {
+                    "id": 3,
+                    "specification": "24\" 1080p, 144Hz, TN"
+                }
+            ],
+            "individualRating": 4.6,
+            "averageRating": 4.6,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Great budget gaming monitor."
+                },
+                {
+                    "id": 2,
+                    "comment": "Smooth gaming experience at a low cost."
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "img": "https://www.startech.com.bd/image/cache/catalog/casing/revenger/mx-2/mx-2-01-228x228.webp",
+            "name": "Revenger MX-2 Mid-Tower Micro ATX Casing",
+            "category": "Accessories",
+            "status": "In Stock",
+            "price": "2000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Logitech"
+                },
+                {
+                    "id": 2,
+                    "model": "G Pro X Mechanical Gaming Keyboard"
+                },
+                {
+                    "id": 3,
+                    "specification": "Tenkeyless, GX Blue Clicky Switches"
+                }
+            ],
+            "individualRating": 4.7,
+            "averageRating": 4.7,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Responsive and clicky keys, great for gaming."
+                },
+                {
+                    "id": 2,
+                    "comment": "Compact design, perfect for travel."
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "img": "https://www.startech.com.bd/image/cache/catalog/casing/montech/air-903-max/air-903-max-01-228x228.webp",
+            "name": "Montech AIR 903 MAX Mid Tower Ultra-Cooling ARGB E-ATX Gaming Casing White",
+            "category": "Accessories",
+            "status": "Out of Stock",
+            "price": "8400",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "SteelSeries"
+                },
+                {
+                    "id": 2,
+                    "model": "QcK Gaming Mouse Pad"
+                },
+                {
+                    "id": 3,
+                    "specification": "Large size, cloth surface"
+                }
+            ],
+            "individualRating": 4.6,
+            "averageRating": 4.6,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Smooth surface, enhances mouse movement."
+                },
+                {
+                    "id": 2,
+                    "comment": "Durable and high-quality build."
+                }
+            ]
+        },
+        {
+            "id": "21",
+            "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/meetion/mt-mk600/mt-mk600-black-01-228x228.jpg",
+            "name": "Meetion MT-MK600MX RGB Mechanical Blue Switch Gaming Keyboard",
+            "category": "Accessories",
+            "status": "In Stock",
+            "price": "2250",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Razer"
+                },
+                {
+                    "id": 2,
+                    "model": "DeathAdder Elite Gaming Mouse"
+                },
+                {
+                    "id": 3,
+                    "specification": "16,000 DPI, 7 programmable buttons"
+                }
+            ],
+            "individualRating": 4.8,
+            "averageRating": 4.8,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Precise and comfortable mouse for gaming."
+                },
+                {
+                    "id": 2,
+                    "comment": "Customizable buttons and lighting."
+                }
+            ]
+        },
+        {
+            "id": "22",
+            "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/ajazz/ak873/ak873-228x228.webp",
+            "name": "Ajazz AK873 Hot Swappable MDA Profile Blue Switch Mechanical Gaming Keyboard",
+            "category": "Accessories",
+            "status": "In Stock",
+            "price": "8000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "Logitech"
+                },
+                {
+                    "id": 2,
+                    "model": "G Pro X Mechanical Gaming Keyboard"
+                },
+                {
+                    "id": 3,
+                    "specification": "Tenkeyless, GX Blue Clicky Switches"
+                }
+            ],
+            "individualRating": 4.7,
+            "averageRating": 4.7,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Responsive and clicky keys, great for gaming."
+                },
+                {
+                    "id": 2,
+                    "comment": "Compact design, perfect for travel."
+                }
+            ]
+        },
+        {
+            "id": "23",
+            "img": "https://www.startech.com.bd/image/cache/catalog/mouse/msi/clutch-gm11/clutch-gm11-01-228x228.jpg",
+            "name": "MSI CLUTCH GM11 6-Button RGB Gaming Mouse",
+            "category": "Accessories",
+            "status": "Out of Stock",
+            "price": "2250",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "SteelSeries"
+                },
+                {
+                    "id": 2,
+                    "model": "QcK Gaming Mouse Pad"
+                },
+                {
+                    "id": 3,
+                    "specification": "Large size, cloth surface"
+                }
+            ],
+            "individualRating": 4.6,
+            "averageRating": 4.6,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Smooth surface, enhances mouse movement."
+                },
+                {
+                    "id": 2,
+                    "comment": "Durable and high-quality build."
+                }
+            ]
+        },
+        {
+            "id": "24",
+            "img": "https://www.startech.com.bd/image/cache/catalog/headphone/a4tech/bloody-mr710/bloody-mr710-01-228x228.webp",
+            "name": "A4TECH Bloody MR710 Wireless RGB Gaming Headphone",
+            "category": "Accessories",
+            "status": "In Stock",
+            "price": "5750",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
+            "features": [
+                {
+                    "id": 1,
+                    "brand": "A4TECH"
+                },
+                {
+                    "id": 2,
+                    "model": "DeathAdder Elite Gaming Mouse"
+                },
+                {
+                    "id": 3,
+                    "specification": "16,000 DPI, 7 programmable buttons"
+                }
+            ],
+            "individualRating": 4.8,
+            "averageRating": 4.8,
+            "Reviews": [
+                {
+                    "id": 1,
+                    "comment": "Precise and comfortable mouse for gaming."
+                },
+                {
+                    "id": 2,
+                    "comment": "Customizable buttons and lighting."
+                }
+            ]
+        }
+    ]
+}
