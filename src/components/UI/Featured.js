@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
 
 const FeaturedProdcts = ({ products }) => {
+
+    const [randomProducts, setRandomProducts] = useState([]);
+
+    useEffect(() => {
+        // Shuffle the array of products
+        const shuffledProducts = [...products].sort(() => Math.random() - 0.5);
+
+        // Get the first 6 products
+        const selectedProducts = shuffledProducts.slice(0, 6);
+        setRandomProducts(selectedProducts);
+    }, [products]);
 
     return (
         <div className='bg-lightBg text-secondary'>
@@ -10,9 +21,9 @@ const FeaturedProdcts = ({ products }) => {
                 <h3 className='text-sm lg:text-base' >Check & Get Your Desired Product!</h3>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 max-w-7xl mx-auto py-10 px-5 lg:px-0'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-5 max-w-7xl mx-auto py-10 px-5 lg:px-0'>
                 {
-                    products?.map(product => <ProductCard key={product?.id} product={product} />).slice(0,6)
+                    randomProducts?.map(product => <ProductCard key={product?.id} product={product} />)
                 }
 
             </div>

@@ -29,8 +29,8 @@ const Header = () => {
 
             <Navbar.Collapse className='text-white'>
                 <Navbar.Link active className='text-white'><Link href={'/'}> Home </Link> </Navbar.Link>
-                <Navbar.Link className='text-white' ><Link href={'/about'}> About </Link> </Navbar.Link>
-                <Navbar.Link className='text-white'><Link href={'/services'}> Services </Link> </Navbar.Link>
+                <Navbar.Link className='text-white' ><Link href={'/about-us'}> About </Link> </Navbar.Link>
+                <Navbar.Link className='text-white'><Link href={'/Products'}> Products </Link> </Navbar.Link>
 
                 <Navbar.Link className='text-white'>
                     <Dropdown inline label="Categories" >
@@ -44,7 +44,7 @@ const Header = () => {
                     </Dropdown>
                 </Navbar.Link>
 
-                <Navbar.Link className='text-white'><Link href={'/contact'}> Contact </Link> </Navbar.Link>
+                <Navbar.Link className='text-white'><Link href={'/contacts'}> Contact </Link> </Navbar.Link>
 
             </Navbar.Collapse>
         </Navbar>
