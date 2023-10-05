@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const ProductCard = ({ product }) => {
-    console.log(product)
+    // console.log(product)
     const { name, price, img, status, individualRating, category } = product;
     return (
         <>
