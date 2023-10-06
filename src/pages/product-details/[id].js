@@ -22,14 +22,14 @@ const ProductDetails = ({ data }) => {
                         <div>
                             <h1 className='text-primary text-xl lg:text-2xl font-bold mb-2'>{name}</h1>
 
-                            <div className='flex flex-wrap items-center gap-1 mb-2 font-bold text-sm lg:text-base'>
-                                <span className='bg-red-200 px-2 py-1 rounded-full font-semibold'>Category: {category}</span>
-                                <span className='bg-red-200 px-2 py-1 rounded-full font-semibold'>Status: {status}</span>
-                                <span className='bg-red-200 px-2 py-1 rounded-full font-semibold'> Rating: {individualRating}</span>
-                                <span className='bg-red-200 px-2 py-1 rounded-full font-semibold'>Avg. Rating: {averageRating}</span>
+                            <div className='flex flex-wrap items-center gap-1 mb-2 font-bold text-xs lg:text-sm'>
+                                <span className='bg-red-200 px-2 py-1 rounded-full font-semibold'>Category : {category}</span>
+                                <span className='bg-red-200 px-2 py-1 rounded-full font-semibold'>Status : {status}</span>
+                                <span className='bg-red-200 px-2 py-1 rounded-full font-semibold'> Rating : {individualRating}</span>
+                                <span className='bg-red-200 px-2 py-1 rounded-full font-semibold'>Avg. Rating : {averageRating}</span>
                             </div>
 
-                            <p className=' font-bold mb-2'>Price: <span className='text-xl text-primary'>{price}</span> tk</p>
+                            <p className=' font-bold mb-2'>Price: <span className='text-xl text-primary'>{price}</span> Tk</p>
 
                             <div>
                                 <p><span className=' font-bold text-sm lg:text-base'>description: </span>{description}</p>

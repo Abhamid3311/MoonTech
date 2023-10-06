@@ -7,7 +7,7 @@ const Header = () => {
         <Navbar rounded className='bg-black text-white'>
 
 
-            <Navbar.Brand href="https://flowbite-react.com">
+            <Navbar.Brand href="/">
                 {/*  <img
                     alt="Flowbite React Logo"
                     className="mr-3 h-6 sm:h-9"
@@ -29,7 +29,6 @@ const Header = () => {
 
             <Navbar.Collapse className='text-white'>
                 <Navbar.Link active className='text-white'><Link href={'/'}> Home </Link> </Navbar.Link>
-                <Navbar.Link className='text-white' ><Link href={'/about-us'}> About </Link> </Navbar.Link>
                 <Navbar.Link className='text-white'><Link href={'/Products'}> Products </Link> </Navbar.Link>
 
                 <Navbar.Link className='text-white'>
@@ -43,8 +42,9 @@ const Header = () => {
                         <Dropdown.Item><Link href={'/accesorries'}> Others </Link> </Dropdown.Item>
                     </Dropdown>
                 </Navbar.Link>
-
-                <Navbar.Link className='text-white'><Link href={'/contacts'}> Contact </Link> </Navbar.Link>
+                
+                <Navbar.Link className='text-white' ><Link href={'/about-us'}> About Us</Link> </Navbar.Link>
+                <Navbar.Link className='text-white'><Link href={'/contacts'}> Contacts </Link> </Navbar.Link>
 
             </Navbar.Collapse>
         </Navbar>
