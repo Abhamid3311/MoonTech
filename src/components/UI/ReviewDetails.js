@@ -38,7 +38,7 @@ const ReviewDetails = ({ Reviews }) => {
 
 
     return (
-        <div>
+        <div className=''>
             <form onSubmit={handleCommentForm}>
                 {/* <h1 className='font-bold'>Leave a comment</h1> */}
                 <div className="w-full" id="textarea">
@@ -46,9 +46,9 @@ const ReviewDetails = ({ Reviews }) => {
                         placeholder="Leave a comment..."
                         onChange={(e) => setComment(e.target.value)}
                         required rows={2}
-                        className='w-full' />
+                        className='w-full border border-gray-300 focus:ring-primary focus:border-primary rounded-md' />
                 </div>
-                <button type='submit' className='bg-primary text-white px-3 py-1 rounded-[5px]  font-semibold '>Submit</button>
+                <button type='submit' className='bg-primary text-white px-3 py-1 rounded-[5px]  font-semibold '>Comment</button>
             </form>
 
             <div className='mt-8'>

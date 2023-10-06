@@ -12,8 +12,8 @@ const ProductDetails = ({ data }) => {
 
     return (
         <div className='bg-lightBg text-secondary '>
-            <div className='max-w-7xl mx-auto px-5 lg:px-0  py-10'>
-                <div className='flex flex-col lg:flex-row items-start gap-5 lg:gap-10 mb-5 lg:mb-10'>
+            <div className='max-w-7xl mx-auto px-5 lg:px-0  py-10 '>
+                <div className='flex flex-col lg:flex-row items-start gap-5 lg:gap-10 mb-5 lg:mb-10 bg-white p-10'>
                     <div className='w-full lg:w-1/2 h-full lg:h-[400px]'>
                         <Image src={img} alt={name} width={200} height={300} className='h-full w-full' />
                     </div>
@@ -56,7 +56,7 @@ const ProductDetails = ({ data }) => {
 
                 </div>
 
-                <div className='w-full lg:w-1/2'>
+                <div className='w-full lg:w-1/2 '>
                     <h2 className=' font-bold mt-2 text-lg lg:text-2xl text-primary mb-5'>Reviews </h2>
                     <ReviewDetails Reviews={Reviews} />
                 </div>
