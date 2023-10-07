@@ -22,7 +22,7 @@ const PCComponent = () => {
 
                 <div className='flex items-center gap-4'>
                     <p className='font-bold text-lg'>10200 Tk</p>
-                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/"}>Choose</Link> </Button>
+                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/Processor"}>Choose</Link> </Button>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@ const PCComponent = () => {
 
                 <div className='flex items-center gap-4'>
                     <p className='font-bold text-lg'>10200 Tk</p>
-                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/"}>Choose</Link> </Button>
+                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/MotherBoard"}>Choose</Link> </Button>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@ const PCComponent = () => {
 
                 <div className='flex items-center gap-4'>
                     <p className='font-bold text-lg'>10200 Tk</p>
-                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/"}>Choose</Link> </Button>
+                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/RAM"}>Choose</Link> </Button>
                 </div>
             </div>
 
@@ -79,7 +79,7 @@ const PCComponent = () => {
 
                 <div className='flex items-center gap-4'>
                     <p className='font-bold text-lg'>10200 Tk</p>
-                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/"}>Choose</Link> </Button>
+                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/StorageDevice"}>Choose</Link> </Button>
                 </div>
             </div>
 
@@ -98,7 +98,7 @@ const PCComponent = () => {
 
                 <div className='flex items-center gap-4'>
                     <p className='font-bold text-lg'>10200 Tk</p>
-                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/"}>Choose</Link> </Button>
+                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/PowerSupply"}>Choose</Link> </Button>
                 </div>
             </div>
 
@@ -117,7 +117,7 @@ const PCComponent = () => {
 
                 <div className='flex items-center gap-4'>
                     <p className='font-bold text-lg'>10200 Tk</p>
-                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/"}>Choose</Link> </Button>
+                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/Monitor"}>Choose</Link> </Button>
                 </div>
             </div>
 
@@ -136,7 +136,7 @@ const PCComponent = () => {
 
                 <div className='flex items-center gap-4'>
                     <p className='font-bold text-lg'>2000 Tk</p>
-                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/"}>Choose</Link> </Button>
+                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/accesorries"}>Choose</Link> </Button>
                 </div>
             </div>
 

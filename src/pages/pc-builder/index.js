@@ -23,3 +23,7 @@ export default PCBuilderPage;
 PCBuilderPage.getLayout = function getLayout(page) {
     return <RootLayout>{page}</RootLayout>;
 };
+
+
+
+
