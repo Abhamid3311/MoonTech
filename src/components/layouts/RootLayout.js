@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Navbar'
 import Footer from './Footer'
+import { ToastContainer } from 'react-toastify'
 
 export default function RootLayout({ children }) {
     return (
@@ -8,6 +9,7 @@ export default function RootLayout({ children }) {
             <Header />
             <div className=''>{children}</div>
             <Footer />
+            <ToastContainer />
         </div>
     )
 }

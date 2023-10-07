@@ -11,8 +11,9 @@ const ChooseProductCard = ({ product }) => {
     const dispatch = useDispatch();
     const router = useRouter();
 
+
+    //Add Product To Builder & Redirect to builder Page
     const handleChooseBuilderProduct = (product) => {
-        // console.log(product);
         dispatch(addToBuilder(product));
         router.push("/pc-builder")
     };
