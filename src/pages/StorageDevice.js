@@ -1,5 +1,6 @@
 import ProductCard from '@/components/UI/ProductCard';
 import RootLayout from '@/components/layouts/RootLayout';
+import { baseUrl } from '@/url';
 import React from 'react';
 
 const StorageDevice = ({ data }) => {
@@ -29,7 +30,7 @@ StorageDevice.getLayout = function getLayout(page) {
 
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:5000/products");
+    const res = await fetch(`${baseUrl}/products`);
     const data = await res.json();
     const filteredData = data.filter(item => item.category === "Storage Device");
 

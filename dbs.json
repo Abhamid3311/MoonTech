@@ -1,5 +1,4 @@
-{
-    "products": [
+ [
         {
             "id": "1",
             "img": "https://www.startech.com.bd/image/cache/catalog/processor/amd/r5-2600/r5-228x228.jpg",
@@ -700,6 +699,9 @@
                 }
             ]
         },
+
+
+        
         {
             "id": "21",
             "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/meetion/mt-mk600/mt-mk600-black-01-228x228.jpg",
@@ -841,4 +843,3 @@
             ]
         }
     ]
-}

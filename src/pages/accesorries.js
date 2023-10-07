@@ -1,6 +1,7 @@
 import ProductCard from '@/components/UI/ProductCard';
 import RootLayout from '@/components/layouts/RootLayout';
 import React from 'react';
+import { baseUrl } from '@/url';
 
 const Accesorries = ({ data }) => {
     // console.log(data);
@@ -31,7 +32,7 @@ Accesorries.getLayout = function getLayout(page) {
 
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:5000/products");
+    const res = await fetch(`${baseUrl}/products`);
     const data = await res.json();
     const filteredData = data.filter(item => item.category === "Accessories");
 

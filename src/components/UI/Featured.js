@@ -2,14 +2,12 @@ import React, { useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
 
 const FeaturedProdcts = ({ products }) => {
-
     const [randomProducts, setRandomProducts] = useState([]);
 
-    useEffect(() => {
-        // Shuffle the array of products
-        const shuffledProducts = [...products].sort(() => Math.random() - 0.5);
 
-        // Get the first 6 products
+    //Get Random 6 Products
+    useEffect(() => {
+        const shuffledProducts = [...products].sort(() => Math.random() - 0.5);
         const selectedProducts = shuffledProducts.slice(0, 6);
         setRandomProducts(selectedProducts);
     }, [products]);

@@ -1,12 +1,12 @@
 import ReviewDetails from '@/components/UI/ReviewDetails';
 import RootLayout from '@/components/layouts/RootLayout';
+import { baseUrl } from '@/url';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import React from 'react';
 
 const ProductDetails = ({ data }) => {
     console.log(data)
-    const { id, img, name, category, status, averageRating, price, description, individualRating, features, Reviews } = data;
+    const { _id, img, name, category, status, averageRating, price, description, individualRating, features, Reviews } = data;
 
 
 
@@ -50,10 +50,6 @@ const ProductDetails = ({ data }) => {
 
                         </div>
                     </div>
-
-
-
-
                 </div>
 
                 <div className='w-full lg:w-1/2 '>
@@ -76,11 +72,11 @@ ProductDetails.getLayout = function getLayout(page) {
 
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`http://localhost:5000/products`);
+    const res = await fetch(`${baseUrl}/products`);
     const alldata = await res.json();
 
     const paths = alldata.map(data => ({
-        params: { id: data.id.toString() }
+        params: { id: data._id }
     }));
 
     return { paths, fallback: false }
@@ -89,7 +85,8 @@ export const getStaticPaths = async () => {
 
 
 export const getStaticProps = async ({ params }) => {
-    const res = await fetch(`http://localhost:5000/products/${params.id}`);
+    console.log(params)
+    const res = await fetch(`${baseUrl}/products/${params.id}`);
     const sinData = await res.json();
 
     return {

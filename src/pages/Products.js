@@ -1,6 +1,7 @@
 import ProductCard from '@/components/UI/ProductCard';
 import RootLayout from '@/components/layouts/RootLayout';
 import React from 'react';
+import { baseUrl } from '@/url';
 
 const Products = ({ data }) => {
     return (
@@ -29,7 +30,7 @@ Products.getLayout = function getLayout(page) {
 
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:5000/products");
+    const res = await fetch(`${baseUrl}/products`);
     const alldata = await res.json();
 
     return {
