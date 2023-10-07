@@ -20,9 +20,11 @@ const Header = () => {
 
 
             <div className="flex md:order-2">
-                <Button color="failure" className="py-0.5 px-1 lg:py-1 lg:px-5 text-sm lg:text-base">
-                    <Link href={'/pc-builder'}>  PC Builder </Link>
-                </Button>
+                <Link href={'/pc-builder'}>
+                    <Button color="failure" className="py-0.5 px-1 lg:py-1 lg:px-5 text-sm lg:text-base">
+                        PC Builder
+                    </Button>
+                </Link>
                 <Navbar.Toggle />
             </div>
 
@@ -42,7 +44,7 @@ const Header = () => {
                         <Dropdown.Item><Link href={'/accesorries'}> Others </Link> </Dropdown.Item>
                     </Dropdown>
                 </Navbar.Link>
-                
+
                 <Navbar.Link className='text-white' ><Link href={'/about-us'}> About Us</Link> </Navbar.Link>
                 <Navbar.Link className='text-white'><Link href={'/contacts'}> Contacts </Link> </Navbar.Link>
 

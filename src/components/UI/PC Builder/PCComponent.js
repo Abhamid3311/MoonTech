@@ -1,10 +1,21 @@
 import { Button } from 'flowbite-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 
 const PCComponent = () => {
+    const { builder, total } = useSelector(state => state.pcBuilder);
+
+    console.log(builder, total);
+
+
     return (
         <div className='max-w-4xl mx-auto bg-white py-6 px-20 mt-10'>
+
+            <div className='flex items-center justify-between'>
+                <h2 className='bg-blue-700 text-white font-bold rounded-md px-2 py-1'>Total {builder?.length} Items</h2>
+                <p className='bg-primary text-white font-bold rounded-md px-2 py-1'>Total: {total || 0} Tk</p>
+            </div>
 
 
             {/* Processor */}
@@ -41,7 +52,7 @@ const PCComponent = () => {
 
                 <div className='flex items-center gap-4'>
                     <p className='font-bold text-lg'>10200 Tk</p>
-                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/MotherBoard"}>Choose</Link> </Button>
+                    <Button gradientDuoTone="cyanToBlue" outline><Link href={"/pc-builder/choose/Motherboard"}>Choose</Link> </Button>
                 </div>
             </div>
 
