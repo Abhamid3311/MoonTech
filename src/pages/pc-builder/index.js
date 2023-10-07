@@ -9,11 +9,7 @@ const PCBuilderPage = () => {
                 <h1 className='text-2xl lg:text-4xl font-bold text-primary'>PC Builder </h1>
                 <h3 className='text-sm lg:text-base' >Build Your Own Computer</h3>
             </div>
-
             <PCComponent />
-
-
-
         </div>
     );
 };

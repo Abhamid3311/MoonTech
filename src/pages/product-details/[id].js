@@ -84,8 +84,9 @@ export const getStaticPaths = async () => {
 
 
 
-export const getStaticProps = async ({ params }) => {
-    console.log(params)
+export const getStaticProps = async (context) => {
+    // console.log(params)
+    const { params } = context;
     const res = await fetch(`${baseUrl}/products/${params.id}`);
     const sinData = await res.json();
 
