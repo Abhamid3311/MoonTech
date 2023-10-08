@@ -2,10 +2,12 @@ import React from 'react';
 import { Button, Dropdown, Navbar } from 'flowbite-react';
 import Link from 'next/link';
 import { signOut, useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 const Header = () => {
     const { data: session } = useSession();
-    // console.log(session);
+    const router = useRouter();
+    console.log(router.pathname)
 
 
     return (
@@ -13,11 +15,6 @@ const Header = () => {
 
 
             <Navbar.Brand href="/">
-                {/*  <img
-                    alt="Flowbite React Logo"
-                    className="mr-3 h-6 sm:h-9"
-                    src="/favicon.svg"
-                /> */}
                 <span className="self-center whitespace-nowrap text-xl lg:text-2xl font-bold text-primary">
                     MoonTech
                 </span>
@@ -47,8 +44,10 @@ const Header = () => {
 
 
             <Navbar.Collapse className='text-white'>
-                <Navbar.Link active className='text-white'><Link href={'/'}> Home </Link> </Navbar.Link>
-                <Navbar.Link className='text-white'><Link href={'/Products'}> Products </Link> </Navbar.Link>
+                <Navbar.Link active={router.pathname == "/"} className='text-white'><Link href={'/'}> Home </Link> </Navbar.Link>
+                <Navbar.Link active={router.pathname == "/Products"} className='text-white'>
+                    <Link href={'/Products'}> Products </Link>
+                </Navbar.Link>
 
                 <Navbar.Link className='text-white'>
                     <Dropdown inline label="Categories" >
@@ -63,8 +62,13 @@ const Header = () => {
                     </Dropdown>
                 </Navbar.Link>
 
-                <Navbar.Link className='text-white' ><Link href={'/about-us'}> About Us</Link> </Navbar.Link>
-                <Navbar.Link className='text-white'><Link href={'/contacts'}> Contacts </Link> </Navbar.Link>
+                <Navbar.Link active={router.pathname == "/about-us"} className='text-white' >
+                    <Link href={'/about-us'}> About Us</Link>
+                </Navbar.Link>
+
+                <Navbar.Link className='text-white' active={router.pathname == "/contacts"}>
+                    <Link href={'/contacts'}> Contacts </Link>
+                </Navbar.Link>
 
 
                 {
