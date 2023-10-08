@@ -18,7 +18,7 @@ const PCComponent = () => {
     const MonitorData = builder?.find(data => data.category === "Monitor");
 
 
-    const skeletonName = <p className='w-60 h-4 bg-gray-200 rounded-md'></p>
+    const skeletonName = <p className='w-32 lg:w-60 h-4 bg-gray-200 rounded-md'></p>
     const skeletonPrice = <p className='w-10 h-4 bg-gray-200 rounded-md'></p>
 
 
