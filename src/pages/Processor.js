@@ -32,6 +32,7 @@ export const getStaticProps = async () => {
     const res = await fetch(`${baseUrl}/products`);
     const data = await res.json();
     const filteredData = data.filter(item => item.category === "Processor");
+    //Checked
 
     return {
         props: {
