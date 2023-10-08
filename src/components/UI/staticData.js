@@ -8,7 +8,7 @@ export const BannerData = [
         desc: "Customize your ORIGIN PC with a new AMD Ryzen 7000 Series X3D processor.",
         descClr: "#C5521C",
         img: "/assets/banner-1.jpg",
-        link: "/",
+        link: "/Products",
         btnText: "Gaming Desktops"
     },
     {
@@ -18,7 +18,7 @@ export const BannerData = [
         desc: "Customize a Next-Gen Gaming Desktop or Laptop and Access Limited-Time Savings.",
         descClr: "#ffffff",
         img: "/assets/banner-2.jpg",
-        link: "/",
+        link: "/Products",
         btnText: "Gaming Desktops"
     },
     {
@@ -28,7 +28,7 @@ export const BannerData = [
         desc: "New Intel® Core™ i9-13900KS Desktop Processors available now at ORIGIN PC.",
         descClr: "#52ADFB",
         img: "/assets/banner-3.jpg",
-        link: "/",
+        link: "/Products",
         btnText: "Gaming Desktops"
     },
     {
@@ -38,7 +38,7 @@ export const BannerData = [
         desc: "New EON14-S and NS-14 Laptops Available Now",
         descClr: "#57CFCE",
         img: "/assets/banner-4.jpg",
-        link: "/",
+        link: "/Products",
         btnText: "Gaming Desktops"
     },
     {
@@ -48,7 +48,7 @@ export const BannerData = [
         desc: "Advance Your Business or Stay on Top of Your Industry With New Intel Xeon W-3400 Processors.",
         descClr: "#ffffff",
         img: "/assets/banner-5.jpg",
-        link: "/",
+        link: "/Products",
         btnText: "Gaming Desktops"
     },
     /* {
@@ -149,7 +149,7 @@ const data = [
                 "id": 6,
                 "Voltage": "220V"
             },
-           
+
         ],
         "individualRating": 5,
         "averageRating": 4.9,
