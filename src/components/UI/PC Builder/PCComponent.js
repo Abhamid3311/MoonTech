@@ -1,4 +1,5 @@
 import { Button } from 'flowbite-react';
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
@@ -6,8 +7,10 @@ import { toast } from 'react-toastify';
 
 const PCComponent = () => {
     const { builder, total } = useSelector(state => state.pcBuilder);
+    const { data: session } = useSession();
+    // console.log(session);
 
-    console.log(builder)
+    // console.log(builder)
 
 
     const ProcessorData = builder?.find(data => data.category === "Processor");
@@ -35,6 +38,8 @@ const PCComponent = () => {
 
     return (
         <div className='w-full max-w-4xl mx-auto bg-white py-6 px-5 lg:px-20 mt-10'>
+
+           
 
             <div className='flex items-center justify-between pb-5'>
                 <h2 className='bg-blue-700 text-white font-bold rounded-md px-2 py-1 text-sm lg:text-base'>Total {builder?.length} Items</h2>

@@ -28,7 +28,7 @@ PowerSupply.getLayout = function getLayout(page) {
     return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const res = await fetch(`${baseUrl}/products`);
     const data = await res.json();
     const filteredData = data.filter(item => item.category === "Power Supply Unit");

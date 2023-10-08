@@ -31,7 +31,7 @@ Accesorries.getLayout = function getLayout(page) {
 };
 
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const res = await fetch(`${baseUrl}/products`);
     const data = await res.json();
     const filteredData = data.filter(item => item.category === "Accessories");
