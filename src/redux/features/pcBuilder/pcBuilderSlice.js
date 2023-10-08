@@ -24,11 +24,29 @@ const pcBuilderSlice = createSlice({
             // Update total
             state.total = state.builder.reduce((total, product) => total + parseFloat(product.price), 0);
             console.log("Added New Category Product")
-        }
+        },
+
+        removeFromBuilder: (state, action) => {
+            const productToRemove = action.payload;
+
+            // Find the index of the product in the builder based on the product object
+            const productIndex = state.builder.findIndex((product) => product._id === productToRemove._id);
+
+            if (productIndex !== -1) {
+                // Remove the product from the builder and update the total price
+                const removedProductPrice = parseFloat(state.builder[productIndex].price);
+                state.builder.splice(productIndex, 1);
+                state.total -= removedProductPrice;
+
+                console.log("Removed product:", productToRemove);
+            } else {
+                console.log("Product not found in builder");
+            }
+        },
 
     }
 });
 
 
-export const { addToBuilder } = pcBuilderSlice.actions;
+export const { addToBuilder, removeFromBuilder } = pcBuilderSlice.actions;
 export default pcBuilderSlice.reducer;

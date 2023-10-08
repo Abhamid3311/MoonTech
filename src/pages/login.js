@@ -3,7 +3,6 @@ import { Button } from 'flowbite-react';
 import { FcGoogle } from 'react-icons/fc';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { signIn } from 'next-auth/react';
-import { baseUrl } from '@/url';
 
 const Login = () => {
     return (

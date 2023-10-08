@@ -2,17 +2,18 @@ import { Button } from 'flowbite-react';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import { BsArrowRepeat } from 'react-icons/bs';
+import { RxCross2 } from 'react-icons/rx';
+import { removeFromBuilder } from '@/redux/features/pcBuilder/pcBuilderSlice';
 
 const PCComponent = () => {
     const { builder, total } = useSelector(state => state.pcBuilder);
     const { data: session } = useSession();
-    // console.log(session);
+    const dispatch = useDispatch();
 
-    // console.log(builder)
-
-
+    //Get Data
     const ProcessorData = builder?.find(data => data.category === "Processor");
     const MotherboardData = builder?.find(data => data.category === "Motherboard");
     const RAMData = builder?.find(data => data.category === "RAM");
@@ -20,26 +21,32 @@ const PCComponent = () => {
     const PowerSupplyData = builder?.find(data => data.category === "Power Supply Unit");
     const MonitorData = builder?.find(data => data.category === "Monitor");
 
-
+    //Skeleton
     const skeletonName = <p className='w-32 lg:w-60 h-4 bg-gray-200 rounded-md'></p>
     const skeletonPrice = <p className='w-10 h-4 bg-gray-200 rounded-md'></p>
 
 
+    // Handle Complete Build Btn
     const handleBuildComplete = (builder) => {
-        console.log(builder, builder.length);
-        if (builder.length > 6) {
-            toast.error("Please Fullfil Your PC Build!");
-            return
+        if (builder.length === 6) {
+            toast.success("Build Completed Succesfully");
+            //! I will write Save to DB Logic here 
         } else {
-            toast.success("PC Build Completed!")
+            toast.error("Please Complete Your Build");
+            console.log(builder.length)
+            return
         }
+    };
+
+
+    //Handle Remove Product From Builder
+    const handleRemoveProduct = (data) => {
+        dispatch(removeFromBuilder(data))
     };
 
 
     return (
         <div className='w-full max-w-4xl mx-auto bg-white py-6 px-5 lg:px-20 mt-10'>
-
-           
 
             <div className='flex items-center justify-between pb-5'>
                 <h2 className='bg-blue-700 text-white font-bold rounded-md px-2 py-1 text-sm lg:text-base'>Total {builder?.length} Items</h2>
@@ -68,7 +75,22 @@ const PCComponent = () => {
                     <p className='font-bold text-base lg:text-lg'>
                         {ProcessorData?.price ? `${ProcessorData?.price} Tk` : skeletonPrice}
                     </p>
-                    <Link href={"/pc-builder/choose/Processor"}> <Button gradientDuoTone="cyanToBlue" outline>Choose </Button></Link>
+
+                    {
+                        !ProcessorData ?
+                            <Link href={"/pc-builder/choose/Processor"}>
+                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                            </Link> :
+
+                            <div className='flex items-center gap-1'>
+                                <Link href={"/pc-builder/choose/Processor"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                </Link>
+
+                                <Button color="failure" outline onClick={() => handleRemoveProduct(ProcessorData)}><RxCross2 /> </Button>
+                            </div>
+                    }
+
                 </div>
             </div>
 
@@ -93,7 +115,21 @@ const PCComponent = () => {
                     <p className='font-bold text-base lg:text-lg'>
                         {MotherboardData?.price ? `${MotherboardData?.price} Tk` : skeletonPrice}
                     </p>
-                    <Link href={"/pc-builder/choose/Motherboard"}> <Button gradientDuoTone="cyanToBlue" outline>Choose </Button></Link>
+
+                    {
+                        !MotherboardData ?
+                            <Link href={"/pc-builder/choose/Motherboard"}>
+                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                            </Link> :
+
+                            <div className='flex items-center gap-1'>
+                                <Link href={"/pc-builder/choose/Motherboard"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                </Link>
+
+                                <Button color="failure" outline onClick={() => handleRemoveProduct(MotherboardData)}><RxCross2 /> </Button>
+                            </div>
+                    }
                 </div>
             </div>
 
@@ -118,7 +154,21 @@ const PCComponent = () => {
                     <p className='font-bold text-base lg:text-lg'>
                         {RAMData?.price ? `${RAMData?.price} Tk` : skeletonPrice}
                     </p>
-                    <Link href={"/pc-builder/choose/RAM"}> <Button gradientDuoTone="cyanToBlue" outline>Choose</Button></Link>
+                    {
+                        !RAMData ?
+                            <Link href={"/pc-builder/choose/RAM"}>
+                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                            </Link> :
+
+                            <div className='flex items-center gap-1'>
+                                <Link href={"/pc-builder/choose/RAM"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                </Link>
+
+                                <Button color="failure" outline onClick={() => handleRemoveProduct(RAMData)}><RxCross2 /> </Button>
+                            </div>
+                    }
+
                 </div>
             </div>
 
@@ -142,9 +192,22 @@ const PCComponent = () => {
                 <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
                     <p className='font-bold text-base lg:text-lg'>{StorageData?.price ? `${StorageData?.price} Tk` : skeletonPrice}</p>
 
-                    <Link href={"/pc-builder/choose/StorageDevice"}>
-                        <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
-                    </Link>
+                    {
+                        !StorageData ?
+                            <Link href={"/pc-builder/choose/StorageDevice"}>
+                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                            </Link> :
+
+                            <div className='flex items-center gap-1'>
+                                <Link href={"/pc-builder/choose/StorageDevice"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                </Link>
+
+                                <Button color="failure" outline onClick={() => handleRemoveProduct(StorageData)}><RxCross2 /> </Button>
+                            </div>
+                    }
+
+
                 </div>
             </div>
 
@@ -168,9 +231,22 @@ const PCComponent = () => {
                 <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
                     <p className='font-bold text-base lg:text-lg'>{PowerSupplyData?.price ? `${PowerSupplyData?.price} Tk` : skeletonPrice}</p>
 
-                    <Link href={"/pc-builder/choose/PowerSupply"}>
-                        <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
-                    </Link>
+                    {
+                        !PowerSupplyData ?
+                            <Link href={"/pc-builder/choose/PowerSupply"}>
+                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                            </Link> :
+
+                            <div className='flex items-center gap-1'>
+                                <Link href={"/pc-builder/choose/PowerSupply"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                </Link>
+
+                                <Button color="failure" outline onClick={() => handleRemoveProduct(PowerSupplyData)}><RxCross2 /> </Button>
+                            </div>
+                    }
+
+
                 </div>
             </div>
 
@@ -193,15 +269,28 @@ const PCComponent = () => {
 
                 <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
                     <p className='font-bold text-base lg:text-lg'>{MonitorData?.price ? `${MonitorData?.price} Tk` : skeletonPrice}</p>
-                    <Link href={"/pc-builder/choose/Monitor"}>
-                        <Button gradientDuoTone="cyanToBlue" outline>Choose</Button>
-                    </Link>
+
+                    {
+                        !MonitorData ?
+                            <Link href={"/pc-builder/choose/Monitor"}>
+                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                            </Link> :
+
+                            <div className='flex items-center gap-1'>
+                                <Link href={"/pc-builder/choose/Monitor"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                </Link>
+
+                                <Button color="failure" outline onClick={() => handleRemoveProduct(MonitorData)}><RxCross2 /> </Button>
+                            </div>
+                    }
+
                 </div>
             </div>
 
 
             <div className='flex items-center justify-center'>
-                <Button disabled={builder?.length > 6} color='failure' onClick={handleBuildComplete}>Complete Build </Button>
+                <Button disabled={builder.length !== 6} color='failure' onClick={() => handleBuildComplete(builder)}>Complete Build </Button>
             </div>
 
 
