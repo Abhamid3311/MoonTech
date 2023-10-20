@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
     font-family: "Trebuchet MS", sans-serif;
 }
@@ -62,7 +64,7 @@ body {
     width: 100%;
 }
 
-.desc-bg-two{
+.desc-bg-two {
     background-image: url('../../public/assets/main-bg-2.jpg');
     background-size: cover;
     background-position: center;

@@ -1,8 +1,11 @@
-import { store } from '@/redux/store';
 import '@/styles/globals.css'
+import { store } from '@/redux/store';
+
 import { Provider } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
-import { SessionProvider } from "next-auth/react"
+import { SessionProvider } from "next-auth/react";
+
+
 
 
 export default function App({ Component, pageProps }) {

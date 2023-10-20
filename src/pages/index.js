@@ -1,3 +1,4 @@
+import Awards from '@/components/UI/home/Awards';
 import Banner from '@/components/UI/home/Banner';
 import FeaturedProdcts from '@/components/UI/home/Featured';
 import FeaturedCategory from '@/components/UI/home/FeaturedCategory';
@@ -16,6 +17,7 @@ export default function Home({ products }) {
       <ProductDesc />
       <Services />
       <ProductDesc2 />
+      <Awards />
 
     </div>
   )
