@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -7,47 +8,65 @@ const Footer = () => {
             <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div class="md:flex md:justify-between">
 
-                    <div class="mb-6 md:mb-0 w-full lg:w-1/3 ">
-                        <a href="https://flowbite.com/" class="flex items-center">
-                            {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" /> */}
-                            <span class="self-center text-3xl font-bold whitespace-nowrap text-primary">MoonTech</span>
-                        </a>
-                    </div>
 
-                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 w-full lg:w-2/3">
+
+                    <div class="grid grid-cols-2 gap-8 lg:gap-6 lg:grid-cols-4 w-full ">
                         <div>
-                            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Resources</h2>
+                            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">PRODUCTS</h2>
+
                             <ul class="text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-                                </li>
-                                <li>
-                                    <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-                                </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline">Gaming PCs</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline">Gaming Laptops</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline">Government & Corporate</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline">Laptops</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline">Desktops</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline">TV</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline">Camera</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline">Gaming Console</Link> </li>
                             </ul>
                         </div>
+
                         <div>
-                            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Follow us</h2>
+                            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">COMPANY</h2>
+
                             <ul class="text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
-                                </li>
-                                <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                                </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline ">About</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline ">Contact</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline "> Online Delivery</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline ">Disclaimer</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline ">Privacy Policy</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline ">Cookies Settings</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline "> Refund and Return Policy</Link> </li>
+                                <li class="mb-1"> <Link href="/" class="hover:underline ">Terms & Conditions</Link> </li>
                             </ul>
                         </div>
+
+
                         <div>
-                            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Legal</h2>
+                            <h2 class="mb-6 text-sm font-semibold  uppercase text-white">SUPPORT</h2>
+
                             <ul class="text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="#" class="hover:underline">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                                </li>
+                                <li class="mb-1"><Link href="#" class="hover:underline">Customer Service</Link> </li>
+                                <li class="mb-1"><Link href="#" class="hover:underline">FAQs</Link> </li>
+                                <li class="mb-1"><Link href="#" class="hover:underline"> Complain / Advice</Link> </li>
+                                <li class="mb-1"><Link href="#" class="hover:underline">Affiliates</Link> </li>
+                                <li class="mb-1"><Link href="#" class="hover:underline"> Online Service Support</Link> </li>
                             </ul>
                         </div>
+
+                        <div class="mb-6 md:mb-0 w-full ">
+                            <Link href="/" class="flex items-center">
+                                {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" /> */}
+                                <span class="self-center text-3xl font-bold whitespace-nowrap text-primary">MoonTech</span>
+                            </Link>
+
+                            <div className='mt-4 text-sm lg:text-base text-paraClr'>
+                                <p>Address: Head Office: 28 Kazi Nazrul Islam Ave,Navana Zohura Square, Dhaka 1000</p>
+                                <p>Email:webteam@moontechbd.com</p>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
