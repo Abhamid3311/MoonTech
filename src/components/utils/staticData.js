@@ -178,6 +178,36 @@ export const CategoryData = [
         link: "/categories/Laptop"
     },
 
+];
+
+export const serviceData = [
+    {
+        id: 1,
+        title: "FINANCING",
+        sub: "Play Now and Pay Later",
+        desc: "Easy to apply  Get instant pre-approved offers and rates  Twelve months same as cash available* No prepayment penalties Up to 36 months of payment options",
+        icon: <Icon icon="icon-park-outline:financing-two" />,
+        link: "/",
+        btnText: "LEARN MORE"
+    },
+    {
+        id: 2,
+        title: "AFFILIATES",
+        sub: "Join the Best",
+        desc: "Partner up with the best custom PC system builder in the world and earn extra cash! Become An Official ORIGIN PC Affiliate Today!",
+        icon: <Icon icon="mdi:business-outline" />,
+        link: "/",
+        btnText: "JOIN NOW"
+    },
+    {
+        id: 3,
+        title: "SUPPORT",
+        sub: "24/7 US Based Support",
+        desc: "Once you join us, we will have you covered. With every system, ORIGIN PC provides a free phone and online lifetime service guarantee.",
+        icon: <Icon icon="bx:support" />,
+        link: "/",
+        btnText: "LEARN MORE"
+    },
 ]
 
 const data = [
