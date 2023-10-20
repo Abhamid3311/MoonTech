@@ -8,7 +8,7 @@ const FeaturedProdcts = ({ products }) => {
     //Get Random 6 Products
     useEffect(() => {
         const shuffledProducts = [...products].sort(() => Math.random() - 0.5);
-        const selectedProducts = shuffledProducts.slice(0, 6);
+        const selectedProducts = shuffledProducts.slice(0, 8);
         setRandomProducts(selectedProducts);
     }, [products]);
 

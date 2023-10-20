@@ -9,8 +9,9 @@ export default function Home({ products }) {
   return (
     <div>
       <Banner />
-      <FeaturedProdcts products={products} />
       <FeaturedCategory />
+      <FeaturedProdcts products={products} />
+
     </div>
   )
 };

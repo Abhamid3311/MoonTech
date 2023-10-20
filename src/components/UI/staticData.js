@@ -1,4 +1,4 @@
-
+import { Icon } from '@iconify/react';
 
 export const BannerData = [
     {
@@ -68,51 +68,95 @@ export const CategoryData = [
     {
         id: 1,
         name: "Processor",
-        icon: "",
-        link: "/Processor"
+        icon: <Icon icon="game-icons:processor" className='text-2xl ' />,
+        link: "/categories/Processor"
     },
     {
         id: 2,
         name: "Motherboard",
-        icon: "",
-        link: "/Motherboard"
+        icon: <Icon icon="ph:cpu" className='text-2xl ' />,
+        link: "/categories/Motherboard"
     },
     {
         id: 3,
         name: "RAM",
-        icon: "",
-        link: "/RAM"
+        icon: <Icon icon="game-icons:ram" className='text-2xl ' />,
+        link: "/categories/RAM"
     },
     {
         id: 4,
         name: "Power Supply Unit",
-        icon: "",
-        link: "/PowerSupply"
+        icon: <Icon icon="icon-park-outline:power-supply" className='text-2xl ' />,
+        link: "/categories/PowerSupply"
     },
     {
         id: 5,
         name: "Storage Device",
-        icon: "",
-        link: "/StorageDevice"
+        icon: <Icon icon="clarity:storage-line" className='text-2xl ' />,
+        link: "/categories/StorageDevice"
     },
     {
         id: 6,
         name: "Monitor",
-        icon: "",
-        link: "/Monitor"
+        icon: <Icon icon="material-symbols:monitor-outline" className='text-2xl ' />,
+        link: "/categories/Monitor"
     },
     {
         id: 7,
-        name: "Others",
-        icon: "",
-        link: "/accesorries"
+        name: "Keyboard",
+        icon: <Icon icon="radix-icons:keyboard" className='text-2xl ' />,
+        link: "/categories/keyboard"
     },
-    /* {
+    {
         id: 8,
         name: "Mouse",
-        icon: "",
-        link: "/accesorries"
-    }, */
+        icon: <Icon icon="material-symbols:mouse-outline" className='text-2xl ' />,
+        link: "/categories/mouse"
+    },
+    {
+        id: 15,
+        name: "Headphones",
+        icon: <Icon icon="ic:outline-headphones" className='text-2xl ' />,
+        link: "/categories/headphones"
+    },
+    {
+        id: 13,
+        name: "Gaming Console",
+        icon: <Icon icon="carbon:game-console" className='text-2xl ' />,
+        link: "/categories/gaming-console"
+    },
+    {
+        id: 9,
+        name: "TV",
+        icon: <Icon icon="iconoir:tv" className='text-2xl ' />,
+        link: "/categories/TV"
+    },
+    {
+        id: 10,
+        name: "Mobile Phone",
+        icon: <Icon icon="clarity:mobile-phone-line" className='text-2xl ' />,
+        link: "/categories/Mobile"
+    },
+    {
+        id: 11,
+        name: "Smart Watch",
+        icon: <Icon icon="fluent:smartwatch-20-regular" className='text-2xl ' />,
+        link: "/categories/smart-watch"
+    },
+    {
+        id: 12,
+        name: "Camera",
+        icon: <Icon icon="mdi:camera-outline" className='text-2xl ' />,
+        link: "/categories/Camera"
+    },
+
+    {
+        id: 14,
+        name: "Laptop",
+        icon: <Icon icon="ph:laptop" className='text-2xl ' />,
+        link: "/categories/Laptop"
+    },
+
 ]
 
 const data = [
