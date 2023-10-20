@@ -1,5 +1,5 @@
 import React from 'react';
-import { CategoryData } from './staticData';
+import { CategoryData } from '../../utils/staticData';
 import Link from 'next/link';
 
 

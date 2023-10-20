@@ -1,6 +1,6 @@
 import { Button, Carousel } from 'flowbite-react';
 import React from 'react';
-import { BannerData } from './staticData';
+import { BannerData } from '../../utils/staticData';
 import Link from 'next/link';
 
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from '../ProductCard';
 
 const FeaturedProdcts = ({ products }) => {
     const [randomProducts, setRandomProducts] = useState([]);
@@ -19,7 +19,7 @@ const FeaturedProdcts = ({ products }) => {
                 <h3 className='text-sm lg:text-base' >Check & Get Your Desired Product!</h3>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-5 max-w-7xl mx-auto py-10 px-5 lg:px-0'>
+            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-7xl mx-auto py-10 px-3 lg:px-0'>
                 {
                     randomProducts?.map(product => <ProductCard key={product?.id} product={product} />)
                 }

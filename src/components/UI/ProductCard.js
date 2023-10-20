@@ -8,20 +8,20 @@ const ProductCard = ({ product }) => {
     return (
         <>
 
-            <div className='h-full lg:h-[400px] overflow-hidden rounded-md shadow-sm hover:shadow-xl bg-white relative product-card'>
-                <div className='h-[240px] w-full'>
+            <div className='h-full lg:h-[400px] overflow-hidden rounded-md shadow-sm hover:shadow-xl bg-white relative product-card w-full'>
+                <div className='h-[150px] lg:h-[240px] w-full'>
                     <img src={img} alt={name} srcSet="" className='card-img' />
                 </div>
 
-                <div className='  p-3 h-full '>
+                <div className=' p-2 lg:p-3 h-full '>
                     <Link href={`/product-details/${_id}`} >
-                        <h1 className="text-lg lg:text-xl font-bold tracking-tight " > {name.slice(0, 22)}{name.length > 22 ? "..." : ""}  </h1>
+                        <h1 className="text-base lg:text-xl font-bold tracking-tight " > {name.slice(0, 22)}{name.length > 22 ? "..." : ""}  </h1>
                     </Link>
 
-                    <p className='text-sm lg:text-base'>Category: {category}</p>
-                    <p className='text-sm lg:text-base'>Rating: {individualRating}</p>
-                    <p className='text-sm lg:text-base'>Price: <span className='text-primary text-base lg:text-lg font-bold'> {price} tk</span></p>
-                    <p className='text-sm lg:text-base'>Status: {status}</p>
+                    <p className='text-xs lg:text-base'>Category: {category}</p>
+                    <p className='text-xs lg:text-base'>Rating: {individualRating}</p>
+                    <p className='text-xs lg:text-base'>Price: <span className='text-primary text-base lg:text-lg font-bold'> {price} tk</span></p>
+                    <p className='text-xs lg:text-base'>Status: {status}</p>
 
 
 

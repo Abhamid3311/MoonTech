@@ -1,6 +1,7 @@
-import Banner from '@/components/UI/Banner';
-import FeaturedProdcts from '@/components/UI/Featured';
-import FeaturedCategory from '@/components/UI/FeaturedCategory';
+import Banner from '@/components/UI/home/Banner';
+import FeaturedProdcts from '@/components/UI/home/Featured';
+import FeaturedCategory from '@/components/UI/home/FeaturedCategory';
+import ProductDesc from '@/components/UI/home/ProductDesc';
 import RootLayout from '@/components/layouts/RootLayout';
 import { baseUrl } from '@/url';
 
@@ -11,6 +12,7 @@ export default function Home({ products }) {
       <Banner />
       <FeaturedCategory />
       <FeaturedProdcts products={products} />
+      <ProductDesc />
 
     </div>
   )
