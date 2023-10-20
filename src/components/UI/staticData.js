@@ -51,16 +51,37 @@ export const BannerData = [
         link: "/Products",
         btnText: "Gaming Desktops"
     },
-    /* {
+    {
         id: "6",
-        title: "BUILT DIFFERENT",
-        subTitle: "BUILT FOR CREATORS",
-        desc: "Work Smarter and Better With the New ORIGIN PC M-Class Studio Desktop",
-        descClr: "#76B900",
+        title: "GAME WITHOUT ",
+        subTitle: "COMPROMISE",
+        desc: "Go Beyond Performance With Intel® Core™ Processors – Intel® Core™ i9-14900K, 14700K, and 14600K Available Now at ORIGIN PC",
+        descClr: "#ffffff",
         img: "/assets/banner-6.jpg",
         link: "/",
         btnText: "Learn More"
-    }, */
+    },
+    {
+        id: "7",
+        title: "THIN TO WIN",
+        subTitle: "",
+        desc: "Introducing the EON16-SL and NSL-16 laptops.Our thinnest ever NVIDIA RTX 40 Series laptop.",
+
+        descClr: "#ffffff",
+        img: "/assets/banner-7.jpg",
+        link: "/",
+        btnText: "Learn More"
+    },
+    {
+        id: "8",
+        title: "PLAY NOW",
+        subTitle: "PAY LATER",
+        desc: "Easy Pre-Approved Online Financing Available On All Systems For Qualifying Customers",
+        descClr: "#ffffff",
+        img: "/assets/banner-8.jpg",
+        link: "/",
+        btnText: "Learn More"
+    },
 ];
 
 
@@ -68,92 +89,92 @@ export const CategoryData = [
     {
         id: 1,
         name: "Processor",
-        icon: <Icon icon="game-icons:processor" className='text-2xl ' />,
+        icon: <Icon icon="game-icons:processor" />,
         link: "/categories/Processor"
     },
     {
         id: 2,
         name: "Motherboard",
-        icon: <Icon icon="ph:cpu" className='text-2xl ' />,
+        icon: <Icon icon="ph:cpu" />,
         link: "/categories/Motherboard"
     },
     {
         id: 3,
         name: "RAM",
-        icon: <Icon icon="game-icons:ram" className='text-2xl ' />,
+        icon: <Icon icon="game-icons:ram" />,
         link: "/categories/RAM"
     },
     {
         id: 4,
-        name: "Power Supply Unit",
-        icon: <Icon icon="icon-park-outline:power-supply" className='text-2xl ' />,
+        name: "Power Supply",
+        icon: <Icon icon="icon-park-outline:power-supply" />,
         link: "/categories/PowerSupply"
     },
     {
         id: 5,
         name: "Storage Device",
-        icon: <Icon icon="clarity:storage-line" className='text-2xl ' />,
+        icon: <Icon icon="clarity:storage-line" />,
         link: "/categories/StorageDevice"
     },
     {
         id: 6,
         name: "Monitor",
-        icon: <Icon icon="material-symbols:monitor-outline" className='text-2xl ' />,
+        icon: <Icon icon="material-symbols:monitor-outline" />,
         link: "/categories/Monitor"
     },
     {
         id: 7,
         name: "Keyboard",
-        icon: <Icon icon="radix-icons:keyboard" className='text-2xl ' />,
+        icon: <Icon icon="radix-icons:keyboard" />,
         link: "/categories/keyboard"
     },
     {
         id: 8,
         name: "Mouse",
-        icon: <Icon icon="material-symbols:mouse-outline" className='text-2xl ' />,
+        icon: <Icon icon="material-symbols:mouse-outline" />,
         link: "/categories/mouse"
     },
     {
         id: 15,
         name: "Headphones",
-        icon: <Icon icon="ic:outline-headphones" className='text-2xl ' />,
+        icon: <Icon icon="ic:outline-headphones" />,
         link: "/categories/headphones"
     },
     {
         id: 13,
         name: "Gaming Console",
-        icon: <Icon icon="carbon:game-console" className='text-2xl ' />,
+        icon: <Icon icon="carbon:game-console" />,
         link: "/categories/gaming-console"
     },
     {
         id: 9,
         name: "TV",
-        icon: <Icon icon="iconoir:tv" className='text-2xl ' />,
+        icon: <Icon icon="iconoir:tv" />,
         link: "/categories/TV"
     },
     {
         id: 10,
         name: "Mobile Phone",
-        icon: <Icon icon="clarity:mobile-phone-line" className='text-2xl ' />,
+        icon: <Icon icon="clarity:mobile-phone-line" />,
         link: "/categories/Mobile"
     },
     {
         id: 11,
         name: "Smart Watch",
-        icon: <Icon icon="fluent:smartwatch-20-regular" className='text-2xl ' />,
+        icon: <Icon icon="fluent:smartwatch-20-regular" />,
         link: "/categories/smart-watch"
     },
     {
         id: 12,
         name: "Camera",
-        icon: <Icon icon="mdi:camera-outline" className='text-2xl ' />,
+        icon: <Icon icon="mdi:camera-outline" />,
         link: "/categories/Camera"
     },
 
     {
         id: 14,
         name: "Laptop",
-        icon: <Icon icon="ph:laptop" className='text-2xl ' />,
+        icon: <Icon icon="ph:laptop" />,
         link: "/categories/Laptop"
     },
 

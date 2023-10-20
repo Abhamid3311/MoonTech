@@ -1,7 +1,7 @@
 import React from 'react';
 import { CategoryData } from './staticData';
 import Link from 'next/link';
-import { Icon } from '@iconify/react';
+
 
 const FeaturedCategory = () => {
     return (
@@ -11,10 +11,10 @@ const FeaturedCategory = () => {
                 <h3 className='text-sm lg:text-base' >Get Your Desired Product from Featured Category!</h3>
             </div>
 
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-7xl mx-auto py-10 px-5 lg:px-0'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-5 max-w-7xl mx-auto py-10 px-5 lg:px-0'>
                 {
-                    CategoryData?.map(category => <Link href={category.link} key={category.id}> <div className=' text-center category-card flex items-center justify-center gap-3'>
-                        <div>
+                    CategoryData?.map(category => <Link href={category.link} key={category.id}> <div className=' text-center category-card flex items-center  justify-center gap-3'>
+                        <div className='text-lg lg:text-2xl '>
                             {category.icon}
                         </div>
                         <h1>{category.name}</h1>
