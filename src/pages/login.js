@@ -8,7 +8,7 @@ const Login = () => {
     return (
         <div className='bg-lightBg text-secondary min-h-screen flex items-center justify-center'>
 
-            <div className='max-w-3xl mx-auto bg-white shadow-lg rounded-md p-10'>
+            {/*   <div className='max-w-3xl mx-auto bg-white shadow-lg rounded-md p-10'>
                 <h2 className='text-2xl font-bold text-primary text-center'>Login</h2>
 
                 <div className='m-7'>
@@ -30,7 +30,7 @@ const Login = () => {
                 </div>
 
 
-            </div>
+            </div> */}
         </div>
     );
 };

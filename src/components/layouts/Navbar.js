@@ -51,13 +51,13 @@ const Header = () => {
 
                 <Navbar.Link className='text-white'>
                     <Dropdown inline label="Categories" >
-                        <Dropdown.Item><Link href={'/Processor'}> Processor </Link> </Dropdown.Item>
-                        <Dropdown.Item>  <Link href={'/Motherboard'}> Motherboard </Link> </Dropdown.Item>
-                        <Dropdown.Item> <Link href={'/RAM'}> RAM </Link> </Dropdown.Item>
-                        <Dropdown.Item><Link href={'/PowerSupply'}> Power Supply Unit </Link>  </Dropdown.Item>
-                        <Dropdown.Item> <Link href={'/StorageDevice'}> Storage Device </Link>  </Dropdown.Item>
-                        <Dropdown.Item> <Link href={'/Monitor'}> Monitor </Link> </Dropdown.Item>
-                        <Dropdown.Item><Link href={'/accesorries'}> Others </Link> </Dropdown.Item>
+                        <Dropdown.Item><Link href={'/categories/Processor'}> Processor </Link> </Dropdown.Item>
+                        <Dropdown.Item>  <Link href={'/categories/Motherboard'}> Motherboard </Link> </Dropdown.Item>
+                        <Dropdown.Item> <Link href={'/categories/RAM'}> RAM </Link> </Dropdown.Item>
+                        <Dropdown.Item><Link href={'/categories/PowerSupply'}> Power Supply Unit </Link>  </Dropdown.Item>
+                        <Dropdown.Item> <Link href={'/categories/StorageDevice'}> Storage Device </Link>  </Dropdown.Item>
+                        <Dropdown.Item> <Link href={'/categories/Monitor'}> Monitor </Link> </Dropdown.Item>
+                        <Dropdown.Item><Link href={'/categories/accesorries'}> Others </Link> </Dropdown.Item>
 
                     </Dropdown>
                 </Navbar.Link>
