@@ -1,10 +1,18 @@
 import Link from 'next/link';
 import React from 'react';
 import { Icon } from '@iconify/react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/redux/features/cart/cartSlice';
 
 const ProductCard = ({ product }) => {
-    // console.log(product)
     const { _id, name, price, img, status, individualRating, category } = product;
+    const dispatch = useDispatch();
+
+    const handleAddToCartBtn = (product) => {
+        dispatch(addToCart(product))
+    };
+
+
     return (
         <>
 
@@ -25,7 +33,7 @@ const ProductCard = ({ product }) => {
 
 
 
-                    <button className='absolute right-3 bottom-5 bg-lightBg p-2 rounded-md shadow-lg product-card-cart'>
+                    <button onClick={() => handleAddToCartBtn(product)} className='absolute right-3 bottom-5 bg-lightBg p-2 rounded-md shadow-lg product-card-cart'>
                         <Icon icon={"bx:cart-add"} className='text-xl md:2xl lg:text-3xl font-bold text-primary' />
                     </button>
                 </div>

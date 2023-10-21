@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { baseUrl } from '@/url';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { Checkbox, Label } from 'flowbite-react';
+import BackToTopButton from '@/components/utils/BottomToTop';
 
 const Products = ({ allproducts }) => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -31,29 +32,29 @@ const Products = ({ allproducts }) => {
     }, [allproducts, searchQuery]);
 
 
-   /*  //checkBox Of City Name & Type  Functionality
-    useEffect(() => {
-        const filteredDeals = allproducts?.filter((book) => {
-            const lowerCaseQuery = searchQuery?.toLowerCase();
-            const hasMatchingCity = selectedProduct.length === 0 ||
-                selectedProduct.includes(book?.name) ||
-                selectedProduct.includes(book?.category) ||
-                selectedProduct.includes(book?.price) ||
-                selectedProduct.includes(book?.status);
-
-            const isWithinPriceRange = parseInt(book.price) <= priceSliderValue;
-            return (
-                hasMatchingCity && isWithinPriceRange &&
-                (book.category.toLowerCase().includes(lowerCaseQuery) ||
-                    book.name.toLowerCase().includes(lowerCaseQuery) ||
-                    book.status.toLowerCase().includes(lowerCaseQuery) ||
-                    book.price.includes(lowerCaseQuery)
-                )
-            )
-        });
-
-        setSearchedDeals(filteredDeals);
-    }, [allproducts, searchQuery, selectedProduct, priceSliderValue]); */
+    /*  //checkBox Of City Name & Type  Functionality
+     useEffect(() => {
+         const filteredDeals = allproducts?.filter((book) => {
+             const lowerCaseQuery = searchQuery?.toLowerCase();
+             const hasMatchingCity = selectedProduct.length === 0 ||
+                 selectedProduct.includes(book?.name) ||
+                 selectedProduct.includes(book?.category) ||
+                 selectedProduct.includes(book?.price) ||
+                 selectedProduct.includes(book?.status);
+ 
+             const isWithinPriceRange = parseInt(book.price) <= priceSliderValue;
+             return (
+                 hasMatchingCity && isWithinPriceRange &&
+                 (book.category.toLowerCase().includes(lowerCaseQuery) ||
+                     book.name.toLowerCase().includes(lowerCaseQuery) ||
+                     book.status.toLowerCase().includes(lowerCaseQuery) ||
+                     book.price.includes(lowerCaseQuery)
+                 )
+             )
+         });
+ 
+         setSearchedDeals(filteredDeals);
+     }, [allproducts, searchQuery, selectedProduct, priceSliderValue]); */
 
 
 
@@ -253,7 +254,7 @@ const Products = ({ allproducts }) => {
 
 
 
-
+           
 
         </div>
     );
