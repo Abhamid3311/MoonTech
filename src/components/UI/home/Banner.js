@@ -31,7 +31,7 @@ const BannerDetails = ({ BannerData }) => {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
         }}>
-            <div className='max-w-7xl mx-auto flex items-center h-full  lg:min-h-[50vh] px-5 lg:px-0 '>
+            <div className='max-w-7xl mx-auto flex items-center h-full  lg:min-h-[50vh] px-5 lg:px-3 '>
                 <div className='text-white '>
                     <h3 className='text-xl lg:text-[40px] mb-2'>{title}</h3>
                     <h1 className='text-2xl lg:text-[60px] font-bold my-1 lg:my-4'>{subTitle}</h1>

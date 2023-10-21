@@ -19,7 +19,7 @@ const FeaturedProdcts = ({ products }) => {
                 <h3 className='text-sm lg:text-base' >Check & Get Your Desired Product!</h3>
             </div>
 
-            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-7xl mx-auto py-10 px-3 lg:px-0'>
+            <div className='grid grid-cols-2  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-3 lg:gap-5 max-w-7xl mx-auto py-10 px-3 md:px-3 lg:px-2'>
                 {
                     randomProducts?.map(product => <ProductCard key={product?.id} product={product} />)
                 }

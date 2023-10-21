@@ -57,12 +57,16 @@ const Footer = () => {
                         <div class="mb-6 md:mb-0 w-full ">
                             <Link href="/" class="flex items-center">
                                 {/* <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" /> */}
-                                <span class="self-center text-3xl font-bold whitespace-nowrap text-primary">MoonTech</span>
+                                <span class="self-center text-2xl lg:text-3xl font-bold whitespace-nowrap text-primary">MoonTech</span>
                             </Link>
 
-                            <div className='mt-4 text-sm lg:text-base text-paraClr'>
+                            <div className='mt-4 text-xs lg:text-base text-paraClr'>
                                 <p>Address: Head Office: 28 Kazi Nazrul Islam Ave,Navana Zohura Square, Dhaka 1000</p>
-                                <p>Email:webteam@moontechbd.com</p>
+                                <div className='flex  flex-col md:flex-row  justify-start'>
+                                    <p className='text-start'>Email:</p>
+                                    <p>web@moontech.com</p>
+                                </div>
+
                             </div>
                         </div>
 

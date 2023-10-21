@@ -27,9 +27,9 @@ export default function Awards() {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 775,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 3,
                     initialSlide: 2
                 }
