@@ -3,13 +3,15 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/redux/features/cart/cartSlice';
+import { toast } from 'react-toastify';
 
 const ProductCard = ({ product }) => {
     const { _id, name, price, img, status, individualRating, category } = product;
     const dispatch = useDispatch();
 
     const handleAddToCartBtn = (product) => {
-        dispatch(addToCart(product))
+        dispatch(addToCart(product));
+        toast.success("Item Added Succesfully");
     };
 
 
