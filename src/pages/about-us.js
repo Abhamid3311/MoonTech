@@ -7,6 +7,8 @@ const AboutUS = () => {
             <div>
                 <h1 className='text-center font-bold text-primary text-5xl mb-3'>About Page</h1>
                 <p className='text-center text-2xl'>This Page is under development</p>
+
+               
             </div>
         </div>
     );

@@ -76,14 +76,9 @@ export default function Cart() {
                                         {pro?.price * pro?.quantity} Tk
                                     </Table.Cell>
                                 </Table.Row>
-
-
                                 )}
 
-
-
                             </Table.Body>
-
                         </Table>
 
                         <div className='text-lg lg:text-2xl font-bold  text-end w-full px-5'>
@@ -97,10 +92,6 @@ export default function Cart() {
                         <Link href={"/products"}><Button color='blue' className='text-xs lg:text-base'>Continue Shopping</Button></Link>
                         <Link href={"/checkout/on-page-checkout"}><Button color='blue'  className='text-sm lg:text-base'>Confirm Order</Button></Link>
                     </div>
-
-
-
-
 
                 </div>
 

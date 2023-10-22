@@ -208,7 +208,81 @@ export const serviceData = [
         link: "/",
         btnText: "LEARN MORE"
     },
+];
+
+export const offersData = [
+    {
+        _id: 1,
+        title: "Logitech Double Deal",
+        subTitle: "Buy Logitech Product & Get 10% Discount along with 10% Cashback!",
+        date: "05 Oct 2023 - 24 Oct 2023",
+        type: "Online",
+        desc: "Shop Logitech products now and score big with a 10% discount and an additional 10% cashback. Elevate your tech game while saving money and earning rewards. Don't miss this chance to upgrade your devices with top-quality Logitech gear at a reduced cost and cashback bonuses.",
+        link: "/products",
+        img: "/assets/offers/logitechdoubledeal-400x400.webp"
+    },
+    {
+        _id: 2,
+        title: "Nagad Discount Offer",
+        subTitle: "Pay with Nagad & Enjoy Exciting Discount!",
+        date: "27 Sep 2023 - 31 Oct 2023",
+        type: "Online",
+        link: "/products",
+        desc: "Experience the thrill of savings by making payments with Nagad! Get ready for exciting discounts that await when you choose Nagad as your payment method. Whether you're shopping online or in-store, Nagad brings you unbeatable offers that make every purchase more affordable. Don't miss out on this opportunity to enjoy incredible discounts while simplifying your payment process with Nagad.",
+        img: "/assets/offers/nagad-sep-wc-400x400.webp"
+    },
+    {
+        _id: 5,
+        title: "HP Bonus Warranty Program",
+        subTitle: "Enjoy 2 Years Bonus Warranty on HP Printer!",
+        date: "27 Sep 2023 - 31 Oct 2023",
+        type: "All Outlet",
+        link: "/categories/Laptop",
+        desc: "Shop Logitech products now and score big with a 10% discount and an additional 10% cashback. Elevate your tech game while saving money and earning rewards. Don't miss this chance to upgrade your devices with top-quality Logitech gear at a reduced cost and cashback bonuses.",
+        img: "/assets/offers/hp-extended-warranty-400x400.webp"
+    },
+    {
+        _id: 3,
+        title: "bKash Durga Puja Cashback Offer",
+        subTitle: "Pay With bKash & Enjoy 10% Instant Cashback!",
+        date: "05 Oct 2023 - 24 Oct 2023",
+        type: "Online",
+        link: "/products",
+        desc: "Shop Logitech products now and score big with a 10% discount and an additional 10% cashback. Elevate your tech game while saving money and earning rewards. Don't miss this chance to upgrade your devices with top-quality Logitech gear at a reduced cost and cashback bonuses.",
+        img: "/assets/offers/bkash-durga-puja-400x400.webp"
+    },
+    {
+        _id: 4,
+        title: "UCB Cashback Offer",
+        subTitle: "Buy Any IT Product & Get up to 3000 Tk Cashback!",
+        date: "15 Oct 2023 - 15 Nov 2023",
+        type: "Online",
+        link: "/products",
+        desc: "Shop Logitech products now and score big with a 10% discount and an additional 10% cashback. Elevate your tech game while saving money and earning rewards. Don't miss this chance to upgrade your devices with top-quality Logitech gear at a reduced cost and cashback bonuses.",
+        img: "/assets/offers/UCB-Bank-Offer3-400x400.png"
+    },
+
+    {
+        _id: 6,
+        title: "Acer Laptop Offer",
+        subTitle: "Buy Acer Laptop & Get Gift Voucher!",
+        date: "01 Oct 2023 - 31 Oct 2023",
+        type: "All Outlet",
+        link: "/categories/Laptop",
+        desc: "Shop Logitech products now and score big with a 10% discount and an additional 10% cashback. Elevate your tech game while saving money and earning rewards. Don't miss this chance to upgrade your devices with top-quality Logitech gear at a reduced cost and cashback bonuses.",
+        img: "/assets/offers/acer-october-offer-400x400.webp"
+    },
 ]
+
+
+
+
+
+
+
+
+
+
 
 const data = [
     {
