@@ -13,26 +13,26 @@ export default function Cart() {
     // console.log(products, total)
     return (
         <div className='bg-lightBg text-secondary min-h-screen'>
-            <div className='max-w-7xl mx-auto px-5 lg:px-0 py-10'>
+            <div className='max-w-7xl mx-auto px-3 lg:px-0 py-10'>
                 <div className='bg-white shadow-sm rounded-md p-2 px-4'>
                     <h1 className='text-2xl mb-5 font-bold'>Shopping Cart</h1>
 
-                    <div>
-                        <Table>
+                    <div className="overflow-x-auto">
+                        <Table className="w-full">
                             <Table.Head>
-                                <Table.HeadCell>
+                                <Table.HeadCell className="truncate">
                                     Image
                                 </Table.HeadCell>
-                                <Table.HeadCell>
+                                <Table.HeadCell className="truncate">
                                     Product name
                                 </Table.HeadCell>
-                                <Table.HeadCell>
+                                <Table.HeadCell className="truncate">
                                     Quantity
                                 </Table.HeadCell>
-                                <Table.HeadCell>
+                                <Table.HeadCell className="truncate">
                                     Remove
                                 </Table.HeadCell>
-                                <Table.HeadCell>
+                                <Table.HeadCell className="truncate">
                                     Price
                                 </Table.HeadCell>
 
@@ -43,17 +43,17 @@ export default function Cart() {
                             <Table.Body className="divide-y">
 
                                 {products?.map(pro => <Table.Row key={pro?._id} className="bg-white  ">
+                                    <Table.Cell className="truncate">
+                                        <Image src={pro?.img} alt={pro?.name} width={40} height={40}  className="max-w-full h-auto" />
+                                    </Table.Cell>
+
                                     <Table.Cell >
-                                        <Image src={pro?.img} alt={pro?.name} width={40} height={40} />
+                                       <p className='text-sm lg:text-base'> {pro?.name}</p>
                                     </Table.Cell>
 
-                                    <Table.Cell>
-                                        {pro?.name}
-                                    </Table.Cell>
-
-                                    <Table.Cell>
+                                    <Table.Cell className="truncate">
                                         <div className='flex items-center gap-2'>
-                                            <p className='text-xl font-bold'> {pro?.quantity}</p>
+                                            <p className='text-base lg:text-xl font-bold'> {pro?.quantity}</p>
 
                                             <div className='flex flex-col gap-1'>
                                                 <button onClick={() => dispatch(increaseQuantity(pro))}
@@ -65,14 +65,14 @@ export default function Cart() {
                                         </div>
                                     </Table.Cell>
 
-                                    <Table.Cell>
+                                    <Table.Cell className="truncate">
                                         <button onClick={() => dispatch(removeFromCart(pro))}>
                                             <Icon icon="material-symbols:delete-outline" className='text-primary text-2xl' />
                                         </button>
                                     </Table.Cell>
 
 
-                                    <Table.Cell>
+                                    <Table.Cell className="truncate">
                                         {pro?.price * pro?.quantity} Tk
                                     </Table.Cell>
                                 </Table.Row>
@@ -86,16 +86,16 @@ export default function Cart() {
 
                         </Table>
 
-                        <div className='text-2xl font-bold  text-end w-full px-5'>
-                            <hr className='my-3'/>
+                        <div className='text-lg lg:text-2xl font-bold  text-end w-full px-5'>
+                            <hr className='my-3' />
                             <h1>Total: <span className='text-primary'>{total} Tk</span></h1>
                             <hr className='my-3' />
                         </div>
                     </div>
 
                     <div className='flex items-center justify-between px-5 my-3'>
-                        <Link href={"/products"}><Button color='blue'>Continue Shopping</Button></Link>
-                        <Link href={"/checkout/on-page-checkout"}><Button color='blue'>Confirm Order</Button></Link>
+                        <Link href={"/products"}><Button color='blue' className='text-xs lg:text-base'>Continue Shopping</Button></Link>
+                        <Link href={"/checkout/on-page-checkout"}><Button color='blue'  className='text-sm lg:text-base'>Confirm Order</Button></Link>
                     </div>
 
 

@@ -14,17 +14,17 @@ export default function PageCheckout() {
 
     return (
         <div className='bg-lightBg text-secondary min-h-screen'>
-            <div className='max-w-7xl mx-auto px-5 lg:px-0 py-10'>
-                <div className=' p-2 px-4'>
-                    <h1 className='text-2xl mb-5'>Checkout</h1>
+            <div className='max-w-7xl mx-auto px-3 lg:px-0 py-10'>
+                <div className=' p-2 px-2'>
+                    <h1 className='text-xl lg:text-2xl mb-5'>Checkout</h1>
 
 
-                    <div className='flex items-start gap-4 min-h-screen'>
+                    <div className='flex flex-col lg:flex-row items-start gap-4 min-h-screen'>
                         <div className='w-full lg:w-1/3 bg-white shadow-sm rounded-md  p-4'>
 
                             <div className='flex items-center gap-2 '>
                                 <span className='bg-[#FEECEB] w-9 h-9 rounded-full px-3 py-2 text-primary font-bold flex items-center justify-center'>1</span>
-                                <h1 className='text-lg font-bold'>  Customer Information</h1>
+                                <h1 className='text-base lg:text-lg font-bold'>  Customer Information</h1>
                             </div>
                             <hr className='my-3' />
 
@@ -104,11 +104,11 @@ export default function PageCheckout() {
 
                             {/* Payment Method, Delivery System */}
 
-                            <div className='flex items-start gap-4 w-full'>
+                            <div className='flex flex-col lg:flex-row items-start gap-4 w-full'>
                                 <div className='bg-white shadow-sm rounded-md p-4 w-full h-full lg:h-[300px]'>
                                     <div className='flex items-center gap-2'>
                                         <span className='bg-[#FEECEB] w-9 h-9 rounded-full px-3 py-2 text-primary font-bold flex items-center justify-center'>2</span>
-                                        <h1 className='text-lg font-bold'>  Payment Method</h1>
+                                        <h1 className='text-base lg:text-lg font-bold'>  Payment Method</h1>
                                     </div>
                                     <hr className='my-3' />
 
@@ -158,7 +158,7 @@ export default function PageCheckout() {
                                 <div className='bg-white shadow-sm rounded-md p-4 w-full h-full lg:h-[300px]'>
                                     <div className='flex items-center gap-2'>
                                         <span className='bg-[#FEECEB] w-9 h-9 rounded-full px-3 py-2 text-primary font-bold flex items-center justify-center'>3</span>
-                                        <h1 className='text-lg font-bold'> Delivery Method</h1>
+                                        <h1 className='text-base lg:text-lg font-bold'> Delivery Method</h1>
                                     </div>
                                     <hr className='my-3' />
 
@@ -203,7 +203,7 @@ export default function PageCheckout() {
 
                             {/* Promo Code */}
 
-                            <div className='w-full bg-white shadow-sm rounded-md p-4  flex items-center gap-5 my-4'>
+                            <div className='w-full bg-white shadow-sm rounded-md p-4  flex flex-col lg:flex-row items-center gap-5 my-4'>
                                 <div className='flex items-center gap-2 w-full'>
                                     <TextInput
                                         id="input-gray"
@@ -230,7 +230,7 @@ export default function PageCheckout() {
 
                                 <div className='flex items-center gap-2'>
                                     <span className='bg-[#FEECEB] w-9 h-9 rounded-full px-3 py-2 text-primary font-bold flex items-center justify-center'>4</span>
-                                    <h1 className='text-lg font-bold'>Order Overview</h1>
+                                    <h1 className='text-base lg:text-lg font-bold'>Order Overview</h1>
                                 </div>
                                 <hr className='my-3' />
 
@@ -273,17 +273,17 @@ export default function PageCheckout() {
 
                                 <div className=' text-end w-full px-5'>
                                     <hr className='my-3' />
-                                    <h1>Sub Total: <span className='text-primary'>{total} Tk</span></h1>
+                                    <h1 className='text-sm lg:text-base'>Sub Total: <span className='text-primary'>{total} Tk</span></h1>
                                     <hr className='my-3' />
                                 </div>
 
                                 <div className=' text-end w-full px-5'>
-                                    <h1>Delivery Charge: <span className='text-primary'>{deliveryCharge} Tk</span></h1>
+                                    <h1 className='text-sm lg:text-base'>Delivery Charge: <span className='text-primary'>{deliveryCharge} Tk</span></h1>
                                     <hr className='my-3' />
                                 </div>
 
                                 <div className=' text-end w-full px-5'>
-                                    <h1>Total: <span className='text-primary'>{total + deliveryCharge} Tk</span></h1>
+                                    <h1 className='text-sm lg:text-base'>Total: <span className='text-primary'>{total + deliveryCharge} Tk</span></h1>
                                     <hr className='my-3' />
                                 </div>
                             </div>
@@ -293,13 +293,13 @@ export default function PageCheckout() {
                     </div>
                     <hr className='my-3' />
 
-                    <div className='w-full flex items-center justify-between '>
+                    <div className='w-full flex flex-col lg:flex-row gap-3 items-center justify-between '>
 
-                        <div className="flex w-full flex-col gap-4" id="checkbox" >
+                        <div className="flex w-full flex-col gap-4 " id="checkbox" >
                             <div className="flex items-center gap-2">
                                 <Checkbox defaultChecked id="accept" />
                                 <Label className="flex" htmlFor="agree" >
-                                    <p>I have read and agree to the
+                                    <p className='text-xs lg:text-base'>I have read and agree to the
                                         <Link href={"/"} className='text-primary hover:underline'> Terms and Conditions</Link>,
                                         <Link href={"/"} className='text-primary hover:underline'> Privacy Policy</Link> and
                                         <Link href={"/"} className='text-primary hover:underline'> Refund and Return Policy</Link>
