@@ -30,14 +30,14 @@ const Footer = () => {
                             <h2 class="mb-6 text-sm font-semibold  uppercase text-white">COMPANY</h2>
 
                             <ul class="text-gray-400 font-medium">
-                                <li class="mb-1"> <Link href="/" class="hover:underline ">About</Link> </li>
-                                <li class="mb-1"> <Link href="/" class="hover:underline ">Contact</Link> </li>
-                                <li class="mb-1"> <Link href="/" class="hover:underline "> Online Delivery</Link> </li>
-                                <li class="mb-1"> <Link href="/" class="hover:underline ">Disclaimer</Link> </li>
-                                <li class="mb-1"> <Link href="/" class="hover:underline ">Privacy Policy</Link> </li>
-                                <li class="mb-1"> <Link href="/" class="hover:underline ">Cookies Settings</Link> </li>
-                                <li class="mb-1"> <Link href="/" class="hover:underline "> Refund and Return Policy</Link> </li>
-                                <li class="mb-1"> <Link href="/" class="hover:underline ">Terms & Conditions</Link> </li>
+                                <li class="mb-1"> <Link href="/about-us" class="hover:underline ">About</Link> </li>
+                                <li class="mb-1"> <Link href="/contacts" class="hover:underline ">Contact</Link> </li>
+                                <li class="mb-1"> <Link href="/contacts" class="hover:underline "> Online Delivery</Link> </li>
+                                <li class="mb-1"> <Link href="/about-us" class="hover:underline ">Disclaimer</Link> </li>
+                                <li class="mb-1"> <Link href="/company/privacy-policy" class="hover:underline ">Privacy Policy</Link> </li>
+                                <li class="mb-1"> <Link href="/company/terms-condition" class="hover:underline ">Cookies Settings</Link> </li>
+                                <li class="mb-1"> <Link href="/company/privacy-policy" class="hover:underline "> Refund and Return Policy</Link> </li>
+                                <li class="mb-1"> <Link href="/company/terms-condition" class="hover:underline ">Terms & Conditions</Link> </li>
                             </ul>
                         </div>
 
@@ -46,11 +46,11 @@ const Footer = () => {
                             <h2 class="mb-6 text-sm font-semibold  uppercase text-white">SUPPORT</h2>
 
                             <ul class="text-gray-400 font-medium">
-                                <li class="mb-1"><Link href="#" class="hover:underline">Customer Service</Link> </li>
+                                <li class="mb-1"><Link href="/contacts" class="hover:underline">Customer Service</Link> </li>
                                 <li class="mb-1"><Link href="#" class="hover:underline">FAQs</Link> </li>
-                                <li class="mb-1"><Link href="#" class="hover:underline"> Complain / Advice</Link> </li>
+                                <li class="mb-1"><Link href="/contacts" class="hover:underline"> Complain / Advice</Link> </li>
                                 <li class="mb-1"><Link href="#" class="hover:underline">Affiliates</Link> </li>
-                                <li class="mb-1"><Link href="#" class="hover:underline"> Online Service Support</Link> </li>
+                                <li class="mb-1"><Link href="/contacts" class="hover:underline"> Online Service Support</Link> </li>
                             </ul>
                         </div>
 
@@ -61,7 +61,7 @@ const Footer = () => {
                             </Link>
 
                             <div className='mt-4 text-xs lg:text-base text-paraClr'>
-                                <p>Address: Head Office: 28 Kazi Nazrul Islam Ave,Navana Zohura Square, Dhaka 1000</p>
+                                <p>Address: Head Office: 28 Sonadanga Khulna,Shibabri more, khulna 9100</p>
                                 <div className='flex  flex-col md:flex-row  justify-start'>
                                     <p className='text-start'>Email:</p>
                                     <p>web@moontech.com</p>
