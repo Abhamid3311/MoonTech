@@ -1,6 +1,7 @@
 import { Button } from 'flowbite-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 export default function ProductDesc() {
@@ -23,8 +24,11 @@ export default function ProductDesc() {
 
 
 export const ProductDesc2 = () => {
+    const router = useRouter();
+    const currentPath = router.pathname;
+
     return (
-        <div className='desc-bg-two h-full lg:h-[80vh] py-20'>
+        <div className='desc-bg-two h-full lg:h-[80vh] py-20 text-white'>
             <div className='max-w-7xl mx-auto px-5 lg:px-0 flex items-center  h-full'>
                 <div className='w-full lg:w-3/5'> </div>
 
@@ -36,8 +40,10 @@ export const ProductDesc2 = () => {
                     <h3 className='text-lg text-primary  mb-1 text-center'>IN THE USA</h3>
                     <div className='bg-white h-[2px] w-24 mt-2 mb-5'></div>
                     <p className='text-xs lg:text-sm text-center mb-5'>By buying an ORIGIN PC, you get access to a fast and powerful PC as well as supporting jobs based in the United States.</p>
+                    {
+                        currentPath !== "/about-us" && <Link href={"/"}><Button color="failure" className='px-4 py-0.5'>LEARN MORE </Button></Link>
+                    }
 
-                    <Link href={"/"}><Button color="failure" className='px-4 py-0.5'>LEARN MORE </Button></Link>
                 </div>
 
             </div>

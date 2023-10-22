@@ -122,7 +122,7 @@ const Header = () => {
                         </Dropdown>
                     </Navbar.Link>
 
-                    <Navbar.Link active={router.pathname == "/about-us"} className='text-white' >
+                    <Navbar.Link active={router.pathname == "/Offers"} className='text-white' >
                         <Link href={'/Offers'}> Offers</Link>
                     </Navbar.Link>
 
