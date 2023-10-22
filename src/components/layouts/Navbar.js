@@ -19,7 +19,7 @@ const Header = () => {
     };
 
     const { products, total } = useSelector(state => state.cart);
-    console.log(products, total);
+    // console.log(products, total);
 
 
     useEffect(() => {
@@ -60,7 +60,7 @@ const Header = () => {
 
         <>
 
-            <Navbar className=' text-white' style={navbarStyle}>
+            <Navbar className=' text-white' style={navbarStyle} >
 
 
                 <Navbar.Brand href="/">
@@ -103,13 +103,13 @@ const Header = () => {
                 </div>
 
 
-                <Navbar.Collapse className='text-white'>
-                    <Navbar.Link active={router.pathname == "/"} className='text-white'><Link href={'/'}> Home </Link> </Navbar.Link>
-                    <Navbar.Link active={router.pathname == "/Products"} className='text-white'>
+                <Navbar.Collapse className='text-white hover:text-primary'>
+                    <Navbar.Link active={router.pathname == "/"} className='text-white hover:text-primary'><Link href={'/'}> Home </Link> </Navbar.Link>
+                    <Navbar.Link active={router.pathname == "/Products"} className='text-white hover:text-primary'>
                         <Link href={'/Products'}> Products </Link>
                     </Navbar.Link>
 
-                    <Navbar.Link className='text-white'>
+                    <Navbar.Link className='text-white hover:text-primary'>
                         <Dropdown inline label="Categories" >
                             <Dropdown.Item><Link href={'/categories/Processor'}> Processor </Link> </Dropdown.Item>
                             <Dropdown.Item>  <Link href={'/categories/Motherboard'}> Motherboard </Link> </Dropdown.Item>
@@ -122,30 +122,30 @@ const Header = () => {
                         </Dropdown>
                     </Navbar.Link>
 
-                    <Navbar.Link active={router.pathname == "/Offers"} className='text-white' >
+                    <Navbar.Link active={router.pathname == "/Offers"} className='text-white hover:text-primary' >
                         <Link href={'/Offers'}> Offers</Link>
                     </Navbar.Link>
 
-                    <Navbar.Link active={router.pathname == "/about-us"} className='text-white' >
+                    <Navbar.Link active={router.pathname == "/about-us"} className='text-white hover:text-primary' >
                         <Link href={'/about-us'}> About Us</Link>
                     </Navbar.Link>
 
-                    <Navbar.Link className='text-white' active={router.pathname == "/contacts"}>
+                    <Navbar.Link className='text-white hover:text-primary' active={router.pathname == "/contacts"}>
                         <Link href={'/contacts'}> Contacts </Link>
                     </Navbar.Link>
 
 
-                    {
+                   {/*  {
                         session?.user ?
-                            <Navbar.Link className='text-white bg-blue-600 w-full text-center px-3 py-1 block lg:hidden' onClick={() => signOut()}>Logout</Navbar.Link>
+                            <Navbar.Link className='text-white hover:text-primary bg-blue-600 w-full text-center px-3 py-1 block lg:hidden' onClick={() => signOut()}>Logout</Navbar.Link>
                             :
                             <Link href={'/login'}>
-                                <Navbar.Link className='text-white bg-blue-600 w-full text-center px-3 py-1 block lg:hidden'>
+                                <Navbar.Link className='text-white hover:text-primary bg-blue-600 w-full text-center px-3 py-1 block lg:hidden'>
                                     Login
                                 </Navbar.Link>
                             </Link>
 
-                    }
+                    } */}
 
 
 
