@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function Cart() {
     const { products, total } = useSelector(state => state.cart);
     const dispatch = useDispatch();
-    console.log(products, total)
+    // console.log(products, total)
     return (
         <div className='bg-lightBg text-secondary min-h-screen'>
             <div className='max-w-7xl mx-auto px-5 lg:px-0 py-10'>
