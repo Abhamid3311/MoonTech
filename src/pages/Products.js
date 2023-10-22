@@ -240,7 +240,7 @@ const Products = ({ allproducts }) => {
 
 
                     {/* SHowing data */}
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 w-full lg:w-4/5'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 w-full lg:w-4/5 place-items-center'>
                         {
                             searchedProducts?.map(product => <ProductCard key={product?._id} product={product} />)
                         }

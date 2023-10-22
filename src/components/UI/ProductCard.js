@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
     return (
         <>
 
-            <div className='h-full lg:h-[400px] overflow-hidden rounded-md shadow-sm hover:shadow-xl bg-white relative product-card w-full'>
+            <div className='h-full lg:h-[400px] overflow-hidden rounded-md shadow-sm hover:shadow-xl bg-white relative product-card w-full max-w-[350px]'>
                 <div className='h-[170px] lg:h-[240px] w-full'>
                     <img src={img} alt={name} srcSet="" className='card-img ' />
                 </div>

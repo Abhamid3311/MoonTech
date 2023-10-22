@@ -44,7 +44,7 @@ const Header = () => {
             top: 0,
             width: '100%',
             backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            zIndex: 1000,
+            zIndex: 100,
             transition: 'all 0.3s ease',
         }
         : {
@@ -135,7 +135,7 @@ const Header = () => {
                     </Navbar.Link>
 
 
-                   {/*  {
+                    {/*  {
                         session?.user ?
                             <Navbar.Link className='text-white hover:text-primary bg-blue-600 w-full text-center px-3 py-1 block lg:hidden' onClick={() => signOut()}>Logout</Navbar.Link>
                             :
@@ -160,48 +160,46 @@ const Header = () => {
             <div className=''>
                 <div
                     id="drawer-right-example"
-                    className={`fixed top-16 right-0 z-40 h-screen overflow-y-auto  transition-transform ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'} bg-white w-80 `} tabindex="-1" aria-labelledby="drawer-right-label" >
-
-                    <div className='bg-primary flex items-center justify-between text-white h-10 px-4 '>
-                        <h1 className='text-lg  font-bold'>Your Cart</h1>
-
-                        <button onClick={toggleDrawer} className='text-2xl  font-bold'><Icon icon="material-symbols:close" /></button>
+                    className={`fixed bottom-0 right-0 z-40 transition-transform ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'
+                        } bg-white w-80`}
+                    style={{
+                        maxHeight: '90vh', // Set a maximum height to the full viewport height
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                    tabIndex="-1"
+                    aria-labelledby="drawer-right-label"
+                >
+                    <div className="bg-primary flex items-center justify-between text-white h-10 px-4 py-2">
+                        <h1 className="text-lg font-bold">Your Cart</h1>
+                        <button onClick={toggleDrawer} className="text-2xl font-bold"><Icon icon="material-symbols:close" /></button>
                     </div>
 
-
-
-                    <div className='relative'>
-                        <div className=' '>
-                            {
-                                products.length !== 0 ? <div className='px-4 my-3'>
-
-                                    {products?.map(pro => <div key={pro?._id} className='text-secondary mb-4 flex items-start justify-between w-full'>
-                                        <div>
-                                            <h1 className='text-sm font-bold'>{pro?.name}</h1>
-                                            <p className='text-end'>{parseFloat(pro?.price)} &#215; {pro?.quantity} = {parseFloat(pro?.price) * pro?.quantity} Tk</p>
-                                            <hr />
-                                        </div>
-                                        <button onClick={() => handleRemoveFromCartBtn(pro)}>
-                                            <Icon icon="material-symbols:delete-outline" className='text-primary text-lg' />
-                                        </button>
-
+                    <div className="flex-grow overflow-y-auto w-full">
+                        <div className="w-full">
+                            {products.length !== 0 ? <div className='px-4 my-3'>
+                                {products?.map(pro => <div key={pro?._id} className='text-secondary mb-4 flex items-start justify-between w-full'>
+                                    <div className='w-full'>
+                                        <h1 className='text-sm font-bold'>{pro?.name}</h1>
+                                        <p className='text-end'>{parseFloat(pro?.price)} &#215; {pro?.quantity} = {parseFloat(pro?.price) * pro?.quantity} Tk</p>
                                         <hr />
+                                    </div>
+                                    <button onClick={() => handleRemoveFromCartBtn(pro)}>
+                                        <Icon icon="material-symbols:delete-outline" className='text-primary text-lg' />
+                                    </button>
+                                    <hr />
+                                </div>)}
+                            </div> : null}
+                        </div>
+                    </div>
 
-                                    </div>)}
-
-                                </div> : null
-                            }
+                    <div className='bg-white'>
+                        <div className='flex items-center justify-between text-secondary z-50 h-10 px-4'>
+                            <h1 className='text-lg font-bold'>Total</h1>
+                            <p>{total} Tk</p>
                         </div>
 
-
-                        <div className=''>
-                            <div className='flex items-center justify-between text-secondary h-10 px-4 '>
-                                <h1 className='text-lg  font-bold'>Total</h1>
-                                <p>{total} Tk</p>
-                            </div>
-
-                            <Link href={"/checkout/cart"} onClick={toggleDrawer} > <button className='bg-primary w-full py-1 font-bold'>Checkout</button> </Link>
-                        </div>
+                        <Link href={"/checkout/cart"} onClick={toggleDrawer} > <button className='bg-red-700 hover:bg-red-500 w-full py-1 font-bold'>Checkout</button> </Link>
                     </div>
                 </div>
 
