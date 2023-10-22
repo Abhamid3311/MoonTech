@@ -35,10 +35,43 @@ const cartSlice = createSlice({
             state.products = state.products.filter(product => product._id !== action.payload._id);
 
             state.total -= parseFloat(action.payload.price) * action.payload.quantity
-        }
+        },
+
+        buyNowBtn: (state, action) => {
+            const existing = state.products.find(pro => pro._id === action.payload._id);
+            if (existing) {
+                return
+            } else {
+                state.products.push({ ...action.payload, quantity: 1 });
+                state.total += parseFloat(action.payload.price);
+            }
+        },
+
+        increaseQuantity: (state, action) => {
+            const product = state.products.find((item) => item._id === action.payload._id);
+            if (product) {
+                product.quantity += 1;
+                state.total += parseFloat(product.price);
+            }
+        },
+
+        decreaseQuantity: (state, action) => {
+            const product = state.products.find((item) => item.id === action.payload.id);
+            if (product && product.quantity > 1) {
+                product.quantity -= 1;
+                state.total -= parseFloat(product.price);
+            } else if (product && product.quantity === 1) {
+                // Remove the product from the cart
+                const productIndex = state.products.findIndex((item) => item.id === action.payload.id);
+                if (productIndex !== -1) {
+                    state.total -= parseFloat(product.price);
+                    state.products.splice(productIndex, 1);
+                }
+            }
+        },
     }
 });
 
 
-export const { addToCart, removeOne, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeOne, removeFromCart, buyNowBtn, increaseQuantity, decreaseQuantity } = cartSlice.actions;
 export default cartSlice.reducer;

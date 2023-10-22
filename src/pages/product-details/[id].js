@@ -1,12 +1,29 @@
 import ReviewDetails from '@/components/UI/ReviewDetails';
 import RootLayout from '@/components/layouts/RootLayout';
+import { addToCart, buyNowBtn } from '@/redux/features/cart/cartSlice';
 import { baseUrl } from '@/url';
+import { Icon } from '@iconify/react';
+import { Button } from 'flowbite-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 
 const ProductDetails = ({ data }) => {
     console.log(data)
     const { _id, img, name, category, status, averageRating, price, description, individualRating, features, Reviews } = data;
+
+    const dispatch = useDispatch();
+
+    const handleAddToCartBtn = (product) => {
+        dispatch(addToCart(product));
+        toast.success("Item Added Succesfully");
+    };
+
+    const handleBuyNowBtn = (product) => {
+        dispatch(buyNowBtn(product));
+    };
 
 
 
@@ -46,6 +63,20 @@ const ProductDetails = ({ data }) => {
                                         </li>
                                     ))}
                                 </ul>
+                            </div>
+
+                            <div className='flex items-center gap-2 my-3'>
+                                <Link href={"/checkout/cart"} >
+                                    <Button color='failure' className='px-3 py-0.5' onClick={() => handleBuyNowBtn(data)}>
+                                        <span> Buy Now</span>
+                                        <Icon icon="icon-park-outline:buy" className='text-xl md:2xl font-bold ml-1' />
+                                    </Button>
+                                </Link>
+
+                                <Button onClick={() => handleAddToCartBtn(data)} color='warning' className='px-3 py-0.5'>
+                                    <span> Add to Cart</span>
+                                    <Icon icon={"bx:cart-add"} className='text-xl md:2xl font-bold ' />
+                                </Button>
                             </div>
 
                         </div>

@@ -196,7 +196,7 @@ const Header = () => {
                                 <p>{total} Tk</p>
                             </div>
 
-                            <Link href={"/checkout"} onClick={toggleDrawer} > <button className='bg-primary w-full py-1 font-bold'>Checkout</button> </Link>
+                            <Link href={"/checkout/cart"} onClick={toggleDrawer} > <button className='bg-primary w-full py-1 font-bold'>Checkout</button> </Link>
                         </div>
                     </div>
                 </div>

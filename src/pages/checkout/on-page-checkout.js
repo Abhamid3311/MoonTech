@@ -1,14 +1,13 @@
 import RootLayout from '@/components/layouts/RootLayout';
 import React from 'react'
 
-export default function Checkout() {
+export default function PageCheckout() {
     return (
-        <div>checkout</div>
+        <div>on-page-checkout</div>
     )
 }
 
 
-
-Checkout.getLayout = function getLayout(page) {
+PageCheckout.getLayout = function getLayout(page) {
     return <RootLayout>{page}</RootLayout>;
 };
