@@ -3,8 +3,8 @@ import RootLayout from '@/components/layouts/RootLayout';
 import React, { useEffect, useRef, useState } from 'react';
 import { baseUrl } from '@/url';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { Checkbox, Label } from 'flowbite-react';
-import BackToTopButton from '@/components/utils/BottomToTop';
+import { Checkbox, Label, Pagination } from 'flowbite-react';
+import PaginationProducts from '@/components/utils/Pagination';
 
 const uniqueCategories = ["RAM", "Monitor", "Motherboard", "Processor", "Power Supply Unit", "Storage Device", "keyboard", "mouse", "headphones", "Accessories"]
 
@@ -12,12 +12,15 @@ const Products = ({ allproducts }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchedProducts, setSearchedDeals] = useState([]);
     const inputRef = useRef(null);
-    const [priceSliderValue, setPriceSliderValue] = useState(null);
 
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedStatus, setSelectedStatus] = useState([]);
-
     const [maxPrice, setMaxPrice] = useState(15000);
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postPerPage] = useState(9);
+
+
 
 
     //Serached Filter Functionality
@@ -32,7 +35,6 @@ const Products = ({ allproducts }) => {
             );
         });
         setSearchedDeals(filteredDeals);
-        // setCurrentPage(1);
 
     }, [allproducts, searchQuery]);
 
@@ -62,11 +64,6 @@ const Products = ({ allproducts }) => {
 
 
 
-
-
-
-
-
     //Handle Search Bar Filter
     const handleSearchFilter = (e) => {
         e.preventDefault();
@@ -75,17 +72,6 @@ const Products = ({ allproducts }) => {
         }
     };
 
-    /*  //Handle Price Filter Slider
-     const handlePriceSliderChange = (value) => {
-         setPriceSliderValue(parseInt(value));
-     }; */
-
-
-    const handlePriceSliderChange = (value) => {
-        const newPrice = parseInt(value);
-        setPriceSliderValue(newPrice);
-        setMinPrice(newPrice);
-    };
 
 
 
@@ -108,6 +94,28 @@ const Products = ({ allproducts }) => {
     };
 
 
+    //Get Current posts
+    const totalProducts = searchedProducts.length;
+
+    // Get the current page products
+    const indexOfLastPost = currentPage * postPerPage;
+    const indexOfFirstPost = indexOfLastPost - postPerPage;
+    const currentPosts = searchedProducts.slice(indexOfFirstPost, indexOfLastPost);
+
+
+    //Change Page
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+        window.scrollTo(0, 0);
+    };
+    const handlePrevBtn = () => {
+        setCurrentPage(currentPage - 1);
+        window.scrollTo(0, 0);
+    };
+    const handleNextBtn = () => {
+        setCurrentPage(currentPage + 1);
+        window.scrollTo(0, 0);
+    };
 
 
     return (
@@ -225,10 +233,24 @@ const Products = ({ allproducts }) => {
 
 
                     {/* SHowing data */}
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 w-full lg:w-4/5 place-items-center'>
-                        {
-                            searchedProducts?.map(product => <ProductCard key={product?._id} product={product} />)
-                        }
+                    <div className='w-full lg:w-4/5 '>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 place-items-center'>
+                            {
+                                currentPosts?.map(product => <ProductCard key={product?._id} product={product} />)
+                            }
+
+                        </div>
+
+                        <PaginationProducts
+                            currentPage={currentPage}
+                            postPerPage={postPerPage}
+                            totalPost={totalProducts}
+                            handlePrevBtn={handlePrevBtn}
+                            handleNextBtn={handleNextBtn}
+                            paginate={paginate}
+                        />
+
+
 
                     </div>
                 </div>
