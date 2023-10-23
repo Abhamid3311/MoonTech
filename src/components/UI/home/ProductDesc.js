@@ -13,7 +13,7 @@ export default function ProductDesc() {
                     <h3 className='text-xl lg:text-5xl  mb-1'>AVAILABLE NOW</h3>
                     <p className='text-sm lg:text-xl mb-5 max-w-2xl'>World’s First Bendable OLED 21:9 Gaming Monitor</p>
 
-                    <Link href={"/"}><Button color="failure" className='px-4 py-0.5'>LEARN MORE </Button></Link>
+                    <Link href={"/categories/Monitor"}><Button color="failure" className='px-4 py-0.5'>LEARN MORE </Button></Link>
                 </div>
 
             </div>
@@ -41,7 +41,7 @@ export const ProductDesc2 = () => {
                     <div className='bg-white h-[2px] w-24 mt-2 mb-5'></div>
                     <p className='text-xs lg:text-sm text-center mb-5'>By buying an ORIGIN PC, you get access to a fast and powerful PC as well as supporting jobs based in the United States.</p>
                     {
-                        currentPath !== "/about-us" && <Link href={"/"}><Button color="failure" className='px-4 py-0.5'>LEARN MORE </Button></Link>
+                        currentPath !== "/about-us" && <Link href={"/about-us"}><Button color="failure" className='px-4 py-0.5'>LEARN MORE </Button></Link>
                     }
 
                 </div>

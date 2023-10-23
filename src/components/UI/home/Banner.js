@@ -22,7 +22,7 @@ export default Banner;
 const BannerDetails = ({ BannerData }) => {
     const { title, subTitle, img, desc, descClr, link, btnText } = BannerData;
     const textStyle = {
-        color: descClr  // Set text color based on descClr
+        color: descClr
     };
     return (
         <div className='w-full  h-full lg:min-h-[90vh] py-10 lg:py-0' style={{

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard';
+import { Button } from 'flowbite-react';
+import Link from 'next/link';
 
 const FeaturedProdcts = ({ products }) => {
     const [randomProducts, setRandomProducts] = useState([]);
@@ -24,6 +26,9 @@ const FeaturedProdcts = ({ products }) => {
                     randomProducts?.map(product => <ProductCard key={product?.id} product={product} />)
                 }
 
+            </div>
+            <div className='flex items-center justify-center py-4'>
+                <Link href={"/Products"}> <Button color='failure' className='px-6 py-1 text-lg '>VIEW ALL</Button></Link>
             </div>
 
 
