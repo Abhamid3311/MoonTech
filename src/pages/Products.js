@@ -6,7 +6,8 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { Checkbox, Label, Pagination } from 'flowbite-react';
 import PaginationProducts from '@/components/utils/Pagination';
 
-const uniqueCategories = ["RAM", "Monitor", "Motherboard", "Processor", "Power Supply Unit", "Storage Device", "keyboard", "mouse", "headphones", "Accessories"]
+const uniqueCategories = ["RAM", "Monitor", "Motherboard", "Processor", "Power Supply Unit", "Storage Device", "Keyboard", "Mouse", "Headphones", "Accessories", "Smart Watch", "Gaming Console", "TV", "Camera", "Laptop"];
+
 
 const Products = ({ allproducts }) => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -15,10 +16,12 @@ const Products = ({ allproducts }) => {
 
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedStatus, setSelectedStatus] = useState([]);
-    const [maxPrice, setMaxPrice] = useState(15000);
+    const [maxPrice, setMaxPrice] = useState(100000);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage] = useState(9);
+    const [postPerPage] = useState(12);
+
+    // console.log(allproducts)
 
 
 
@@ -104,18 +107,9 @@ const Products = ({ allproducts }) => {
 
 
     //Change Page
-    const paginate = (pageNumber) => {
-        setCurrentPage(pageNumber);
-        window.scrollTo(0, 0);
-    };
-    const handlePrevBtn = () => {
-        setCurrentPage(currentPage - 1);
-        window.scrollTo(0, 0);
-    };
-    const handleNextBtn = () => {
-        setCurrentPage(currentPage + 1);
-        window.scrollTo(0, 0);
-    };
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const handlePrevBtn = () => setCurrentPage(currentPage - 1);
+    const handleNextBtn = () => setCurrentPage(currentPage + 1);
 
 
     return (
@@ -218,9 +212,9 @@ const Products = ({ allproducts }) => {
                                     type="range"
                                     id="price-slider"
                                     name="price-slider"
-                                    min="800"
-                                    max="15000" // Set the maximum value based on your requirements
-                                    step="100"
+                                    min="500"
+                                    max="100000" // Set the maximum value based on your requirements
+                                    step="400"
                                     value={maxPrice}
                                     onChange={(e) => setMaxPrice(parseInt(e.target.value))}
                                     className="mt-1 block w-full"

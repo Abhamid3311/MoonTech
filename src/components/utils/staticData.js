@@ -152,12 +152,7 @@ export const CategoryData = [
         icon: <Icon icon="iconoir:tv" />,
         link: "/categories/TV"
     },
-    {
-        id: 10,
-        name: "Mobile Phone",
-        icon: <Icon icon="clarity:mobile-phone-line" />,
-        link: "/categories/Mobile"
-    },
+
     {
         id: 11,
         name: "Smart Watch",
@@ -176,6 +171,12 @@ export const CategoryData = [
         name: "Laptop",
         icon: <Icon icon="ph:laptop" />,
         link: "/categories/Laptop"
+    },
+    {
+        id: 10,
+        name: "Accessories",
+        icon: <Icon icon="tabler:devices-pc" />,
+        link: "/categories/accesorries"
     },
 
 ];
@@ -333,4 +334,853 @@ const data = [
             }
         ]
     },
+]
+
+
+
+
+const newData = [
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/havit/kb858l/kb858l-001-228x228.webp",
+        "name": "IMICE GK-700 USB RGB Gaming Keyboard",
+        "category": "Keyboard",
+        "status": "In Stock",
+        "price": "1200",
+        "description": "This is a sample keyboard description.IMICE GK-700 USB RGB Gaming Keyboard IMICE GK-700 USB RGB Gaming Keyboard IMICE GK-700 USB RGB Gaming Keyboard",
+        "features": [
+            {
+                "id": 1,
+                "brand": "Brand XYZ"
+            },
+            {
+                "id": 2,
+                "model": "Mechanical"
+            },
+            {
+                "id": 3,
+                "specification": "Wired"
+            }
+        ],
+        "individualRating": 4.8,
+        "averageRating": 4.7,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Great keyboard, very comfortable to type on."
+            },
+            {
+                "id": 2,
+                "comment": "Stylish design and responsive keys."
+            }]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/havit/kb488l/kb488l-01-228x228.jpg",
+        "name": "Havit KB488L Multi-Function Backlit Gaming Keyboard",
+        "category": "Keyboard",
+        "status": "In Stock",
+        "price": "1050",
+        "description": "This is a sample keyboard description.IMICE GK-700 USB RGB Gaming Keyboard IMICE GK-700 USB RGB Gaming Keyboard IMICE GK-700 USB RGB Gaming Keyboard",
+        "features": [
+            {
+                "id": 1,
+                "brand": "Brand XYZ"
+            },
+            {
+                "id": 2,
+                "model": "Mechanical"
+            },
+            {
+                "id": 3,
+                "specification": "Wired"
+            }
+        ],
+        "individualRating": 4.8,
+        "averageRating": 4.7,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Great keyboard, very comfortable to type on."
+            },
+            {
+                "id": 2,
+                "comment": "Stylish design and responsive keys."
+            }]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/meetion/mt-k9320/mt-k9320-01-228x228.jpg",
+        "name": "Meetion MT-K9320 Waterproof Backlit Gaming Keyboard",
+        "category": "Keyboard",
+        "status": "In Stock",
+        "price": "800",
+        "description": "19 keys anti-ghosting, multiple keys without conflict. Rainbow backlit with adjustable brightness. Keyboard Layout: 104/105",
+        "features": [
+            {
+                "id": 1,
+                "brand": "Brand XYZ"
+            },
+            {
+                "id": 2,
+                "model": "Mechanical"
+            },
+            {
+                "id": 3,
+                "specification": "Wired"
+            }
+        ],
+        "individualRating": 4.8,
+        "averageRating": 4.7,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Great keyboard, very comfortable to type on."
+            },
+            {
+                "id": 2,
+                "comment": "Stylish design and responsive keys."
+            }]
+    },
+
+
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/mouse/aula/s11/s11-001-228x228.webp",
+        "name": "Aula S11 RGB Wired Gaming Mouse",
+        "category": "Mouse",
+        "status": "In Stock",
+        "price": "550",
+        "description": "This is a sample mouse description. Number of keys: 4 keys. Resolution: 1200-1800-2400-3600 dpi. Type: USB Wired. ",
+        "features": [
+            {
+                "id": 1,
+                "model": "Wireless"
+            },
+            {
+                "id": 2,
+                "brand": "Brand ABC"
+            },
+            {
+                "id": 3,
+                "specification": "1200-1800-2400-3600 dpi"
+            }
+        ],
+        "individualRating": 4.5,
+        "averageRating": 4.3,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Comfortable grip and good for daily use."
+            },
+            {
+                "id": 2,
+                "comment": "Smooth tracking and affordable price."
+            }]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/mouse/a4tech/l65-max-naraka/l65-max-naraka-01-228x228.webp",
+        "name": "A4tech Bloody L65 Max Naraka RGB Wired Gaming Mouse",
+        "category": "Mouse",
+        "status": "In Stock",
+        "price": "750",
+        "description": "This is a sample mouse description.",
+        "features": [
+            {
+                "id": 1,
+                "model": "XYZ Model"
+            },
+            {
+                "id": 2,
+                "brand": "Brand ABC"
+            },
+            {
+                "id": 3,
+                "specification": "Wireless"
+            }
+        ],
+        "individualRating": 4.5,
+        "averageRating": 4.3,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Comfortable grip and good for daily use."
+            },
+            {
+                "id": 2,
+                "comment": "Smooth tracking and affordable price."
+            }]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/mouse/a4tech/bloody-l65-max/bloody-l65-max-01-228x228.webp",
+        "name": "A4tech Bloody L65 Max Honeycomb Lightweight RGB Wired Gaming Mouse",
+        "category": "Mouse",
+        "status": "In Stock",
+        "price": "800",
+        "description": "This is a sample mouse description.",
+        "features": [
+            {
+                "id": 1,
+                "model": "XYZ Model"
+            },
+            {
+                "id": 2,
+                "brand": "Brand ABC"
+            },
+            {
+                "id": 3,
+                "specification": "Wireless"
+            }
+        ],
+        "individualRating": 4.5,
+        "averageRating": 4.3,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Comfortable grip and good for daily use."
+            },
+            {
+                "id": 2,
+                "comment": "Smooth tracking and affordable price."
+            }]
+    },
+
+
+
+
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/watch/samsung/galaxy-watch4/galaxy-watch4-44mm-black-01-228x228.jpg",
+        "name": "Samsung Galaxy Watch4 44mm Smart Watch",
+        "category": "Smart Watch",
+        "status": "In Stock",
+        "price": "21000",
+        "description": "1.4' (34.6mm) Circular Super AMOLED (450x450) Display, Exynos W920 Dual Core 1.18GHz, 1.5GB RAM + 16GB Internal Memory. Battery: 361mAh",
+        "features": [
+            {
+                "id": 1,
+                "model": "Samsung Galaxy Watch4"
+            },
+            {
+                "id": 2,
+                "brand": "Samsung"
+            },
+            {
+                "id": 3,
+                "specification": "1.5GB RAM + 16GB Internal Memory"
+            }
+
+        ],
+        "individualRating": 4.2,
+        "averageRating": 4.0,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Great smartwatch, stylish and functional."
+            },
+            {
+                "id": 2,
+                "comment": "Good value for the price."
+            }]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/smart-watch/apple/apple-watch-se/apple-watch-se-101-228x228.jpg",
+        "name": "Apple Watch SE A2352 (MYDT2LL/A) GPS 44mm Sport Band (Space Gray Aluminum, Black)",
+        "category": "Smart Watch",
+        "status": "In Stock",
+        "price": "42000",
+        "description": "Fall Detection + SOS Emergency. LTPO OLED Retina Display. Digital Crown with Haptic Feedback. Heart Rate Monitor with Notifications",
+        "features": [
+            {
+                "id": 1,
+                "model": "Apple Watch SE A2352"
+            },
+            {
+                "id": 2,
+                "brand": "Apple"
+            },
+            {
+                "id": 3,
+                "specification": "LTPO OLED Retina Display"
+            }
+        ],
+        "individualRating": 4.2,
+        "averageRating": 4.0,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Great smartwatch, stylish and functional."
+            },
+            {
+                "id": 2,
+                "comment": "Good value for the price."
+            }]
+
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/smart-watch/apple/apple-watch-nike/black/apple-watch-nike-black-01-228x228.jpg",
+        "name": "Apple Watch Series 7 45mm Nike Edition Sports Band",
+        "category": "Smart Watch",
+        "status": "In Stock",
+        "price": "40000",
+        "description": "Always-On Retina LTPO OLED display, 1,000 nits. S7 SiP with 64-bit dual-core processor. Blood Oxygen app & ECG app. Swimproof & Dust resistant (IP6X)",
+        "features": [
+            {
+                "id": 1,
+                "model": "Apple Watch SE A2352"
+            },
+            {
+                "id": 2,
+                "brand": "Apple"
+            },
+            {
+                "id": 3,
+                "specification": " S7 SiP with 64-bit dual-core processor"
+            }
+        ],
+        "individualRating": 4.8,
+        "averageRating": 5.0,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Great smartwatch, stylish and functional."
+            },
+            {
+                "id": 2,
+                "comment": "Good value for the price."
+            }]
+
+    },
+
+
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/headphone/razer/blackshark-v2-pro/blackshark-v2-pro-228x228.jpg",
+        "name": "Corsair HS80 RGB USB Wired Gaming Headphone",
+        "category": "Headphones",
+        "status": "In Stock",
+        "price": "11100",
+        "description": "Impedance: 32k Ohms, Drivers: 50mm. Frequency: 20Hz - 40kHz. Microphone Type: Omni-directional. Dolby Audio, Surround Sound.",
+        "features": [
+            {
+                "id": 1,
+                "model": "Corsair HS80 RGB"
+            },
+            {
+                "id": 2,
+                "brand": "Corsair"
+            },
+            {
+                "id": 3,
+                "specification": "Frequency: 20Hz - 40kHz."
+            }
+        ],
+        "individualRating": 4.5,
+        "averageRating": 4.4,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Clear sound and comfortable to wear."
+            },
+            {
+                "id": 2,
+                "comment": "Great headphones for the price."
+            }]
+
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/headphone/awei/gm-6/gm-6-01-228x228.webp",
+        "name": "AWEI GM-6 Wired Headset",
+        "category": "Headphones",
+        "status": "In Stock",
+        "price": "975",
+        "description": "Impedance: 32k Ohms, Drivers: 50mm. Frequency: 20Hz - 40kHz. Microphone Type: Omni-directional. Dolby Audio, Surround Sound.",
+        "features": [
+            {
+                "id": 1,
+                "model": "AWEI GM-6"
+            },
+            {
+                "id": 2,
+                "brand": "AWEI"
+            },
+            {
+                "id": 3,
+                "specification": "Frequency: 20Hz - 40kHz."
+            }
+        ],
+        "individualRating": 4.5,
+        "averageRating": 4.4,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Clear sound and comfortable to wear."
+            },
+            {
+                "id": 2,
+                "comment": "Great headphones for the price."
+            }]
+
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/headphone/jabra/evolve-65/evolve-65-228x228.jpg",
+        "name": "Jabra Evolve 65MS DUO Professional Wireless Headphone Black",
+        "category": "Headphones",
+        "status": "In Stock",
+        "price": "15000",
+        "description": "Long wireless range for up to 14 hours. 30m wireless range. Passive Noise Cancellation",
+        "features": [
+            {
+                "id": 1,
+                "model": "Jabra Evolve"
+            },
+            {
+                "id": 2,
+                "brand": "Jabra"
+            },
+            {
+                "id": 3,
+                "specification": "Passive Noise Cancellation"
+            }
+        ],
+        "individualRating": 4.5,
+        "averageRating": 4.4,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Clear sound and comfortable to wear."
+            },
+            {
+                "id": 2,
+                "comment": "Great headphones for the price."
+            }]
+
+    },
+
+
+
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/game-pad/sony/ps4-dualshock-4/dualshock-4-glacier-white-01-228x228.webp",
+        "name": "PS4 Dualshock 4 Wireless Controller Steel Glacier White (Original)",
+        "category": "Gaming Console",
+        "status": "In Stock",
+        "price": "6500",
+        "description": "Motion sensors, Stereo headset jack. Light bar, Built-in speaker .HARE button, Touch pad. Refined analog sticks and triggers.",
+        "features": [
+            {
+                "id": 1,
+                "model": "PS4 Dualshock 4"
+            },
+            {
+                "id": 2,
+                "brand": "PS4"
+            },
+            {
+                "id": 3,
+                "specification": "Motion sensors, Stereo headset jack"
+            }
+        ],
+        "individualRating": 4.7,
+        "averageRating": 4.6,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Awesome gaming console, great graphics!"
+            },
+            {
+                "id": 2,
+                "comment": "Smooth performance and a vast game library."
+            }]
+
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/game-pad/sony/ps4-dualshock-4/ps4-dualshock-4-228x228.jpg",
+        "name": "PS4 DualShock 4 Wireless Controller Black (Original)",
+        "category": "Gaming Console",
+        "status": "In Stock",
+        "price": "6700",
+        "description": "Motion sensors, Stereo headset jack. Light bar, Built-in speaker .HARE button, Touch pad. Refined analog sticks and triggers.",
+        "features": [
+            {
+                "id": 1,
+                "model": "PS4 Dualshock 4"
+            },
+            {
+                "id": 2,
+                "brand": "PS4"
+            },
+            {
+                "id": 3,
+                "specification": "Motion sensors, Stereo headset jack"
+            }
+        ],
+        "individualRating": 4.7,
+        "averageRating": 4.6,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Awesome gaming console, great graphics!"
+            },
+            {
+                "id": 2,
+                "comment": "Smooth performance and a vast game library."
+            }]
+
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/game-pad/sony/ps4-dualshock-4/dualshock-4-b-01-228x228.jpg",
+        "name": "PS4 Dualshock 4 Wireless Controller Midnight Blue (Original)",
+        "category": "Gaming Console",
+        "status": "In Stock",
+        "price": "6700",
+        "description": "Motion sensors, Stereo headset jack. Light bar, Built-in speaker .HARE button, Touch pad. Refined analog sticks and triggers.",
+        "features": [
+            {
+                "id": 1,
+                "model": "PS4 Dualshock 4"
+            },
+            {
+                "id": 2,
+                "brand": "PS4"
+            },
+            {
+                "id": 3,
+                "specification": "Motion sensors, Stereo headset jack"
+            }
+        ],
+        "individualRating": 4.7,
+        "averageRating": 4.6,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Awesome gaming console, great graphics!"
+            },
+            {
+                "id": 2,
+                "comment": "Smooth performance and a vast game library."
+            }]
+
+    },
+
+
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/television/lg-tv/32lk510b/32lk510b-01-228x228.jpg",
+        "name": "LG 32LK510B 32' HD LED Television",
+        "category": "TV",
+        "status": "In Stock",
+        "price": "19700",
+        "description": "32' HD (1366 x 768) @50Hz LED-Backlit Display. Dynamic Color & Virtual Surround Sound. Sophisticated inside and out ",
+        "features": [
+            {
+                "id": 1,
+                "model": "LG 32LK510B"
+            },
+            {
+                "id": 2,
+                "brand": "LG"
+            },
+            {
+                "id": 3,
+                "specification": "32' HD (1366 x 768) @50Hz LED-Backlit Display"
+            }
+        ],
+        "individualRating": 4.4,
+        "averageRating": 4.3,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Impressive picture quality and smart features."
+            },
+            {
+                "id": 2,
+                "comment": "Good value for a 55-inch smart TV."
+
+            }]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/television/samsung/au8100/au8100-01-228x228.jpg",
+        "name": "Samsung 43AU8100 43' Crystal UHD 4K Smart TV",
+        "category": "TV",
+        "status": "In Stock",
+        "price": "47000",
+        "description": "Motion Xcelerator, Ambient Mode, Auto Game Mode. Dynamic Crystal Color, Crystal Processor 4K. 43' UHD 4K (3840 x 2160) Display. Analog Clean View, Triple Protection",
+        "features": [
+            {
+                "id": 1,
+                "model": "Samsung 43AU8100 43'"
+            },
+            {
+                "id": 2,
+                "brand": "Samsung"
+            },
+            {
+                "id": 3,
+                "specification": "Motion Xcelerator, Ambient Mode"
+            }
+        ],
+        "individualRating": 4.4,
+        "averageRating": 4.3,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Impressive picture quality and smart features."
+            },
+            {
+                "id": 2,
+                "comment": "Good value for a 55-inch smart TV."
+
+            }]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/television/samsung/65bu8100/65bu8100-01-228x228.webp",
+        "name": "Samsung 43BU8100 43' Crystal UHD 4K Smart TV",
+        "category": "TV",
+        "status": "In Stock",
+        "price": "50000",
+        "description": "Motion Xcelerator, Ambient Mode, Auto Game Mode. Dynamic Crystal Color, Crystal Processor 4K. 43' UHD 4K (3840 x 2160) Display. Analog Clean View, Triple Protection",
+        "features": [
+            {
+                "id": 1,
+                "model": "Samsung 43AU8100 43'"
+            },
+            {
+                "id": 2,
+                "brand": "Samsung"
+            },
+            {
+                "id": 3,
+                "specification": "Motion Xcelerator, Ambient Mode"
+            }
+        ],
+        "individualRating": 4.4,
+        "averageRating": 4.3,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Impressive picture quality and smart features."
+            },
+            {
+                "id": 2,
+                "comment": "Good value for a 55-inch smart TV."
+
+            }]
+    },
+
+
+
+
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/gopro/hero-9/hero-9-05-228x228.jpg",
+        "name": "GoPro HERO9 Black 20MP 5K Ultra HD Touch Screen Waterproof Action Camera",
+        "category": "Camera",
+        "status": "In Stock",
+        "price": "35000",
+        "description": "5K Video, Waterproof, HyperSmooth 3.0. Live Streaming, Webcam, TimeWarp 3.0. Front Display + Rear Touch Screen. 20MP Photo with SuperPhoto.",
+        "features": [
+            {
+                "id": 1,
+                "model": "GoPro HERO9 Black'"
+            },
+            {
+                "id": 2,
+                "brand": "GoPro"
+            },
+            {
+                "id": 3,
+                "specification": "5K Video, Waterproof, HyperSmooth 3.0"
+            }
+        ],
+        "individualRating": 4.8,
+        "averageRating": 4.7,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Excellent image quality and versatile features."
+            },
+            {
+                "id": 2,
+                "comment": "Great camera for both amateurs and professionals."
+            }
+        ]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/gopro/hero10/hero10-01-228x228.jpg",
+        "name": "GoPro HERO10 Black 23MP 5.3K Ultra HD Waterproof Touch Screen Action Camera",
+        "category": "Camera",
+        "status": "In Stock",
+        "price": "41000",
+        "description": "5K Video, Waterproof, HyperSmooth 3.0. Live Streaming, Webcam, TimeWarp 3.0. Front Display + Rear Touch Screen. 20MP Photo with SuperPhoto.",
+        "features": [
+            {
+                "id": 1,
+                "model": "GoPro HERO9 Black'"
+            },
+            {
+                "id": 2,
+                "brand": "GoPro"
+            },
+            {
+                "id": 3,
+                "specification": "5K Video, Waterproof, HyperSmooth 3.0"
+            }
+        ],
+        "individualRating": 4.8,
+        "averageRating": 4.7,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Excellent image quality and versatile features."
+            },
+            {
+                "id": 2,
+                "comment": "Great camera for both amateurs and professionals."
+            }
+        ]
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/camera/action-camera/gopro/hero10/hero10-with-accessories-228x228.webp",
+        "name": "GoPro HERO10 Black 23MP 5.3K Ultra HD Waterproof Touch Screen Action Camera with Accessories Bundle",
+        "category": "Camera",
+        "status": "In Stock",
+        "price": "46500",
+        "description": "5K Video, Waterproof, HyperSmooth 3.0. Live Streaming, Webcam, TimeWarp 3.0. Front Display + Rear Touch Screen. 20MP Photo with SuperPhoto.",
+        "features": [
+            {
+                "id": 1,
+                "model": "GoPro HERO9 Black'"
+            },
+            {
+                "id": 2,
+                "brand": "GoPro"
+            },
+            {
+                "id": 3,
+                "specification": "5K Video, Waterproof, HyperSmooth 3.0"
+            }
+        ],
+        "individualRating": 4.8,
+        "averageRating": 4.7,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Excellent image quality and versatile features."
+            },
+            {
+                "id": 2,
+                "comment": "Great camera for both amateurs and professionals."
+            }
+        ]
+    },
+
+
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-fq2597tu/15s-fq2597tu-01-228x228.jpg",
+        "name": "HP 15s-fq3617TU Celeron N4500 15.6' FHD Laptop",
+        "category": "Laptop",
+        "status": "In Stock",
+        "price": "43500",
+        "description": "Processor: Intel Celeron N4500 (4M Cache, 1.10 GHz up to 2.80 GHz). RAM: 4GB 2933 MHz, Storage: 256GB SSD. Display: 15.6' FHD (1920 x 1080). Feature: Dual speakers, Type-C",
+        "features": [
+            {
+                "id": 1,
+                "model": "HP 15s-fq3617TU"
+            },
+            {
+                "id": 2,
+                "brand": "HP"
+            },
+            {
+                "id": 3,
+                "specification": " Intel Celeron N4500"
+            }
+        ],
+        "individualRating": 4.6,
+        "averageRating": 4.5,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Powerful laptop, excellent for gaming and work."
+            },
+            {
+                "id": 2,
+                "comment": "Fast and reliable performance."
+            }]
+
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/hp-15s/hp-15s-spruce-blue-02-228x228.jpg",
+        "name": "HP 15s-eq2618AU Ryzen 3 5300U 15.6' HD Laptop",
+        "category": "Laptop",
+        "status": "In Stock",
+        "price": "55500",
+        "description": "Processor: Intel Celeron N4500 (4M Cache, 1.10 GHz up to 2.80 GHz). RAM: 4GB 2933 MHz, Storage: 256GB SSD. Display: 15.6' FHD (1920 x 1080). Feature: Dual speakers, Type-C",
+        "features": [
+            {
+                "id": 1,
+                "model": "HP 15s-fq3617TU"
+            },
+            {
+                "id": 2,
+                "brand": "HP"
+            },
+            {
+                "id": 3,
+                "specification": " Intel Celeron N4500"
+            }
+        ],
+        "individualRating": 4.6,
+        "averageRating": 4.5,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Powerful laptop, excellent for gaming and work."
+            },
+            {
+                "id": 2,
+                "comment": "Fast and reliable performance."
+            }]
+
+    },
+    {
+        "img": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/probook-440-g9/probook-440-g9-01-228x228.webp",
+        "name": "HP ProBook 440 G9 Core i5 12th Gen 14' FHD Laptop With Windows 11",
+        "category": "Laptop",
+        "status": "In Stock",
+        "price": "91000",
+        "description": "Processor: Intel Core i5-1235U (12M Cache, 1.30 GHz, up to 4.40 GHz). RAM: 8GB RAM, Storage: 512GB SSD. Display: 14' FHD (1920 x 1080). Features: Backlit Keyboard, Fingerprint, Type-C.",
+        "features": [
+            {
+                "id": 1,
+                "model": "HP 15s-fq3617TU"
+            },
+            {
+                "id": 2,
+                "brand": "HP"
+            },
+            {
+                "id": 3,
+                "specification": "Intel Core i5-1235U"
+            }
+        ],
+        "individualRating": 4.9,
+        "averageRating": 5,
+        "Reviews": [
+            {
+                "id": 1,
+                "comment": "Powerful laptop, excellent for gaming and work."
+            },
+            {
+                "id": 2,
+                "comment": "Fast and reliable performance."
+            }]
+
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ]

@@ -3,14 +3,13 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const PaginationProducts = ({ postPerPage, totalPost, paginate, handlePrevBtn, handleNextBtn, currentPage }) => {
     const pageNumber = [];
-    const totalPage = totalPost / 10;
+    const totalPage = Math.ceil(totalPost / postPerPage);
 
     //Get Btn
-    for (let i = 1; i <= Math.ceil(totalPost / postPerPage); i++) {
+    for (let i = 1; i <= totalPage; i++) {
         pageNumber.push(i);
     };
 
-    
     return (
         <nav className="flex items-center justify-center lg:justify-end  gap-3 mt-5">
             <button
