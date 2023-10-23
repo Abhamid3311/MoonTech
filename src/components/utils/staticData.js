@@ -276,6 +276,7 @@ export const offersData = [
 ]
 
 
+const uniqueCategories = ["RAM", "Monitor", "Motherboard", "Processor", "Power Supply Unit", "Storage Device", "Keyboard", "Mouse", "Headphones", "Smart Watch", "Gaming Console", "TV", "Camera", "Laptop", "Accessories"];
 
 
 
@@ -285,56 +286,6 @@ export const offersData = [
 
 
 
-const data = [
-    {
-        "id": "1",
-        "img": "https://www.startech.com.bd/image/cache/catalog/Motherboard/Gigabyte/GIGABYTE%20GA-J1800M-D3P/GIGABYTE%20GA-J1800M-D3P-1-228x228.jpg",
-        "name": "Example Motherboard 1",
-        "category": "Motherboard",
-        "status": "In Stock",
-        "price": "220",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae animi quod odio corrupti iusto magni! Obcaecati, numquam molestias. Eius autem, totam maxime exercitationem consequatur dolorum voluptas in a quo voluptatum!",
-        "features": [
-            {
-                "id": 1,
-                "brand": "Ryzen"
-            },
-            {
-                "id": 2,
-                "model": "Ryzen 500T"
-            },
-            {
-                "id": 3,
-                "specification": "Ryzen"
-            },
-            {
-                "id": 4,
-                "Port": "Ryzen"
-            },
-            {
-                "id": 5,
-                "Type": "Ryzen"
-            },
-            {
-                "id": 6,
-                "Voltage": "220V"
-            },
-
-        ],
-        "individualRating": 5,
-        "averageRating": 4.9,
-        "Reviews": [
-            {
-                "id": 1,
-                "comment": "This is a nice product"
-            },
-            {
-                "id": 2,
-                "comment": "Great performance and quality!"
-            }
-        ]
-    },
-]
 
 
 

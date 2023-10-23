@@ -3,10 +3,10 @@ import RootLayout from '@/components/layouts/RootLayout';
 import React, { useEffect, useRef, useState } from 'react';
 import { baseUrl } from '@/url';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { Checkbox, Label, Pagination } from 'flowbite-react';
+import { Checkbox, Label } from 'flowbite-react';
 import PaginationProducts from '@/components/utils/Pagination';
 
-const uniqueCategories = ["RAM", "Monitor", "Motherboard", "Processor", "Power Supply Unit", "Storage Device", "Keyboard", "Mouse", "Headphones", "Accessories", "Smart Watch", "Gaming Console", "TV", "Camera", "Laptop"];
+const uniqueCategories = ["RAM", "Monitor", "Motherboard", "Processor", "Power Supply Unit", "Storage Device", "Keyboard", "Mouse", "Headphones", "Smart Watch", "Gaming Console", "TV", "Camera", "Laptop", "Accessories"];
 
 
 const Products = ({ allproducts }) => {
@@ -22,8 +22,6 @@ const Products = ({ allproducts }) => {
     const [postPerPage] = useState(12);
 
     // console.log(allproducts)
-
-
 
 
     //Serached Filter Functionality
@@ -42,8 +40,7 @@ const Products = ({ allproducts }) => {
     }, [allproducts, searchQuery]);
 
 
-
-
+    //Sorting,Price Range Data Filtering
     useEffect(() => {
         const filteredProducts = allproducts?.filter((product) => {
             const lowerCaseQuery = searchQuery?.toLowerCase();
@@ -64,9 +61,6 @@ const Products = ({ allproducts }) => {
     }, [allproducts, searchQuery, selectedCategories, selectedStatus, maxPrice]);
 
 
-
-
-
     //Handle Search Bar Filter
     const handleSearchFilter = (e) => {
         e.preventDefault();
@@ -76,10 +70,7 @@ const Products = ({ allproducts }) => {
     };
 
 
-
-
-    ///Filter
-
+    ///Filter Category and status
     const toggleCategory = (category) => {
         if (selectedCategories.includes(category)) {
             setSelectedCategories(selectedCategories.filter(c => c !== category));
@@ -180,7 +171,6 @@ const Products = ({ allproducts }) => {
                             </div>
 
 
-
                             {/* CheckBox Sorting By Category */}
 
                             <div className="ml-2">
@@ -197,7 +187,6 @@ const Products = ({ allproducts }) => {
                                     </div>
                                 ))}
                             </div>
-
                         </div>
 
 
@@ -224,8 +213,6 @@ const Products = ({ allproducts }) => {
                     </div>
 
 
-
-
                     {/* SHowing data */}
                     <div className='w-full lg:w-4/5 '>
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 place-items-center'>
@@ -234,7 +221,6 @@ const Products = ({ allproducts }) => {
                             }
 
                         </div>
-
                         <PaginationProducts
                             currentPage={currentPage}
                             postPerPage={postPerPage}
@@ -243,20 +229,9 @@ const Products = ({ allproducts }) => {
                             handleNextBtn={handleNextBtn}
                             paginate={paginate}
                         />
-
-
-
                     </div>
                 </div>
-
-
-
             </div>
-
-
-
-
-
         </div>
     );
 };
