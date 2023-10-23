@@ -17,6 +17,8 @@ const Products = ({ allproducts }) => {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedStatus, setSelectedStatus] = useState([]);
 
+    const [maxPrice, setMaxPrice] = useState(15000);
+
 
     //Serached Filter Functionality
     useEffect(() => {
@@ -38,19 +40,25 @@ const Products = ({ allproducts }) => {
 
 
     useEffect(() => {
-        const filteredDeals = allproducts?.filter((product) => {
+        const filteredProducts = allproducts?.filter((product) => {
             const lowerCaseQuery = searchQuery?.toLowerCase();
+            const productPrice = parseFloat(product.price);
+
             return (
                 (selectedCategories.length === 0 || selectedCategories.includes(product.category)) &&
                 (selectedStatus.length === 0 || selectedStatus.includes(product.status)) &&
+                (productPrice <= maxPrice) && // Check if the product price is less than or equal to the maximum price
                 (product.category.toLowerCase().includes(lowerCaseQuery) ||
                     product.name.toLowerCase().includes(lowerCaseQuery) ||
                     product.status.toLowerCase().includes(lowerCaseQuery) ||
                     product.price.toLowerCase().includes(lowerCaseQuery))
             );
         });
-        setSearchedDeals(filteredDeals);
-    }, [allproducts, searchQuery, selectedCategories, selectedStatus]);
+
+        setSearchedDeals(filteredProducts);
+    }, [allproducts, searchQuery, selectedCategories, selectedStatus, maxPrice]);
+
+
 
 
 
@@ -67,9 +75,16 @@ const Products = ({ allproducts }) => {
         }
     };
 
-    //Handle Price Filter Slider
+    /*  //Handle Price Filter Slider
+     const handlePriceSliderChange = (value) => {
+         setPriceSliderValue(parseInt(value));
+     }; */
+
+
     const handlePriceSliderChange = (value) => {
-        setPriceSliderValue(parseInt(value));
+        const newPrice = parseInt(value);
+        setPriceSliderValue(newPrice);
+        setMinPrice(newPrice);
     };
 
 
@@ -188,21 +203,20 @@ const Products = ({ allproducts }) => {
                         {/* Price Range Sorting */}
                         <div>
                             <div className="mt-8">
-                                <label htmlFor="year-slider" className="block text-base font-medium text-gray-700">
-                                    Price Range
+                                <label htmlFor="price-slider" className="block text-base font-medium text-gray-700">
+                                    Price Range (0 to {maxPrice} Tk)
                                 </label>
                                 <input
                                     type="range"
-                                    id="year-slider"
-                                    name="year-slider"
+                                    id="price-slider"
+                                    name="price-slider"
                                     min="800"
-                                    max="30000"
+                                    max="15000" // Set the maximum value based on your requirements
                                     step="100"
-                                    value={priceSliderValue}
-                                    onChange={(e) => handlePriceSliderChange(e.target.value)}
-                                    className="mt-1 block w-full "
+                                    value={maxPrice}
+                                    onChange={(e) => setMaxPrice(parseInt(e.target.value))}
+                                    className="mt-1 block w-full"
                                 />
-                                <p className="text-sm mt-2 text-center">{priceSliderValue}</p>
                             </div>
                         </div>
                     </div>
