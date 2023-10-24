@@ -7,11 +7,14 @@ import { toast } from 'react-toastify';
 import { BsArrowRepeat } from 'react-icons/bs';
 import { RxCross2 } from 'react-icons/rx';
 import { removeFromBuilder } from '@/redux/features/pcBuilder/pcBuilderSlice';
+import { useState } from 'react';
 
 const PCComponent = () => {
     const { builder, total } = useSelector(state => state.pcBuilder);
     const { data: session } = useSession();
     const dispatch = useDispatch();
+
+    const [errors, setErrors] = useState({});
 
     //Get Data
     const ProcessorData = builder?.find(data => data.category === "Processor");
@@ -25,25 +28,53 @@ const PCComponent = () => {
     const skeletonName = <p className='w-32 lg:w-60 h-4 bg-gray-200 rounded-md'></p>
     const skeletonPrice = <p className='w-10 h-4 bg-gray-200 rounded-md'></p>
 
-
-    // Handle Complete Build Btn
-    const handleBuildComplete = (builder) => {
-        if (builder.length === 6) {
-            toast.success("Build Completed Succesfully");
-            //! I will write Save to DB Logic here 
-        } else {
-            toast.error("Please Complete Your Build");
-            console.log(builder.length)
-            return
-        }
-    };
-
-
     //Handle Remove Product From Builder
     const handleRemoveProduct = (data) => {
         dispatch(removeFromBuilder(data))
     };
 
+
+
+    //Get Selected Build Data & Show error
+    const collectSelectedData = () => {
+        const selectedData = {
+            Processor: ProcessorData,
+            Motherboard: MotherboardData,
+            RAM: RAMData,
+            StorageDevice: StorageData,
+            PowerSupply: PowerSupplyData,
+            Monitor: MonitorData,
+        };
+
+        // Validate if required components are selected
+        const requiredComponents = ["Processor", "Motherboard", "RAM", "StorageDevice", "PowerSupply", "Monitor"];
+        const newErrors = {};
+
+        requiredComponents.forEach((component) => {
+            if (!selectedData[component]) {
+                newErrors[component] = `${component} is required.`;
+            }
+        });
+
+        setErrors(newErrors);
+
+        return selectedData;
+    };
+
+
+
+    // Handle Complete Build Btn
+    const handleBuildComplete = () => {
+        const selectedData = collectSelectedData();
+
+        if (Object.keys(errors).length === 0) {
+            toast.success("Build Completed Successfully!");
+            console.log("Selected Data:", selectedData);
+        } else {
+            toast.error("Build Completed Successfully!")
+            console.log("Validation Errors:", errors);
+        }
+    };
 
     return (
         <div className='w-full max-w-4xl mx-auto bg-white py-6 px-5 lg:px-20 mt-10'>
@@ -68,6 +99,11 @@ const PCComponent = () => {
                     <div>
                         <h1 className='font-bold'>Processor<span className='text-primary'>*</span></h1>
                         <p className='text-sm lg:text-base'>{ProcessorData?.name ? ProcessorData?.name : skeletonName}</p>
+
+                        {/* Display error message */}
+                        {errors["Processor"] && (
+                            <p className="text-red-500">{errors["Processor"]}</p>
+                        )}
                     </div>
                 </div>
 
@@ -108,6 +144,11 @@ const PCComponent = () => {
                     <div>
                         <h1 className='font-bold'>Motherboard<span className='text-primary'>*</span></h1>
                         <p className='text-sm lg:text-base'>{MotherboardData?.name ? MotherboardData?.name : skeletonName}</p>
+
+                        {/* Display error message */}
+                        {errors["Motherboard"] && (
+                            <p className="text-red-500">{errors["Motherboard"]}</p>
+                        )}
                     </div>
                 </div>
 
@@ -147,6 +188,11 @@ const PCComponent = () => {
                     <div>
                         <h1 className='font-bold'>RAM<span className='text-primary'>*</span></h1>
                         <p className='text-sm lg:text-base'>{RAMData?.name ? RAMData?.name : skeletonName}</p>
+
+                        {/* Display error message */}
+                        {errors["RAM"] && (
+                            <p className="text-red-500">{errors["RAM"]}</p>
+                        )}
                     </div>
                 </div>
 
@@ -186,6 +232,10 @@ const PCComponent = () => {
                     <div>
                         <h1 className='font-bold'>Storage<span className='text-primary'>*</span></h1>
                         <p className='text-sm lg:text-base'>{StorageData?.name ? StorageData?.name : skeletonName}</p>
+                        {/* Display error message */}
+                        {errors["StorageDevice"] && (
+                            <p className="text-red-500">{errors["StorageDevice"]}</p>
+                        )}
                     </div>
                 </div>
 
@@ -225,6 +275,10 @@ const PCComponent = () => {
                     <div>
                         <h1 className='font-bold'>Power Supply<span className='text-primary'>*</span></h1>
                         <p className='text-sm lg:text-base'>{PowerSupplyData?.name ? PowerSupplyData?.name : skeletonName}</p>
+                        {/* Display error message */}
+                        {errors["PowerSupply"] && (
+                            <p className="text-red-500">{errors["PowerSupply"]}</p>
+                        )}
                     </div>
                 </div>
 
@@ -264,6 +318,11 @@ const PCComponent = () => {
                     <div>
                         <h1 className='font-bold'>Monitor<span className='text-primary'>*</span></h1>
                         <p className='text-sm lg:text-base'>{MonitorData?.name ? MonitorData?.name : skeletonName}</p>
+
+                        {/* Display error message */}
+                        {errors["Monitor"] && (
+                            <p className="text-red-500">{errors["Monitor"]}</p>
+                        )}
                     </div>
                 </div>
 
@@ -290,7 +349,7 @@ const PCComponent = () => {
 
 
             <div className='flex items-center justify-center'>
-                <Button disabled={builder.length !== 6} color='failure' onClick={() => handleBuildComplete(builder)}>Complete Build </Button>
+                <Button color='failure' onClick={handleBuildComplete}>Complete Build </Button>
             </div>
 
 
