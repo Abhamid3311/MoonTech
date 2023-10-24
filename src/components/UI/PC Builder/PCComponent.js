@@ -23,6 +23,10 @@ const PCComponent = () => {
     const StorageData = builder?.find(data => data.category === "Storage Device");
     const PowerSupplyData = builder?.find(data => data.category === "Power Supply Unit");
     const MonitorData = builder?.find(data => data.category === "Monitor");
+    const CasingData = builder?.find(data => data.category === "Accessories");
+    const MouseData = builder?.find(data => data.category === "Mouse");
+    const KeyboardData = builder?.find(data => data.category === "Keyboard");
+    const HeadphonesData = builder?.find(data => data.category === "Headphones");
 
     //Skeleton
     const skeletonName = <p className='w-32 lg:w-60 h-4 bg-gray-200 rounded-md'></p>
@@ -44,6 +48,10 @@ const PCComponent = () => {
             StorageDevice: StorageData,
             PowerSupply: PowerSupplyData,
             Monitor: MonitorData,
+            Casing: CasingData,
+            Mouse: MouseData,
+            Keyboard: KeyboardData,
+            Headphones: HeadphonesData
         };
 
         // Validate if required components are selected
@@ -57,7 +65,6 @@ const PCComponent = () => {
         });
 
         setErrors(newErrors);
-
         return selectedData;
     };
 
@@ -76,7 +83,7 @@ const PCComponent = () => {
         }
     };
 
-    
+
 
     return (
         <div className='w-full max-w-4xl mx-auto bg-white py-6  mt-10'>
@@ -320,6 +327,58 @@ const PCComponent = () => {
                     </div>
                 </div>
 
+                {/* Casing */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                CasingData?.img ?
+                                    <Image src={CasingData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="lucide:pc-case" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
+
+                        <div>
+                            <h1 className='font-bold'>Casing</h1>
+                            <p className='text-sm lg:text-base'>{CasingData?.name ? CasingData?.name : skeletonName}</p>
+
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>{CasingData?.price ? `${CasingData?.price} Tk` : skeletonPrice}</p>
+
+                        {
+                            !CasingData ?
+                                <Link href={"/pc-builder/choose/accesorries"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
+
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/accesorries"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
+
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(CasingData)}><RxCross2 /> </Button>
+                                </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            {/*  Peripherals & Others */}
+
+
+            <hr />
+            <div className='bg-gray-700 text-white w-full px-3 lg:px-20'>
+                <h3>Peripherals & Others</h3>
+            </div>
+
+
+            <div className='px-3 lg:px-20'>
                 {/* Monitor */}
                 <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
                     <div className='flex items-center gap-2'>
@@ -363,11 +422,130 @@ const PCComponent = () => {
                     </div>
                 </div>
 
+
+                {/* Keyboard */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                KeyboardData?.img ?
+                                    <Image src={KeyboardData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="radix-icons:keyboard" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
+
+                        <div>
+                            <h1 className='font-bold'>Keyboard</h1>
+                            <p className='text-sm lg:text-base'>{KeyboardData?.name ? KeyboardData?.name : skeletonName}</p>
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>{KeyboardData?.price ? `${KeyboardData?.price} Tk` : skeletonPrice}</p>
+
+                        {
+                            !KeyboardData ?
+                                <Link href={"/pc-builder/choose/keyboard"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
+
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/keyboard"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
+
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(KeyboardData)}><RxCross2 /> </Button>
+                                </div>
+                        }
+
+                    </div>
+                </div>
+
+                {/* Mouse */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                MouseData?.img ?
+                                    <Image src={MouseData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="material-symbols:mouse-outline" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
+
+                        <div>
+                            <h1 className='font-bold'>Mouse</h1>
+                            <p className='text-sm lg:text-base'>{MouseData?.name ? MouseData?.name : skeletonName}</p>
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>{MouseData?.price ? `${MouseData?.price} Tk` : skeletonPrice}</p>
+
+                        {
+                            !MouseData ?
+                                <Link href={"/pc-builder/choose/mouse"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
+
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/mouse"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
+
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(MouseData)}><RxCross2 /> </Button>
+                                </div>
+                        }
+
+                    </div>
+                </div>
+
+
+                {/* Headphones */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                HeadphonesData?.img ?
+                                    <Image src={HeadphonesData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="ic:outline-headphones" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
+
+                        <div>
+                            <h1 className='font-bold'>Headphones</h1>
+                            <p className='text-sm lg:text-base'>{HeadphonesData?.name ? HeadphonesData?.name : skeletonName}</p>
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>{HeadphonesData?.price ? `${HeadphonesData?.price} Tk` : skeletonPrice}</p>
+
+                        {
+                            !HeadphonesData ?
+                                <Link href={"/pc-builder/choose/headphones"}>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
+
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/headphones"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
+
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(HeadphonesData)}><RxCross2 /> </Button>
+                                </div>
+                        }
+
+                    </div>
+                </div>
+
             </div>
 
-            <div className='flex items-center justify-center'>
-                <Button color='failure' onClick={handleBuildComplete}>Complete Build </Button>
+
+            <div className='flex items-center justify-center gap-2'>
+                <Button color='blue' onClick={handleBuildComplete}>BUY NOW</Button>
+                <Button color='failure' onClick={handleBuildComplete}>SAVE PC </Button>
             </div>
+
 
 
         </div>
