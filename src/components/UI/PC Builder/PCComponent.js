@@ -8,12 +8,12 @@ import { BsArrowRepeat } from 'react-icons/bs';
 import { RxCross2 } from 'react-icons/rx';
 import { removeFromBuilder } from '@/redux/features/pcBuilder/pcBuilderSlice';
 import { useState } from 'react';
+import { Icon } from '@iconify/react';
 
 const PCComponent = () => {
     const { builder, total } = useSelector(state => state.pcBuilder);
-    const { data: session } = useSession();
+    // const { data: session } = useSession();
     const dispatch = useDispatch();
-
     const [errors, setErrors] = useState({});
 
     //Get Data
@@ -71,282 +71,299 @@ const PCComponent = () => {
             toast.success("Build Completed Successfully!");
             console.log("Selected Data:", selectedData);
         } else {
-            toast.error("Build Completed Successfully!")
+            toast.error("Build Complete Failed!")
             console.log("Validation Errors:", errors);
         }
     };
 
+    
+
     return (
-        <div className='w-full max-w-4xl mx-auto bg-white py-6 px-5 lg:px-20 mt-10'>
+        <div className='w-full max-w-4xl mx-auto bg-white py-6  mt-10'>
 
-            <div className='flex items-center justify-between pb-5'>
-                <h2 className='bg-blue-700 text-white font-bold rounded-md px-2 py-1 text-sm lg:text-base'>Total {builder?.length} Items</h2>
-                <p className='bg-primary text-white font-bold rounded-md px-2 py-1 text-sm lg:text-base'>Total: {total || 0} Tk</p>
+            <div className='flex items-center justify-between pb-5 px-5 lg:px-20'>
+                <div>
+                    <h1 className='text-primary text-xl lg:text-2xl font-bold'>MoonTech</h1>
+                    <p>Build Your Own PC</p>
+                </div>
+
+                <div className='bg-blue-700 text-white font-bold rounded-md text-sm lg:text-base px-3 py-1'>
+                    <p>Total {total || 0} Tk</p>
+                    <p className='text-center'> {builder?.length} Items</p>
+
+                </div>
+            </div>
+            <hr />
+            <div className='bg-gray-700 text-white w-full px-3 lg:px-20'>
+                <h3>Core Components</h3>
             </div>
 
 
-            {/* Processor */}
-            <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
-                <div className='flex items-center gap-2'>
-                    <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+            <div className='px-3 lg:px-20'>
+                {/* Processor */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                ProcessorData?.img ?
+                                    <Image src={ProcessorData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="game-icons:processor" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
+
+                        <div>
+                            <h1 className='font-bold'>Processor<span className='text-primary'>*</span></h1>
+                            <p className='text-sm lg:text-base'>{ProcessorData?.name ? ProcessorData?.name : skeletonName}</p>
+
+                            {/* Display error message */}
+                            {errors["Processor"] && (
+                                <p className="text-red-500">{errors["Processor"]}</p>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>
+                            {ProcessorData?.price ? `${ProcessorData?.price} Tk` : skeletonPrice}
+                        </p>
+
                         {
-                            ProcessorData?.img ?
-                                <Image src={ProcessorData?.img} alt='Processor' width={60} height={60} /> :
-                                <Image src={"/assets/pc-builder/cpu.svg"} alt='Processor' width={30} height={30} />
-                        }
-                    </div>
-
-                    <div>
-                        <h1 className='font-bold'>Processor<span className='text-primary'>*</span></h1>
-                        <p className='text-sm lg:text-base'>{ProcessorData?.name ? ProcessorData?.name : skeletonName}</p>
-
-                        {/* Display error message */}
-                        {errors["Processor"] && (
-                            <p className="text-red-500">{errors["Processor"]}</p>
-                        )}
-                    </div>
-                </div>
-
-                <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
-                    <p className='font-bold text-base lg:text-lg'>
-                        {ProcessorData?.price ? `${ProcessorData?.price} Tk` : skeletonPrice}
-                    </p>
-
-                    {
-                        !ProcessorData ?
-                            <Link href={"/pc-builder/choose/Processor"}>
-                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
-                            </Link> :
-
-                            <div className='flex items-center gap-1'>
+                            !ProcessorData ?
                                 <Link href={"/pc-builder/choose/Processor"}>
-                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
-                                </Link>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
 
-                                <Button color="failure" outline onClick={() => handleRemoveProduct(ProcessorData)}><RxCross2 /> </Button>
-                            </div>
-                    }
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/Processor"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
 
-                </div>
-            </div>
-
-            {/* MotherBoard */}
-            <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
-                <div className='flex items-center gap-2'>
-                    <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
-                        {
-                            MotherboardData?.img ?
-                                <Image src={MotherboardData?.img} alt='Processor' width={60} height={60} /> :
-                                <Image src={"/assets/pc-builder/cpu.svg"} alt='Processor' width={30} height={30} />
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(ProcessorData)}><RxCross2 /> </Button>
+                                </div>
                         }
-                    </div>
 
-                    <div>
-                        <h1 className='font-bold'>Motherboard<span className='text-primary'>*</span></h1>
-                        <p className='text-sm lg:text-base'>{MotherboardData?.name ? MotherboardData?.name : skeletonName}</p>
-
-                        {/* Display error message */}
-                        {errors["Motherboard"] && (
-                            <p className="text-red-500">{errors["Motherboard"]}</p>
-                        )}
                     </div>
                 </div>
 
-                <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
-                    <p className='font-bold text-base lg:text-lg'>
-                        {MotherboardData?.price ? `${MotherboardData?.price} Tk` : skeletonPrice}
-                    </p>
+                {/* MotherBoard */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                MotherboardData?.img ?
+                                    <Image src={MotherboardData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="ph:cpu" className="w-[30px] h-[30px] text-blue-800" />
 
-                    {
-                        !MotherboardData ?
-                            <Link href={"/pc-builder/choose/Motherboard"}>
-                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
-                            </Link> :
+                            }
+                        </div>
 
-                            <div className='flex items-center gap-1'>
+                        <div>
+                            <h1 className='font-bold'>Motherboard<span className='text-primary'>*</span></h1>
+                            <p className='text-sm lg:text-base'>{MotherboardData?.name ? MotherboardData?.name : skeletonName}</p>
+
+                            {/* Display error message */}
+                            {errors["Motherboard"] && (
+                                <p className="text-red-500">{errors["Motherboard"]}</p>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>
+                            {MotherboardData?.price ? `${MotherboardData?.price} Tk` : skeletonPrice}
+                        </p>
+
+                        {
+                            !MotherboardData ?
                                 <Link href={"/pc-builder/choose/Motherboard"}>
-                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
-                                </Link>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
 
-                                <Button color="failure" outline onClick={() => handleRemoveProduct(MotherboardData)}><RxCross2 /> </Button>
-                            </div>
-                    }
-                </div>
-            </div>
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/Motherboard"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
 
-            {/* RAM */}
-            <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
-                <div className='flex items-center gap-2'>
-                    <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
-                        {
-                            RAMData?.img ?
-                                <Image src={RAMData?.img} alt='Processor' width={60} height={60} /> :
-                                <Image src={"/assets/pc-builder/cpu.svg"} alt='Processor' width={30} height={30} />
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(MotherboardData)}><RxCross2 /> </Button>
+                                </div>
                         }
                     </div>
-
-                    <div>
-                        <h1 className='font-bold'>RAM<span className='text-primary'>*</span></h1>
-                        <p className='text-sm lg:text-base'>{RAMData?.name ? RAMData?.name : skeletonName}</p>
-
-                        {/* Display error message */}
-                        {errors["RAM"] && (
-                            <p className="text-red-500">{errors["RAM"]}</p>
-                        )}
-                    </div>
                 </div>
 
-                <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
-                    <p className='font-bold text-base lg:text-lg'>
-                        {RAMData?.price ? `${RAMData?.price} Tk` : skeletonPrice}
-                    </p>
-                    {
-                        !RAMData ?
-                            <Link href={"/pc-builder/choose/RAM"}>
-                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
-                            </Link> :
+                {/* RAM */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                RAMData?.img ?
+                                    <Image src={RAMData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="game-icons:ram" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
 
-                            <div className='flex items-center gap-1'>
+                        <div>
+                            <h1 className='font-bold'>RAM<span className='text-primary'>*</span></h1>
+                            <p className='text-sm lg:text-base'>{RAMData?.name ? RAMData?.name : skeletonName}</p>
+
+                            {/* Display error message */}
+                            {errors["RAM"] && (
+                                <p className="text-red-500">{errors["RAM"]}</p>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>
+                            {RAMData?.price ? `${RAMData?.price} Tk` : skeletonPrice}
+                        </p>
+                        {
+                            !RAMData ?
                                 <Link href={"/pc-builder/choose/RAM"}>
-                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
-                                </Link>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
 
-                                <Button color="failure" outline onClick={() => handleRemoveProduct(RAMData)}><RxCross2 /> </Button>
-                            </div>
-                    }
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/RAM"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
 
-                </div>
-            </div>
-
-            {/* Storage Device */}
-            <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
-                <div className='flex items-center gap-2'>
-                    <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
-                        {
-                            StorageData?.img ?
-                                <Image src={StorageData?.img} alt='Processor' width={60} height={60} /> :
-                                <Image src={"/assets/pc-builder/cpu.svg"} alt='Processor' width={30} height={30} />
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(RAMData)}><RxCross2 /> </Button>
+                                </div>
                         }
-                    </div>
 
-                    <div>
-                        <h1 className='font-bold'>Storage<span className='text-primary'>*</span></h1>
-                        <p className='text-sm lg:text-base'>{StorageData?.name ? StorageData?.name : skeletonName}</p>
-                        {/* Display error message */}
-                        {errors["StorageDevice"] && (
-                            <p className="text-red-500">{errors["StorageDevice"]}</p>
-                        )}
                     </div>
                 </div>
 
-                <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
-                    <p className='font-bold text-base lg:text-lg'>{StorageData?.price ? `${StorageData?.price} Tk` : skeletonPrice}</p>
+                {/* Storage Device */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                StorageData?.img ?
+                                    <Image src={StorageData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="clarity:storage-line" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
 
-                    {
-                        !StorageData ?
-                            <Link href={"/pc-builder/choose/StorageDevice"}>
-                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
-                            </Link> :
+                        <div>
+                            <h1 className='font-bold'>Storage<span className='text-primary'>*</span></h1>
+                            <p className='text-sm lg:text-base'>{StorageData?.name ? StorageData?.name : skeletonName}</p>
+                            {/* Display error message */}
+                            {errors["StorageDevice"] && (
+                                <p className="text-red-500">{errors["StorageDevice"]}</p>
+                            )}
+                        </div>
+                    </div>
 
-                            <div className='flex items-center gap-1'>
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>{StorageData?.price ? `${StorageData?.price} Tk` : skeletonPrice}</p>
+
+                        {
+                            !StorageData ?
                                 <Link href={"/pc-builder/choose/StorageDevice"}>
-                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
-                                </Link>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
 
-                                <Button color="failure" outline onClick={() => handleRemoveProduct(StorageData)}><RxCross2 /> </Button>
-                            </div>
-                    }
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/StorageDevice"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
 
-
-                </div>
-            </div>
-
-            {/* Power Supply */}
-            <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
-                <div className='flex items-center gap-2'>
-                    <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
-                        {
-                            PowerSupplyData?.img ?
-                                <Image src={PowerSupplyData?.img} alt='Processor' width={60} height={60} /> :
-                                <Image src={"/assets/pc-builder/cpu.svg"} alt='Processor' width={30} height={30} />
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(StorageData)}><RxCross2 /> </Button>
+                                </div>
                         }
-                    </div>
 
-                    <div>
-                        <h1 className='font-bold'>Power Supply<span className='text-primary'>*</span></h1>
-                        <p className='text-sm lg:text-base'>{PowerSupplyData?.name ? PowerSupplyData?.name : skeletonName}</p>
-                        {/* Display error message */}
-                        {errors["PowerSupply"] && (
-                            <p className="text-red-500">{errors["PowerSupply"]}</p>
-                        )}
+
                     </div>
                 </div>
 
-                <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
-                    <p className='font-bold text-base lg:text-lg'>{PowerSupplyData?.price ? `${PowerSupplyData?.price} Tk` : skeletonPrice}</p>
+                {/* Power Supply */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                PowerSupplyData?.img ?
+                                    <Image src={PowerSupplyData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="icon-park-outline:power-supply" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
 
-                    {
-                        !PowerSupplyData ?
-                            <Link href={"/pc-builder/choose/PowerSupply"}>
-                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
-                            </Link> :
+                        <div>
+                            <h1 className='font-bold'>Power Supply<span className='text-primary'>*</span></h1>
+                            <p className='text-sm lg:text-base'>{PowerSupplyData?.name ? PowerSupplyData?.name : skeletonName}</p>
+                            {/* Display error message */}
+                            {errors["PowerSupply"] && (
+                                <p className="text-red-500">{errors["PowerSupply"]}</p>
+                            )}
+                        </div>
+                    </div>
 
-                            <div className='flex items-center gap-1'>
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>{PowerSupplyData?.price ? `${PowerSupplyData?.price} Tk` : skeletonPrice}</p>
+
+                        {
+                            !PowerSupplyData ?
                                 <Link href={"/pc-builder/choose/PowerSupply"}>
-                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
-                                </Link>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
 
-                                <Button color="failure" outline onClick={() => handleRemoveProduct(PowerSupplyData)}><RxCross2 /> </Button>
-                            </div>
-                    }
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/PowerSupply"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
 
-
-                </div>
-            </div>
-
-            {/* Monitor */}
-            <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
-                <div className='flex items-center gap-2'>
-                    <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
-                        {
-                            MonitorData?.img ?
-                                <Image src={MonitorData?.img} alt='Processor' width={60} height={60} /> :
-                                <Image src={"/assets/pc-builder/cpu.svg"} alt='Processor' width={30} height={30} />
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(PowerSupplyData)}><RxCross2 /> </Button>
+                                </div>
                         }
-                    </div>
 
-                    <div>
-                        <h1 className='font-bold'>Monitor<span className='text-primary'>*</span></h1>
-                        <p className='text-sm lg:text-base'>{MonitorData?.name ? MonitorData?.name : skeletonName}</p>
 
-                        {/* Display error message */}
-                        {errors["Monitor"] && (
-                            <p className="text-red-500">{errors["Monitor"]}</p>
-                        )}
                     </div>
                 </div>
 
-                <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
-                    <p className='font-bold text-base lg:text-lg'>{MonitorData?.price ? `${MonitorData?.price} Tk` : skeletonPrice}</p>
+                {/* Monitor */}
+                <div className='flex items-center justify-between border-b-[1px] border-b-gray-200 pb-3 my-5'>
+                    <div className='flex items-center gap-2'>
+                        <div className='h-[60px] w-[60px] bg-blue-100 flex items-center justify-center'>
+                            {
+                                MonitorData?.img ?
+                                    <Image src={MonitorData?.img} alt='Processor' width={60} height={60} /> :
+                                    <Icon icon="material-symbols:monitor-outline" className="w-[30px] h-[30px] text-blue-800" />
+                            }
+                        </div>
 
-                    {
-                        !MonitorData ?
-                            <Link href={"/pc-builder/choose/Monitor"}>
-                                <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
-                            </Link> :
+                        <div>
+                            <h1 className='font-bold'>Monitor<span className='text-primary'>*</span></h1>
+                            <p className='text-sm lg:text-base'>{MonitorData?.name ? MonitorData?.name : skeletonName}</p>
 
-                            <div className='flex items-center gap-1'>
+                            {/* Display error message */}
+                            {errors["Monitor"] && (
+                                <p className="text-red-500">{errors["Monitor"]}</p>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col lg:flex-row items-center gap-2 lg:gap-4'>
+                        <p className='font-bold text-base lg:text-lg'>{MonitorData?.price ? `${MonitorData?.price} Tk` : skeletonPrice}</p>
+
+                        {
+                            !MonitorData ?
                                 <Link href={"/pc-builder/choose/Monitor"}>
-                                    <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
-                                </Link>
+                                    <Button gradientDuoTone="cyanToBlue" outline>Choose </Button>
+                                </Link> :
 
-                                <Button color="failure" outline onClick={() => handleRemoveProduct(MonitorData)}><RxCross2 /> </Button>
-                            </div>
-                    }
+                                <div className='flex items-center gap-1'>
+                                    <Link href={"/pc-builder/choose/Monitor"}>
+                                        <Button gradientDuoTone="cyanToBlue" outline><BsArrowRepeat /> </Button>
+                                    </Link>
 
+                                    <Button color="failure" outline onClick={() => handleRemoveProduct(MonitorData)}><RxCross2 /> </Button>
+                                </div>
+                        }
+
+                    </div>
                 </div>
-            </div>
 
+            </div>
 
             <div className='flex items-center justify-center'>
                 <Button color='failure' onClick={handleBuildComplete}>Complete Build </Button>
