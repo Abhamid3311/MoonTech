@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export default function Cart() {
     const { products, total } = useSelector(state => state.cart);
+    console.log(products)
     const dispatch = useDispatch();
     // console.log(products, total)
     return (

@@ -9,12 +9,15 @@ import { RxCross2 } from 'react-icons/rx';
 import { removeFromBuilder } from '@/redux/features/pcBuilder/pcBuilderSlice';
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
+import { useRouter } from 'next/router';
+import { addPCBuilderToCart } from '@/redux/features/cart/cartSlice';
 
 const PCComponent = () => {
     const { builder, total } = useSelector(state => state.pcBuilder);
     // const { data: session } = useSession();
     const dispatch = useDispatch();
     const [errors, setErrors] = useState({});
+    const router = useRouter();
 
     //Get Data
     const ProcessorData = builder?.find(data => data.category === "Processor");
@@ -48,10 +51,10 @@ const PCComponent = () => {
             StorageDevice: StorageData,
             PowerSupply: PowerSupplyData,
             Monitor: MonitorData,
-            Casing: CasingData,
-            Mouse: MouseData,
-            Keyboard: KeyboardData,
-            Headphones: HeadphonesData
+            Casing: CasingData || null,
+            Mouse: MouseData || null,
+            Keyboard: KeyboardData || null,
+            Headphones: HeadphonesData || null
         };
 
         // Validate if required components are selected
@@ -84,6 +87,27 @@ const PCComponent = () => {
     };
 
 
+    //Handle Buy PC Now Btn
+
+    const handleBuildBuyNowBtn = () => {
+        const selectedData = collectSelectedData();
+        console.log(selectedData)
+
+        // Check if all required components are selected
+        if (Object.keys(errors).length === 0) {
+            dispatch(addPCBuilderToCart(Object.values(selectedData)));
+
+            // Display a success message
+            // toast.success("Added to Cart Successfully!");
+
+
+            router.push('/checkout/cart');
+        } else {
+            // Display an error message
+            toast.error("Build Complete Failed!");
+            console.log("Validation Errors:", errors);
+        }
+    };
 
     return (
         <div className='w-full max-w-4xl mx-auto bg-white py-6  mt-10'>
@@ -542,8 +566,13 @@ const PCComponent = () => {
 
 
             <div className='flex items-center justify-center gap-2'>
-                <Button color='blue' onClick={handleBuildComplete}>BUY NOW</Button>
-                <Button color='failure' onClick={handleBuildComplete}>SAVE PC </Button>
+                <Button color='blue' onClick={handleBuildBuyNowBtn}>
+                    BUY NOW
+                </Button>
+
+                <Button color='failure' onClick={handleBuildComplete}>
+                    SAVE PC
+                </Button>
             </div>
 
 

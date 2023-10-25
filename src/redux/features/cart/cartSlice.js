@@ -69,9 +69,24 @@ const cartSlice = createSlice({
                 }
             }
         },
+
+        addPCBuilderToCart: (state, action) => {
+            // Loop through the items to be added
+            action.payload.forEach((item) => {
+                const existing = state.products.find((product) => product?._id === item?._id);
+                if (existing) {
+                    existing.quantity = existing.quantity + 1;
+                } else {
+                    state.products.push({ ...item, quantity: 1 });
+                }
+                if (!isNaN(item?.price)) {
+                    state.total += parseFloat(item.price);
+                }
+            });
+        }
     }
 });
 
 
-export const { addToCart, removeOne, removeFromCart, buyNowBtn, increaseQuantity, decreaseQuantity } = cartSlice.actions;
+export const { addToCart, removeOne, removeFromCart, buyNowBtn, increaseQuantity, decreaseQuantity, addPCBuilderToCart } = cartSlice.actions;
 export default cartSlice.reducer;
