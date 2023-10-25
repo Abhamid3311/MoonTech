@@ -45,12 +45,12 @@ const PCComponent = () => {
     //Get Selected Build Data & Show error
     const collectSelectedData = () => {
         const selectedData = {
-            Processor: ProcessorData,
-            Motherboard: MotherboardData,
-            RAM: RAMData,
-            StorageDevice: StorageData,
-            PowerSupply: PowerSupplyData,
-            Monitor: MonitorData,
+            Processor: ProcessorData || null,
+            Motherboard: MotherboardData || null,
+            RAM: RAMData || null,
+            StorageDevice: StorageData || null,
+            PowerSupply: PowerSupplyData || null,
+            Monitor: MonitorData || null,
             Casing: CasingData || null,
             Mouse: MouseData || null,
             Keyboard: KeyboardData || null,
@@ -59,6 +59,7 @@ const PCComponent = () => {
 
         // Validate if required components are selected
         const requiredComponents = ["Processor", "Motherboard", "RAM", "StorageDevice", "PowerSupply", "Monitor"];
+        // const requiredComponents = ["Processor", "Motherboard",];
         const newErrors = {};
 
         requiredComponents.forEach((component) => {
@@ -91,19 +92,15 @@ const PCComponent = () => {
 
     const handleBuildBuyNowBtn = () => {
         const selectedData = collectSelectedData();
-        console.log(selectedData)
+        console.log(selectedData);
 
         // Check if all required components are selected
         if (Object.keys(errors).length === 0) {
             dispatch(addPCBuilderToCart(Object.values(selectedData)));
 
-            // Display a success message
-            // toast.success("Added to Cart Successfully!");
-
-
+            toast.success("Added to Cart Successfully!");
             router.push('/checkout/cart');
         } else {
-            // Display an error message
             toast.error("Build Complete Failed!");
             console.log("Validation Errors:", errors);
         }
@@ -570,7 +567,7 @@ const PCComponent = () => {
                     BUY NOW
                 </Button>
 
-                <Button color='failure' onClick={handleBuildComplete}>
+                 <Button color='failure' onClick={handleBuildComplete}>
                     SAVE PC
                 </Button>
             </div>

@@ -71,16 +71,17 @@ const cartSlice = createSlice({
         },
 
         addPCBuilderToCart: (state, action) => {
-            // Loop through the items to be added
             action.payload.forEach((item) => {
-                const existing = state.products.find((product) => product?._id === item?._id);
-                if (existing) {
-                    existing.quantity = existing.quantity + 1;
-                } else {
-                    state.products.push({ ...item, quantity: 1 });
-                }
-                if (!isNaN(item?.price)) {
-                    state.total += parseFloat(item.price);
+                if (item && item._id) {
+                    const existing = state.products.find((product) => product?._id === item._id);
+                    if (existing) {
+                        existing.quantity = existing.quantity + 1;
+                    } else {
+                        state.products.push({ ...item, quantity: 1 });
+                    }
+                    if (!isNaN(item?.price)) {
+                        state.total += parseFloat(item.price);
+                    }
                 }
             });
         }
