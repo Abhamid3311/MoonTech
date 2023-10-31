@@ -1,9 +1,15 @@
+import { useAddCommentMutation, useGetCommentQuery } from '@/redux/features/products/productsApi';
 import { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 
 
-const ReviewDetails = ({ Reviews }) => {
-    const [comment, setComment] = useState('')
+const ReviewDetails = ({ id }) => {
+    const [comment, setComment] = useState('');
+    const { data: getComment, isLoading } = useGetCommentQuery(id);
+    const [postComment, { isLoading: isCommenting }] = useAddCommentMutation();
+
+
+    console.log(getComment)
 
 
 
@@ -13,27 +19,27 @@ const ReviewDetails = ({ Reviews }) => {
         e.preventDefault();
         console.log(comment)
 
-        /*  if (!user.email) {
-             toast.info("Please login For comment Here!");
-             return
-         }
- 
-         const data = {
-             name: user.email,
-             comment: comment
-         }
- 
-         postComment({ bookId, data })
-             .unwrap()
-             .then((response) => {
-                 console.log('Comment added successfully', response);
-                 toast.success("Comment Added Successfully!");
-                 setComment('')
-             })
-             .catch((error) => {
-                 console.error('Error adding Comment', error);
-                 toast.error("Comment Added Failed!")
-             }); */
+        if (!user.email) {
+            toast.info("Please login For comment Here!");
+            return
+        }
+
+        const data = {
+            name: user.email,
+            comment: comment
+        }
+
+        postComment({ id, data })
+            .unwrap()
+            .then((response) => {
+                console.log('Comment added successfully', response);
+                toast.success("Comment Added Successfully!");
+                setComment('')
+            })
+            .catch((error) => {
+                console.error('Error adding Comment', error);
+                toast.error("Comment Added Failed!")
+            });
     };
 
 
@@ -54,16 +60,17 @@ const ReviewDetails = ({ Reviews }) => {
             <div className='mt-8'>
                 <h3 className='text-base lg:text-lg font-bold  mb-2' >Comments:</h3>
                 {
-                    Reviews?.length !== 0 && Reviews?.map((rev, index) => <div key={index} className='flex items-center gap-2 '>
-                        <FaUserCircle className="text-2xl text-primary" />
-                        <div>
-                            <p className="font-bold " >abc@user</p>
-                            <p className='text-sm lg:text-base '>{rev.comment}</p>
-                        </div>
-                    </div>)
+                    !isLoading ?
+                        getComment?.length !== 0 && getComment?.map((rev, index) => <div key={index} className='flex items-center gap-2 '>
+                            <FaUserCircle className="text-2xl text-primary" />
+                            <div>
+                                <p className="font-bold " >abc@user</p>
+                                <p className='text-sm lg:text-base '>{rev.comment}</p>
+                            </div>
+                        </div>) : <p>Loading....</p>
                 }
 
-                {Reviews?.length === 0 && null}
+                {getComment?.length === 0 && null}
             </div>
         </div>
 

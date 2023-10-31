@@ -1,7 +1,10 @@
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
+    const { data: session } = useSession();
+
     return (
 
         <footer class="bg-secondary text-white">
@@ -51,6 +54,14 @@ const Footer = () => {
                                 <li class="mb-1"><Link href="/contacts" class="hover:underline"> Complain / Advice</Link> </li>
                                 <li class="mb-1"><Link href="#" class="hover:underline">Affiliates</Link> </li>
                                 <li class="mb-1"><Link href="/contacts" class="hover:underline"> Online Service Support</Link> </li>
+
+                                {
+                                    session?.user ?
+                                        <li class="mb-1" onClick={() => signOut()}>Logout </li> :
+                                        <li class="mb-1"><Link href="/login" class="hover:underline">Login</Link> </li>
+                                }
+
+
                             </ul>
                         </div>
 

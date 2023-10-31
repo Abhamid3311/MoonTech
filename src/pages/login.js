@@ -8,12 +8,12 @@ const Login = () => {
     return (
         <div className='bg-lightBg text-secondary min-h-screen flex items-center justify-center'>
 
-            {/*   <div className='max-w-3xl mx-auto bg-white shadow-lg rounded-md p-10'>
+            <div className='max-w-3xl mx-auto bg-white shadow-lg rounded-md p-10'>
                 <h2 className='text-2xl font-bold text-primary text-center'>Login</h2>
 
                 <div className='m-7'>
                     <Button className='bg-[#4D82E5] mb-2' onClick={() => signIn("google", {
-                        callbackUrl: "https://moon-tech-omega.vercel.app/pc-builder"
+                        callbackUrl: "https://moon-tech-omega.vercel.app"
                     })} >
                         <FcGoogle className="mr-2 h-7 w-7 bg-white p-1" />
                         <p className=' font-bold'> Sign in with Google </p>
@@ -22,7 +22,7 @@ const Login = () => {
 
 
                     <Button color="dark" onClick={() => signIn("github", {
-                        callbackUrl: `https://moon-tech-omega.vercel.app/pc-builder`
+                        callbackUrl: `https://moon-tech-omega.vercel.app`
                     })}>
                         <AiOutlineGithub className="mr-2 h-7 w-7  " />
                         <p className=' font-bold'> Sign in with GitHub </p>
@@ -30,7 +30,7 @@ const Login = () => {
                 </div>
 
 
-            </div> */}
+            </div>
         </div>
     );
 };

@@ -91,7 +91,7 @@ const ProductDetails = ({ data }) => {
 
                         <div className='w-full lg:w-1/2 '>
                             <h2 className=' font-bold mt-2 text-lg lg:text-2xl text-primary mb-5'>Reviews </h2>
-                            <ReviewDetails Reviews={Reviews} />
+                            <ReviewDetails id={_id} />
                         </div>
                     </div>
 
