@@ -160,10 +160,10 @@ const Header = () => {
             <div className=''>
                 <div
                     id="drawer-right-example"
-                    className={`fixed bottom-0 right-0 z-40 transition-transform ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'
+                    className={`fixed bottom-0 top-20 right-0 z-40 transition-transform ${isDrawerOpen ? 'translate-x-0' : 'translate-x-full'
                         } bg-white w-80`}
                     style={{
-                        maxHeight: '90vh', // Set a maximum height to the full viewport height
+                        maxHeight: '90vh',
                         display: 'flex',
                         flexDirection: 'column',
                     }}

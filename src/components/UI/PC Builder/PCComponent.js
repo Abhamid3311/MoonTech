@@ -563,11 +563,11 @@ const PCComponent = () => {
 
 
             <div className='flex items-center justify-center gap-2'>
-                <Button color='blue' onClick={handleBuildBuyNowBtn}>
+                <Button disabled={builder?.length === 0} color='blue' onClick={handleBuildBuyNowBtn}>
                     BUY NOW
                 </Button>
 
-                 <Button color='failure' onClick={handleBuildComplete}>
+                <Button disabled={builder?.length === 0} color='failure' onClick={handleBuildComplete}>
                     SAVE PC
                 </Button>
             </div>
