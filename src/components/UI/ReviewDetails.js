@@ -2,6 +2,7 @@ import { useAddCommentMutation, useGetCommentQuery } from '@/redux/features/prod
 import { useSession } from 'next-auth/react';
 import { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 
 const ReviewDetails = ({ id }) => {
@@ -36,6 +37,7 @@ const ReviewDetails = ({ id }) => {
             .then((response) => {
                 console.log('Comment added successfully', response);
                 toast.success("Comment Added Successfully!");
+                e.target.reset();
                 setComment('')
             })
             .catch((error) => {
@@ -66,7 +68,7 @@ const ReviewDetails = ({ id }) => {
                         getComment?.length !== 0 && getComment?.map((rev, index) => <div key={index} className='flex items-center gap-2 '>
                             <FaUserCircle className="text-2xl text-primary" />
                             <div>
-                                <p className="font-bold " >abc@user</p>
+                                <p className="font-bold " >{rev.name}</p>
                                 <p className='text-sm lg:text-base '>{rev.comment}</p>
                             </div>
                         </div>) : <p>Loading....</p>
