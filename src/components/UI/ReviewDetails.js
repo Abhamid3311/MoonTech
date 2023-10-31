@@ -1,4 +1,5 @@
 import { useAddCommentMutation, useGetCommentQuery } from '@/redux/features/products/productsApi';
+import { useSession } from 'next-auth/react';
 import { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 
@@ -7,6 +8,7 @@ const ReviewDetails = ({ id }) => {
     const [comment, setComment] = useState('');
     const { data: getComment, isLoading } = useGetCommentQuery(id);
     const [postComment, { isLoading: isCommenting }] = useAddCommentMutation();
+    const { data: session } = useSession();
 
 
     console.log(getComment)
@@ -19,13 +21,13 @@ const ReviewDetails = ({ id }) => {
         e.preventDefault();
         console.log(comment)
 
-        if (!user.email) {
+        if (!session.user.email) {
             toast.info("Please login For comment Here!");
             return
         }
 
         const data = {
-            name: user.email,
+            name: session.user.email,
             comment: comment
         }
 
