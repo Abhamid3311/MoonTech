@@ -12,7 +12,7 @@ const ReviewDetails = ({ id }) => {
     const { data: session } = useSession();
 
 
-    console.log(getComment)
+    // console.log(getComment)
 
 
 
@@ -20,7 +20,7 @@ const ReviewDetails = ({ id }) => {
     //Handle Comment Form
     const handleCommentForm = (e) => {
         e.preventDefault();
-        console.log(comment)
+        // console.log(comment)
 
         if (!session.user.email) {
             toast.info("Please login For comment Here!");
@@ -35,22 +35,22 @@ const ReviewDetails = ({ id }) => {
         postComment({ id, data })
             .unwrap()
             .then((response) => {
-                console.log('Comment added successfully', response);
+                // console.log('Comment added successfully', response);
                 toast.success("Comment Added Successfully!");
-                e.target.reset();
-                setComment('')
+
             })
             .catch((error) => {
                 console.error('Error adding Comment', error);
                 toast.error("Comment Added Failed!")
             });
+
+        e.target.reset();
     };
 
 
     return (
         <div className=''>
             <form onSubmit={handleCommentForm}>
-                {/* <h1 className='font-bold'>Leave a comment</h1> */}
                 <div className="w-full" id="textarea">
                     <textarea
                         placeholder="Leave a comment..."
@@ -58,7 +58,7 @@ const ReviewDetails = ({ id }) => {
                         required rows={2}
                         className='w-full border border-gray-300 focus:ring-primary focus:border-primary rounded-md' />
                 </div>
-                <button type='submit' className='bg-primary text-white px-3 py-1 rounded-[5px]  font-semibold '>Comment</button>
+                <button disabled={isCommenting} type='submit' className='bg-primary text-white px-3 py-1 rounded-[5px]  font-semibold '> {isCommenting ? "Commenting" : "Comment"}</button>
             </form>
 
             <div className='mt-8'>
