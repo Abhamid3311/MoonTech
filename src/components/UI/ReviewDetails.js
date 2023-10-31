@@ -12,10 +12,6 @@ const ReviewDetails = ({ id }) => {
     const { data: session } = useSession();
 
 
-    // console.log(getComment)
-
-
-
 
     //Handle Comment Form
     const handleCommentForm = (e) => {
@@ -65,11 +61,11 @@ const ReviewDetails = ({ id }) => {
                 <h3 className='text-base lg:text-lg font-bold  mb-2' >Comments:</h3>
                 {
                     !isLoading ?
-                        getComment?.length !== 0 && getComment?.map((rev, index) => <div key={index} className='flex items-center gap-2 '>
+                        getComment?.length !== 0 && getComment?.map((rev, index) => <div key={index} className='flex items-center gap-2 mb-3'>
                             <FaUserCircle className="text-2xl text-primary" />
                             <div>
-                                <p className="font-bold " >{rev.name}</p>
-                                <p className='text-sm lg:text-base '>{rev.comment}</p>
+                                <p className="text-base lg:text-lg  " >{rev.name}</p>
+                                <p className='text-sm lg:text-base text-gray-500'>{rev.comment}</p>
                             </div>
                         </div>) : <p>Loading....</p>
                 }
